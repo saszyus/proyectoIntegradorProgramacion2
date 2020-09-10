@@ -22,9 +22,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+//Rutas registradas por nosotros
 
+//home
 let rutasHome = require("./routes/home");
 app.use("/home", rutasHome);
+
+//mi perfil
+let rutasMiPerfil = require("./routes/miPerfil");
+app.use("/miPerfil", rutasMiPerfil);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
