@@ -4,4 +4,8 @@ let homeController = require("../controllers/homeController")
 
 router.get("/", homeController.home);
 
+router.get("/registracion", homeController.registracion);
+
+router.get("/login", homeController.login);
+
 module.exports = router;

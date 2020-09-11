@@ -8,6 +8,20 @@ let homeController =  {
     },
     
     
+    registracion: function (req,res) {
+
+    
+        res.render("registracion")
+    
+    },
+
+
+    login: function (req,res) {
+
+    
+        res.render("login")
+    
+    },
   
     
 

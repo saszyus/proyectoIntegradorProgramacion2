@@ -24,21 +24,17 @@ app.use('/users', usersRouter);
 
 //Rutas registradas por nosotros
 
-//home
+//HOME
 let rutasHome = require("./routes/home");
 app.use("/home", rutasHome);
 
-//mi perfil
-let rutasMiPerfil = require("./routes/miPerfil");
-app.use("/miPerfil", rutasMiPerfil);
+//PROFILE
+let rutasProfile = require("./routes/profile");
+app.use("/profile", rutasProfile);
 
-//agregar post
-let rutasAgregarPost = require("./routes/agregarPost");
-app.use("/agregarPost", rutasAgregarPost);
-
-//detalle post
-let rutasDetallePost = require("./routes/detallePost");
-app.use("/detallePost", rutasDetallePost);
+//SEARCH
+let rutasSearch = require("./routes/search");
+app.use("/search", rutasSearch);
 
 
 // catch 404 and forward to error handler
