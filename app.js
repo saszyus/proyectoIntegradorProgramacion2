@@ -36,6 +36,10 @@ app.use("/miPerfil", rutasMiPerfil);
 let rutasAgregarPost = require("./routes/agregarPost");
 app.use("/agregarPost", rutasAgregarPost);
 
+//detalle post
+let rutasDetallePost = require("./routes/detallePost");
+app.use("/detallePost", rutasDetallePost);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
