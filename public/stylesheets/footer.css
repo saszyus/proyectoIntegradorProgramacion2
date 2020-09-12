@@ -1,6 +1,6 @@
 footer{
     height: 40px;
-    color: rgb(63, 168, 31);
+    color: black;
     padding: 0 10px;
 }
 
@@ -10,4 +10,10 @@ footer ul{
 
 footer ul li{
     margin-top: 0;
+}
+
+.alumnos {
+
+color: black
+
 }
