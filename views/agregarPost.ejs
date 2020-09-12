@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FalseBook</title>
@@ -34,9 +35,15 @@
     <main>
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex">
-                <form action="">
-                    <h2>(Formulario para agregar un post)</h2>
-
+              
+                <form action="/profile/miPerfil">
+                   <h2>¿Queres subir una foto?</h2>
+                 
+                    <p>Ingresa tu nombre de usuario <input type="text" name="nombreUsuario"> <p>    
+                    <p> Selecciona o arrastra tu foto <input type="file" name="foto"> <p>
+                    <p>Añade un comentario
+                        <textarea id="msg" name="user_message"></textarea></p>    
+                    <input type="submit" value="Subi tu foto!">
                 </form>
 
             </div>
