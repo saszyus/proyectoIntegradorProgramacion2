@@ -36,7 +36,36 @@
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
                 <form action="">
                     
-                    <h2>(Formulario de registración)</h2>
+                    
+                    <form action="/profile/miPerfil">
+                        <h2>Bienvenido a "xxx" , registrate a continuacion</h2>
+                      
+                        <p>Nombre <input type="text" name="nombre"> <p>   
+                        <p>Apellido <input type="text" name="apellido"> <p> 
+                            <p>Fecha de nacimiento  <input type="date" id="bdaymonth" name="bdaymonth"> </p>
+                          <p>Selecciona tu sexo:</p>
+                          <p><input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Masculino</label></p> 
+                        <p>  <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Femenino</label></p> 
+                        <p>   <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Otro</label></p> 
+  
+
+                         <p> Elige una foto de perfil:</p>
+                               <input type="file" name="foto"> 
+                         <p>
+                            <label for="email"> Ingrese su mail:</label>
+                            <input type="email" id="email" name="email">
+                         </p>   
+                         <p>
+                            <label for="pass">Elija una contraseña</label>
+                            <input type="password" id="pass" name="password">
+                         </p>   
+
+                             <input type="reset" value="Reset"> <input type="submit" value="Registrate">
+                     </form>
+     
             
                 </form>
             </div>
