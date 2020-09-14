@@ -1,3 +1,4 @@
+let paqueteFrutas = require("../frutas")
 let homeController =  {
 
     home: function (req,res) {
@@ -23,7 +24,11 @@ let homeController =  {
     
     },
   
-    
+    list: function(req, res) {
+        let listado = paqueteFrutas.lista;
+     
+        res.render("list", {listado: listado});
+    },
 
     
     
