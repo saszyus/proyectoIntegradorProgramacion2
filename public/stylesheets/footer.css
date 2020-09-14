@@ -18,9 +18,37 @@ footer ul li{
 .alumnos {
 
 color: white;
+font-family: 'Quicksand';
 }
 
 li.ulC {
     margin: 0;
     padding-left: 30px;
+    font-family: 'Caveat';
+    font-size: 23px;
+}
+
+.instagram {
+    padding-right: 20px;
+}
+
+div.instagram li a:hover {
+    color: rgb(54, 205, 91 )
+}
+
+.facebook {
+    padding-right: 20px;
+}
+
+div.facebook li a:hover {
+    color: rgb(54, 205, 91 )
+}
+
+div.twitter li a:hover {
+    color: rgb(54, 205, 91 )
+}
+
+ul li a.alumnos:hover {
+    color: rgb(54, 205, 91 );
+    text-decoration: none;
 }
