@@ -1,0 +1,33 @@
+input.botonIngresa {
+    margin-top: 10px;
+}
+
+h1.titulo {
+    font-family: 'Montserrat';
+    margin-bottom: 50px;
+}
+
+main {
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+
+form.iniciarSesion {
+    border: solid 3px rgb(54, 205, 91 );
+    padding: 50px;
+}
+
+p.registrateAca {
+    font-family: QuickSand;
+}
+
+p a.registrateAqui:hover {
+    color:rgb(54, 205, 91 );
+    text-decoration: none;
+
+}
+
+p a.registrateAqui {
+    color: dimgray;
+}
+
