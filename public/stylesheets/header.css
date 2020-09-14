@@ -1,6 +1,7 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url('https://fonts.google.com/specimen/Fredoka+One#standard-styles');
+@import url('https://fonts.google.com/specimen/Ranchers');
 /* FONTS */
 
 
@@ -26,7 +27,7 @@ header nav ul li a:hover{
     margin: 0px;
 }
 .logo a{
-    font-family: 'Fredoka One';
+    font-family: 'Ranchers';
     color: white;
 }
 .logo a:hover {
