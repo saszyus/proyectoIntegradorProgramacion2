@@ -5,6 +5,7 @@ var frutas = {
         {
 
         nombre: "Manzana",
+        user:"@Manzana_Roja",
         id:1,
         
     },
@@ -13,6 +14,7 @@ var frutas = {
     {
 
         nombre: "Naranja",
+        user:"@Naranja_Exprimida98",
         id:2,
        
     },
@@ -22,6 +24,7 @@ var frutas = {
     {
 
         nombre: "Pera",
+        user:"@laPeraQueTeEspera;)",
         id:3,
   
     },
@@ -29,12 +32,14 @@ var frutas = {
     {
 
         nombre: "Uva",
+        user:"@uvaDeVino",
         id:4,
     },
 
     {
 
         nombre: "Frutilla",
+        user:"@frufru",
         id:5,
 
     },
@@ -42,6 +47,7 @@ var frutas = {
     {
 
         nombre: "Sandia",
+        user:"@Sandia-->cOOL",
         id:6,
 
     },
@@ -50,32 +56,11 @@ var frutas = {
 
 
         nombre: "Melon",
+        user:"@MelonesDeMoria",
         id:7,
     },
 
-    {
-
-
-        nombre: "Durazno",
-        id:8,
-
-    },
-
-    {
-
-
-        nombre: "Mango",
-        id:9,
-
-    },
-
-      {
-
-
-        nombre: "Mandarina",
-        id:10,
-
-    },
+   
 
     ]
 

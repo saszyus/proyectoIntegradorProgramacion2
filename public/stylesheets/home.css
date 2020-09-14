@@ -11,8 +11,8 @@ article.post div.info-usuario{
 }
 article.post div.info-usuario img{
     border-radius: 50px;
-    padding: 180px;
-    border: 1.5px ;
+    padding: 1px;
+    border: 1.5px solid red;
 }
 article.post div.info-usuario h4{
    margin: 8px 10px;
