@@ -3,8 +3,11 @@ input.botonIngresa {
 }
 
 h1.titulo {
-    font-family: 'Montserrat';
+    font-family: 'Balsamiq Sna';
     margin-bottom: 40px;
+    margin-top: 100px;
+    font-size: 70px;
+    color: rgb(54, 205, 91 ) ;
 }
 
 main {
