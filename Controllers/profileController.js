@@ -3,8 +3,11 @@ let profileController =  {
 
     profile: function (req,res) {
 
-    
-        res.render("miPerfil")
+
+
+        res.render("perfilManzanita")
+
+  
     
     },
     
