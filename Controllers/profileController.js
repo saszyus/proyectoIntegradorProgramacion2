@@ -1,3 +1,4 @@
+let paqueteFrutas = require("../frutas")
 let profileController =  {
 
     profile: function (req,res) {

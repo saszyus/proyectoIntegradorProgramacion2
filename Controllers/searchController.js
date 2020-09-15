@@ -1,9 +1,12 @@
+let paqueteFrutas = require("../frutas")
 let searchController =  {
 
     detalleUsuario: function (req,res) {
 
-//idUsuario    
-       // let idUsuario = req.params.idUsuario;
+ 
+      //  let idUsuario = req.params.idUsuario;
+        //let listadoId = paqueteFrutas.detalleUsuario(idUsuario);
+
 
           
         res.render("detalleUsuario")
