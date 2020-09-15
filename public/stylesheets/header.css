@@ -1,12 +1,32 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.google.com/specimen/Fredoka+One#standard-styles');
+@import url('https://fonts.google.com/specimen/Ranchers');
+@import url('https://fonts.google.com/specimen/Comfortaa');
+@import url('https://fonts.google.com/specimen/Caveat');
+@import url('https://fonts.google.com/specimen/Spartan#standard-styles');
+@import url('https://fonts.google.com/specimen/Quicksand?category=Sans+Serif,Display,Handwriting,Monospace');
+@import url('https://fonts.google.com/specimen/Montserrat?category=Sans+Serif,Display,Handwriting,Monospace');
+@import url('https://fonts.google.com/specimen/Reenie+Beanie');
+
+
 /* FONTS */
 
 
 header{
-    height: 55px;
-    padding-top: 10px;
+    padding-top: 19px;
+    background-color: rgb(200, 146, 245);
+    height: 81px;
 }
+
+div.barraNavegador {
+    font-family: 'Quicksand';
+}
+
+input.buscador {
+    font-family: "Quicksand";
+}
+
 header section{
     height: 100%;
 }
@@ -14,18 +34,19 @@ header section nav{
     height: 100%;
 }
 header nav ul li a{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 header nav ul li a:hover{
-    color: lightsteelblue;
+    color: rgb(200, 146, 245);
     text-decoration: none;
 }
 .logo{
     margin: 0px;
 }
 .logo a{
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Ranchers';
     color: white;
+    font-size: 60px;
 }
 .logo a:hover {
     text-decoration: none;
@@ -37,12 +58,25 @@ header ul{
     list-style: none;
 }
 header div.uk-navbar-center ul li{
-    padding: 0 10px;
-    border-right: 1px solid white;
+    padding: 0 20px;
+
 }
 header div.uk-navbar-center ul li:nth-last-child(1){
     border-right: none;
 }
+
 header nav form input, header nav form ::placeholder, header nav form span{
     color: white !important;
 }
+
+div.barraNavegador ul.navegador {
+    color: black;
+    margin-top: 140px;
+}
+
+div.fondoNav {
+    background-color: rgb(237, 226, 248);
+    height: 60px;
+    margin-right: 0;
+}
+

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FalseBook</title>
+    <title>Fruitbook</title>
     <link rel="icon"
         href="https://w7.pngwing.com/pngs/624/811/png-transparent-computer-icons-facebook-social-media-f-logo-cross-brand.png"
         type="image/x-icon">
@@ -32,19 +32,36 @@
     <%- include("headerDeslogueado") %> 
 
     <main>
-        <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                <form action="/profile/miPerfil">
+        <div class="contenedorPrincipal uk-section uk-section-small ">
+
+            <h1 class="login">Login</h1>
+
+              <div class="gifNaranja"> <img src="https://media.giphy.com/media/3ohc0UUiHhVz7iWyEo/source.gif" alt=""></div>
+
+           
+             <div class="contenedor  uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
+
+
+                <form action="/profile/miPerfil" class="iniciarSesion">
+
+
 
                     <form>
-                        <label for="username">Username:</label><br>
-                        <input type="text" id="username" name="username"><br>
-                        <label for="pwd">Password:</label><br>
-                        <input type="password" id="pwd" name="pwd">
-                        <br>
-                        <input type="submit" value="Ingresa!">
-                        <p>Primera vez? Registrate aqui</p>
-                        <a href="/home/registracion">Sign Up</a>
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                <input class="uk-input" type="text" placeholder="Usuario">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                                <input class="uk-input" type="text" placeholder="Contraseña">
+                            </div>
+                        </div>
+
+                        <input type="submit" class="uk-button uk-button-default botonIngresa" value="Ingresa">
+                        <p class="registrateAca">  Primera vez? <a class="registrateAqui" href="/home/registracion">Registrate aqui! </a> </p>
 
                       </form>
                 

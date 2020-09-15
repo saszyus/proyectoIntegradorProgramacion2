@@ -62,3 +62,11 @@ article.post div.post-comentarios ul li p{
     margin: 0 5px;
 }
 
+div h4 {
+    font-family: 'Quicksand';
+}
+
+main {
+    padding-top: 80px;
+}
+

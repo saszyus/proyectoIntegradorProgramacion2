@@ -1,7 +1,9 @@
 footer{
     height: 40px;
-    color: black;
-    padding: 0 10px;
+    color: white;
+    padding: 30px 20px;
+    background-color: rgb(46, 46, 46);
+    margin-bottom: 0px;
 }
 
 footer ul{
@@ -10,10 +12,42 @@ footer ul{
 
 footer ul li{
     margin-top: 0;
+
 }
 
 .alumnos {
 
-color: black
+color: white;
+font-family: 'Quicksand';
+}
 
+li.ulC {
+    margin: 0;
+    padding-left: 30px;
+    font-family: 'QuickSand';
+}
+
+.instagram {
+    padding-right: 20px;
+}
+
+div.instagram li a:hover {
+    color: rgb(54, 205, 91 )
+}
+
+.facebook {
+    padding-right: 20px;
+}
+
+div.facebook li a:hover {
+    color: rgb(54, 205, 91 )
+}
+
+div.twitter li a:hover {
+    color: rgb(54, 205, 91 )
+}
+
+ul li a.alumnos:hover {
+    color: rgb(54, 205, 91 );
+    text-decoration: none;
 }
