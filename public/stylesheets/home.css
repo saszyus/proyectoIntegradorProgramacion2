@@ -67,12 +67,7 @@ div h4 {
     font-family: 'Quicksand';
 }
 
-main {
-    padding-top: 20px;
-   background-image: url(https://media.giphy.com/media/ME3eStjV06s8QbFOyJ/giphy.gif);
-   background-repeat: repeat;
-   background-size: contain;
-}
+
 
 div.post-reacciones ul li {
     padding-top: 15px;
