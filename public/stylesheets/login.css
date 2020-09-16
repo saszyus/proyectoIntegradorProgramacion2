@@ -17,6 +17,15 @@ main {
 form.iniciarSesion {
     padding: 38px;
     font-family: 'Quicksand';
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Quicksand';
+    border: 1px solid #CCC;
+    border-radius: 35px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 p.registrateAca {

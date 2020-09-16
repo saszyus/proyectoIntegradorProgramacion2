@@ -3,7 +3,9 @@
 div.bienvenida h1.bienvenidoA {
     font-family: 'Reenie Beanie';
     font-size: 75px;
-    padding-top: 50px;
+    padding-top: 28px;
+    padding-right: 20px;
+    padding-left: 20px;
     
 }
 
@@ -18,10 +20,19 @@ div.contenedorMayor {
 }
 
 form.registracion {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     font-family: 'Quicksand';
-    padding-top: 40px;
-    border-color: dimgray;
-    border-width: 10px;
+    border: 1px solid #CCC;
+    border-radius: 35px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-top: 40px;
+
 }
 
 
@@ -44,4 +55,5 @@ div.gifS {
 div.gifBienvenida img{
     height: 206px;
     border-radius: 200px;
+    margin-bottom: 40px;
 }
