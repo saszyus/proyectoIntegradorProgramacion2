@@ -36,11 +36,13 @@
         <div class=" uk-section uk-section-small">
             <div class=" contenedor uk-container uk-container-large uk-flex">
                <div>
-                <h2>¿Quéres subir una foto?</h2>
+                <h2>Posteá tu foto!</h2>
                 </div>
-                <form action="/profile/miPerfil">
+                <form class='subiFoto' action="/profile/miPerfil">
+
+                    <div class="gifsubiFoto"> <img src="https://media.giphy.com/media/3oz8xDzuVDbKoU4shi/giphy.gif" alt=""></div>
                    
-                 
+                 <div>
                     <div class="uk-margin">
                         <input class="uk-input uk-form-width-medium" type="text" placeholder="Usuario">
                     </div>  
@@ -53,6 +55,8 @@
                     <p>Añade un comentario
                         <textarea class='uk-textarea' id="msg" name="user_message"></textarea></p>    
                     <input class='uk-button uk-button-default' type="submit" value="Subi tu foto!">
+
+                </div>
                 </form>
 
             </div>
