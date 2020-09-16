@@ -10,9 +10,10 @@ article.post div.info-usuario{
     margin-bottom: 5px;
 }
 article.post div.info-usuario img{
-    border-radius: 50px;
+    border-radius: 160px;
     padding: 1px;
     border: 1.5px solid red;
+    width: 47px;
 }
 article.post div.info-usuario h4{
    margin: 8px 10px;
