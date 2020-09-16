@@ -68,7 +68,10 @@ div h4 {
 }
 
 main {
-    padding-top: 80px;
+    padding-top: 20px;
+   background-image: url(https://media.giphy.com/media/ME3eStjV06s8QbFOyJ/giphy.gif);
+   background-repeat: repeat;
+   background-size: contain;
 }
 
 div.post-reacciones ul li {
@@ -100,4 +103,25 @@ h4.nombreUsuario a{
 h4.nombreUsuario a:hover {
     text-decoration: none;
     color: rgb(200, 146, 245);
+}
+
+div.contenedorChico {
+    padding-bottom: 100px;
+}
+
+div h1.titulo {
+    font-family: 'Reenie Beanie';
+    font-size: 250px;
+}
+
+div.contenedorGeneral {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+article.post {
+    width: 600px;
+    margin-bottom: 100px;
 }

@@ -24,3 +24,17 @@ img.foto-perfil-principal {
 div a.link-detalle p{
     font-family: 'Quicksand';
 }
+
+ div.contenedorChico{
+    padding-top: 100px !important;
+    padding-bottom: 150px !important;
+}
+
+div h3 {
+    font-family: 'QuickSand';
+    color: rgb(200, 146, 245);
+}
+
+div.nombreUsuario a:hover{
+    color: rgb(200, 146, 245);
+}
