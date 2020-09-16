@@ -1,36 +1,39 @@
 <header>
-    <section class=" uk-container uk-container-large">
+    <section>
+    <div class="headerPrincipal ">
         <div class="">
-            <nav class="uk-navbar">
-                
-                
-                <div class="uk-navbar-left ">
                    
-                        <h2 class="logo"><a href="/home/">FruitBook</a></h2>
-                    
-                </div>
-                <div class=" uk-navbar-center barraNavegador">
+            <h2 class="logo"><a href="/home/">FruitBook</a></h2>
+        
+        </div>
+        <div class="">
+            <ul class="uk-flex uk-flex-between uk-flex-middle">
+                <li>
+                    <form action="/search/resultadoBusqueda/" class=" buscadoR uk-search uk-search-default">
+                        <span class="icono" uk-search-icon></span>
+                        <input type="search" class="uk-search-input buscador" placeholder="Buscar...">
+                    </form>
+                </li>
+            </ul>
+        </div>
 
-                    <ul class="navegador uk-flex uk-flex-between uk-flex-middle">
-                        
-                        <li><a href="/home/">HOME</a></li>
+    </div>
+
+
+        <nav class="uk-navbar-container barraNavegador" uk-navbar>
+            <div class="uk-navbar-center">
+                <ul class="uk-navbar-nav">
+                    <li><a href="/home/">HOME</a></li>
                         <li><a href="/profile/agregarPost">POSTEAR</a></li>
                         <li><a href="/home/registracion">REGISTRACIÓN</a></li>
                         <li><a href="/home/login">LOGIN</a></li>
-                    </ul>
-                </div>
-                <div class="uk-navbar-right">
-                    <ul class="uk-flex uk-flex-between uk-flex-middle">
-                        <li>
-                            <form action="/search/resultadoBusqueda/" class="uk-search uk-search-default">
-                                <span uk-search-icon></span>
-                                <input type="search" class="uk-search-input buscador" placeholder="Buscar...">
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+
+                </ul>
+            </div>
+        </nav>
+
     </section>
-    <div class="fondoNav"></div>
+
+
+
 </header>

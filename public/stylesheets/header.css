@@ -10,7 +10,7 @@
 
 /* FONTS */
 
-
+/*
 header{
     padding-top: 19px;
     background-color: rgb(200, 146, 245);
@@ -72,9 +72,64 @@ div.barraNavegador ul.navegador {
     margin-top: 140px;
 }
 
-div.fondoNav {
+ div.fondoNav {
     background-color: rgb(237, 226, 248);
     height: 60px;
-    margin-right: 0;
+    margin-right: 0; 
+    margin-bottom: 30px;
+} 
+
+nav.navegador {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
+ */
+
+div.headerPrincipal {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgb(200, 146, 245);
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+div.headerPrincipal div h2.logo a{
+    font-family: 'Ranchers';
+    color: white !important;
+    font-size: 50px;
+}
+
+div.headerPrincipal div h2.logo a:hover {
+    text-decoration: none;
+}
+
+nav.uk-navbar-container {
+    background-color: rgb(237, 226, 248) !important;
+    
+}
+
+form.buscadoR ::placeholder, header nav form input span{
+    color: white !important;
+}
+
+header ul{
+    list-style: none;
+}
+
+nav div ul li a {
+    font-family: 'Quicksand' !important ; 
+    color: black !important ;
+}
+
+nav div ul li a:hover {
+    color: rgb(200, 146, 245) !important;
+}
+
+
+
 
