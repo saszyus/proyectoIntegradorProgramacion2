@@ -16,6 +16,7 @@ main {
 
 form.iniciarSesion {
     padding: 38px;
+    font-family: 'Quicksand';
 }
 
 p.registrateAca {
@@ -42,8 +43,8 @@ div.contenedorPrincipal {
     padding: 40px;
 }
 
-div.gifNaranja img {
-    height: 231px;
+div.gifLogin img {
+    height: 206px;
     border-radius: 200px;
 }
 

@@ -32,17 +32,24 @@
     <%- include("headerDeslogueado") %> 
 
     <main>
-        <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                <form action="">
+        <div class="contenedorGeneral uk-section uk-section-small">
+            <div class=" contenedorMayor uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
+                    
+
+                <div class="gifBienvenida"> <img src="https://media.giphy.com/media/26BRKRABuRCtFVre8/source.gif" alt=""></div>
+
+                <div class="bienvenida">
+                    <h1 class="bienvenidoA">Bienvenido! Registrate a continuación </h1>
+                </div>
+                
+                
                     
                     
-                    <form action="/profile/miPerfil">
-                        <h2>Bienvenido a </h2> <h2>FruitBook </h2> <h2>registrate a continuacion</h2>
-                      
-                        <p>Nombre <input type="text" name="nombre"> <p>   
-                        <p>Apellido <input type="text" name="apellido"> <p> 
-                            <p>Fecha de nacimiento  <input type="date" id="bdaymonth" name="bdaymonth"> </p>
+                    <form class='registracion' action="/profile/miPerfil">
+                        
+                        <p><input class='uk-input uk-form-width-medium' type="text" name="nombre" placeholder='Nombre'> <p>   
+                        <p><input class='uk-input uk-form-width-medium' type="text" name="apellido" placeholder='Apellido'> <p> 
+                            <p>Fecha de nacimiento  <input type="date" class='fechaNacimiento'id="bdaymonth" name="bdaymonth"> </p>
                           <p>Selecciona tu sexo:</p>
                           <p><input type="radio" id="male" name="gender" value="male">
                             <label for="male">Masculino</label></p> 
@@ -52,22 +59,25 @@
                             <label for="other">Otro</label></p> 
   
 
-                         <p> Elige una foto de perfil:</p>
-                               <input type="file" name="foto"> 
-                         <p>
-                            <label for="email"> Ingrese su mail:</label>
-                            <input type="email" id="email" name="email">
+                            <div class="uk-margin" uk-margin>
+                                <div uk-form-custom="target: true">
+                                    <input type="file">
+                                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
+                                </div>
+                                <button class="uk-button uk-button-default">Submit</button>
+                            </div>
+                            
+                            <input class='uk-input uk-form-width-medium' type="email" id="email" name="email" placeholder="Mail">
                          </p>   
                          <p>
-                            <label for="pass">Elija una contraseña</label>
-                            <input type="password" id="pass" name="password">
+                            
+                            <input class='uk-input uk-form-width-medium' type="password" id="pass" name="password" placeholder="Contraseña">
                          </p>   
 
-                             <input type="reset" value="Reset"> <input type="submit" value="Registrate">
+                             <input type="reset" class='uk-button uk-button-default' value="Reset"> <input type="submit" class='uk-button uk-button-default' value="Registrate">
                      </form>
      
-            
-                </form>
+        
             </div>
         </div>
     </main>

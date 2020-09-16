@@ -1,0 +1,47 @@
+
+
+div.bienvenida h1.bienvenidoA {
+    font-family: 'Reenie Beanie';
+    font-size: 75px;
+    padding-top: 50px;
+    
+}
+
+div.contenedorMayor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+form.registracion {
+    font-family: 'Quicksand';
+    padding-top: 40px;
+    border-color: dimgray;
+    border-width: 10px;
+}
+
+
+p input.fechaNacimiento {
+    margin-left: 20px;
+}
+
+main {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+div.gifS {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+
+}
+
+div.gifBienvenida img{
+    height: 206px;
+    border-radius: 200px;
+}
