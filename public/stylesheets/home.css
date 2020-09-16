@@ -70,3 +70,33 @@ main {
     padding-top: 80px;
 }
 
+div.post-reacciones ul li {
+    padding-top: 15px;
+}
+
+div.post-pie {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+a.usuario{
+    font-family: 'Quicksand';
+    color: rgb(200, 146, 245);
+}
+
+a.usuario:hover {
+    text-decoration: none;
+    color: rgb(200, 146, 245);
+    
+}
+
+
+h4.nombreUsuario a{
+    color: rgb(200, 146, 245);
+}
+
+h4.nombreUsuario a:hover {
+    text-decoration: none;
+    color: rgb(200, 146, 245);
+}

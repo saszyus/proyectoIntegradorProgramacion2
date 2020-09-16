@@ -71,6 +71,8 @@ textarea {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
+    padding-bottom: 102px;
   }
 
   div.contenedor h2 {
