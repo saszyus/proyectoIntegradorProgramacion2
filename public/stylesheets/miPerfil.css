@@ -20,3 +20,7 @@
 img.foto-perfil-principal {
     width: 210px;
 }
+
+div a.link-detalle p{
+    font-family: 'Quicksand';
+}

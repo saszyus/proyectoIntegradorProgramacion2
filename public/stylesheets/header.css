@@ -130,6 +130,9 @@ nav div ul li a:hover {
     color: rgb(200, 146, 245) !important;
 }
 
+ul li form {
+    font-family: 'Quicksand';
+}
 
 
 
