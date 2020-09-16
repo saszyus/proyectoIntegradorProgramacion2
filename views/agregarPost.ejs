@@ -32,18 +32,27 @@
 <body>
     <%- include("headerLogueado") %> 
 
-    <main>
-        <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex">
-              
+    <main class="granContenedor">
+        <div class=" uk-section uk-section-small">
+            <div class=" contenedor uk-container uk-container-large uk-flex">
+               <div>
+                <h2>¿Quéres subir una foto?</h2>
+                </div>
                 <form action="/profile/miPerfil">
-                   <h2>¿Queres subir una foto?</h2>
+                   
                  
-                    <p>Ingresa tu nombre de usuario <input type="text" name="nombreUsuario"> <p>    
-                    <p> Selecciona o arrastra tu foto <input type="file" name="foto"> <p>
+                    <div class="uk-margin">
+                        <input class="uk-input uk-form-width-medium" type="text" placeholder="Usuario">
+                    </div>  
+                        <div class="uk-margin" uk-margin>
+                            <div uk-form-custom="target: true">
+                                <input type="file">
+                                <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
+                            </div>
+                        </div>
                     <p>Añade un comentario
-                        <textarea id="msg" name="user_message"></textarea></p>    
-                    <input type="submit" value="Subi tu foto!">
+                        <textarea class='uk-textarea' id="msg" name="user_message"></textarea></p>    
+                    <input class='uk-button uk-button-default' type="submit" value="Subi tu foto!">
                 </form>
 
             </div>
