@@ -22,7 +22,7 @@ article.detalle-post .imagen-post{
     border-radius: 50%;
 }
 .comentarios-detalle .info-post h3{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bolder;
     margin: 0 0 0 8px;
 }
@@ -37,11 +37,15 @@ article.detalle-post .imagen-post{
 }
 .comentarios-detalle .agregar-comentario{
     height: 15%;
-    padding-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .comentarios-detalle .lista-comentarios{
-    padding-right: 2px;
+    padding-right: 13px;
+    padding-left: 9px;
+    padding-bottom: 30px;
+    padding-top: 5px;
 }
 .comentarios-detalle .lista-comentarios .comentario .icono-meGusta{
     font-weight: bolder;
@@ -62,5 +66,43 @@ article.detalle-post .imagen-post{
     margin-right: 4px !important;
 }
 
+div h6 {
+    padding-left: 10px;
+
+}
+
+div h6 a{
+    font-family: 'Quicksand';
+    color: rgb(200, 146, 245) !important;
+}
+
+div.info-post {
+    color: rgb(200, 146, 245) !important;
+    padding-left: 20px !important;
+}
+
+div.info-post h3 {
+    font-family: 'Quicksand';
+    color: rgb(200, 146, 245);
+    padding-left: 2px;
+}
+
+div.comentario {
+    padding-top: 15px;
+}
+
+section {
+    height: 900px !important;
+}
+
+div.contenedorGeneral {
+    padding-top: 50px;
+    padding-bottom: 90px;
+}
+
+div.agregar-comentario {
+    font-family: 'Quicksand';
+
+}
 
 
