@@ -33,23 +33,30 @@ article.post div.post-reacciones ul.post-icons{
 article.post div.post-reacciones div.post-pie{
     padding-left: 20px;
     border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
 }
 article.post div.post-reacciones div.post-pie h5{
     margin: 0;
 }
 article.post div.post-reacciones div.post-pie p{
     margin: 0;
+    padding-left: 15px;
+    padding-right: 20px;
 }
 article.post div.post-comentarios {
     margin-top: 10px;
     margin-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
 }
 article.post div.post-comentarios h6{
     margin-bottom: 0;
+    font-size: 15px;
 }
 article.post div.post-comentarios ul{
     list-style: none;
-    margin-top: 5px
+    margin-top: 5px;
+    padding-top: 10px;
 }
 article.post div.post-comentarios ul li{
     display: flex;
@@ -127,4 +134,12 @@ ul li a.usuarioComent {
 a.verMas {
     font-family: 'Quicksand'!important;
     color: rgb(200, 146, 245) !important;
+}
+
+div p {
+    padding: 0;
+}
+
+p.manzana {
+    padding: 0px !important;
 }

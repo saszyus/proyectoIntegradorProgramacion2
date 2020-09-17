@@ -88,20 +88,22 @@ nav.navegador {
  */
 
 div.headerPrincipal {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: row; */
     background-color: rgb(200, 146, 245);
     text-decoration: none;
-    padding-top: 10px;
+    padding-top: 30px;
     padding-bottom: 10px;
     align-items: center;
+    height: 89px;
+    
 }
 
 div.headerPrincipal div h2.logo a{
     font-family: 'Ranchers';
     color: white !important;
-    font-size: 50px;
+    font-size: 70px;
 }
 
 div.headerPrincipal div h2.logo a:hover {
@@ -132,6 +134,23 @@ nav div ul li a:hover {
 
 ul li form {
     font-family: 'Quicksand';
+}
+
+div.logO {
+    width: 43%;
+
+}
+
+span.icono {
+    color: white !important;
+}
+
+input.buscador {
+    color: white !important;
+}
+
+div.contenedorBuscador {
+    padding-right: 30px;
 }
 
 
