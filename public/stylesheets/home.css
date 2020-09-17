@@ -119,3 +119,12 @@ article.post {
 div.post-body img {
     width: 800px;
 }
+
+ul li a.usuarioComent {
+    font-family: 'Quicksand';
+}
+
+a.verMas {
+    font-family: 'Quicksand'!important;
+    color: rgb(200, 146, 245) !important;
+}
