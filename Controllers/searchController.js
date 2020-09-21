@@ -17,10 +17,10 @@ let searchController =  {
 
     //detalleBusqueda
 
-    let id = req.params.idBusqueda
-    let listado = paqueteFrutas.resultadoBusqueda(id);
+   // let id = req.params.idBusqueda
+    //let listado = paqueteFrutas.resultadoBusqueda(id);
 
-        res.render("resultadoBusqueda",{listado: listado, id: id});
+        res.render("resultadoBusqueda");
       
     
     },

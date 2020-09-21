@@ -5,7 +5,7 @@ let profileController =  {
 
 
 
-        res.render("perfilManzanita")
+        res.render("miPerfil")
 
   
     
