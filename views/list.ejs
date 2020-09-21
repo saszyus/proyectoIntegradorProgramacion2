@@ -1,7 +1,10 @@
 <html>
 
+    <%- include("head") %> 
 
 <body>
+
+    <%- include("headerDeslogueado") %> 
     <% for (let i = 0; i < listado.length; i++) { %>
         <li>
       
@@ -10,5 +13,7 @@
         </li>
     <% } %>
 
+
+    <%- include("footer") %> 
 </body>
 </html>
