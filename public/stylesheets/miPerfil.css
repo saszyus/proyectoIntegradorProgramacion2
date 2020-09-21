@@ -26,7 +26,7 @@ div a.link-detalle p{
 }
 
  div.contenedorChico{
-    padding-top: 100px !important;
+    padding-top: 50px !important;
     padding-bottom: 150px !important;
 }
 
@@ -37,4 +37,8 @@ div h3 {
 
 div.nombreUsuario a:hover{
     color: rgb(200, 146, 245);
+}
+
+section.info-usuario {
+    padding-bottom: 30px;
 }
