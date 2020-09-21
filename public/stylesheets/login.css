@@ -10,7 +10,7 @@ h1.titulo {
 }
 
 main {
-    padding-top: 80px;
+    padding-top: 30px;
     padding-bottom: 70px;
 }
 
@@ -62,3 +62,9 @@ h1.login {
     font-size: 194px;
 }
 
+input.usuario {
+    margin-top: 14px;
+}
+ input.contrasena {
+     margin-top: -15px;
+ }
