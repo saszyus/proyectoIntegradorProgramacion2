@@ -92,9 +92,6 @@ div.comentario {
     padding-top: 15px;
 }
 
-section {
-    height: 900px !important;
-}
 
 div.contenedorGeneral {
     padding-top: 50px;
@@ -103,7 +100,13 @@ div.contenedorGeneral {
 
 div.agregar-comentario {
     font-family: 'Quicksand';
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
+
+img.fotoManzana {
+    height: 40px;
 }
 
 
