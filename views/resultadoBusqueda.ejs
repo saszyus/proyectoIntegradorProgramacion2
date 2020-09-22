@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("head") %> 
-
+    <head>
+        <%- include("head") %> 
+        <link rel="stylesheet" href="/stylesheets/resultadoBusqueda.css">
+    </head>
+    
 <body>
     <%- include("headerDeslogueado") %> 
     
     <main>
-      
-        <h2>Su busqueda no obtuvo resultados...</h2>
-        <img src="/images/noresults.jpg" alt="">
+      <div class="contenedor ">
+        <h2 class="tituloResultado">Ups, su busqueda no obtuvo resultados...</h2>
+        <div><img class='fotoResultado' src="https://media.giphy.com/media/tK9YVw0UjUwJIL0oSq/giphy.gif" alt=""> </div>
 <br>
-        <h3>Volvemos a home?</h3>
-     <a href="/home/"> <input type="button" name="" value="Click aca!" id=""></a>  
+        <h3 class="volverHome"> Volvemos al home? <a href="/home/"> Click aca! </a> </h3>
      
      <br>
 
+    </div>
     </main>
 <br>
     <%- include("footer") %> 

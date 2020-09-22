@@ -32,7 +32,7 @@ li.ulC {
 }
 
 div.instagram li a:hover {
-    color: rgb(237, 226, 248)
+   color: rgb(248, 159, 214);
 }
 
 .facebook {
@@ -40,14 +40,14 @@ div.instagram li a:hover {
 }
 
 div.facebook li a:hover {
-    color: rgb(237, 226, 248);
+    color: rgb(248, 159, 214);
 }
 
 div.twitter li a:hover {
-    color: rgb(237, 226, 248);
+    color: rgb(248, 159, 214);
 }
 
 ul li a.alumnos:hover {
-    color: rgb(237, 226, 248);
+    color: rgb(248, 159, 214);
     text-decoration: none;
 }

@@ -30,10 +30,15 @@ div a.link-detalle p{
     padding-bottom: 150px !important;
 }
 
-div h3 {
+div h3 a {
     font-family: 'QuickSand';
     color: rgb(200, 146, 245);
 }
+
+div h3 a:hover {
+    text-decoration: none;
+}
+
 
 div.nombreUsuario a:hover{
     color: rgb(200, 146, 245);
