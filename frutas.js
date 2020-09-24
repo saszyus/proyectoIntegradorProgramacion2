@@ -1,6 +1,5 @@
 var frutas = {
 
-
     lista: [
         {
 
@@ -18,8 +17,6 @@ var frutas = {
         id:2,
        
     },
-
-
 
     {
 
@@ -60,12 +57,8 @@ var frutas = {
         id:7,
     },
 
-   
-
     ]
 
-
 }
-
 
 module.exports = frutas;
