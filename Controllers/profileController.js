@@ -19,7 +19,12 @@ let profileController =  {
     },
     
   
+    detalleUsuario: function (req,res) {
+
     
+        res.render("detalleUsuario")
+    
+    },
 
     
     

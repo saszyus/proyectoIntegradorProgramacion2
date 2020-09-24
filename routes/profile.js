@@ -6,4 +6,6 @@ router.get("/manzanita/", profileController.profile);
 
 router.get("/agregarPost", profileController.agregarPost);
 
+router.get("/detalleUsuario", profileController.detalleUsuario);
+
 module.exports = router;
