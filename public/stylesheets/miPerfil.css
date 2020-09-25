@@ -7,6 +7,25 @@
     padding: 0  ;
 }
 
+#follow-button {
+    font-family: 'Quicksand';
+    font-size: 15px;
+    width: 103px;
+    height: 32px;
+    margin-left: 200px;
+  }
+
+  div.nombreUsuario {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 46px;
+}
+
+div.datosUsuario {
+    width: 711px !important;
+}
+
 .muro{
     margin-top: 20px;
     padding-top: 20px;

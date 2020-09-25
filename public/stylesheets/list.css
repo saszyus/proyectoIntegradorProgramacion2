@@ -1,0 +1,47 @@
+
+
+div.tituloFruitbookers h2 {
+    font-family: 'Reenie Beanie' !important;
+    font-weight: bold;
+    font-size: 121px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+div.listado {
+    font-family: 'Quicksand';
+    margin-top: 50px;
+}
+
+ol.list {
+    text-decoration: none !important;
+    margin-bottom: 15px;
+}
+
+img.imagen {
+    border-radius: 500px;
+    height: 220px;
+    width: 229px;
+}
+
+div.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #CCC;
+    border-radius: 35px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+}
+}
