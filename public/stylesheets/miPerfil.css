@@ -8,19 +8,23 @@
 }
 
 #follow-button {
-    color: #3399FF;
-    font-family: "Helvetica";
-    font-size: 10pt;
-    background-color: #ffffff;
-    border: 1px solid;
-    border-color: #3399FF;
-    border-radius: 3px;
-    width: 85px;
-    height: 30px;
-    top: 50px;
-    left: 50px;	
-    cursor: hand;		    
+    font-family: 'Quicksand';
+    font-size: 15px;
+    width: 103px;
+    height: 32px;
+    margin-left: 200px;
   }
+
+  div.nombreUsuario {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 46px;
+}
+
+div.datosUsuario {
+    width: 711px !important;
+}
 
 .muro{
     margin-top: 20px;
