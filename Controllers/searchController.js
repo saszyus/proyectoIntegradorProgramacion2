@@ -18,13 +18,6 @@ let searchController =  {
     },
     
     
-  
-    
-
-    
-    
-    
-    
     }
     
     module.exports = searchController;
