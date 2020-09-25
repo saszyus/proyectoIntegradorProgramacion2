@@ -1,7 +1,7 @@
 let paqueteFrutas = require("../frutas")
 let profileController =  {
 
-    profile: function (req,res) {
+    profile: function (req,res) {n
 
 
 
@@ -21,7 +21,8 @@ let profileController =  {
   
     detalleUsuario: function (req,res) {
 
-    
+        let idUsuario = req.params.id;
+        
         res.render("detalleUsuario")
     
     },

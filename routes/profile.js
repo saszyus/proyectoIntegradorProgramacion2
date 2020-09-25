@@ -6,6 +6,6 @@ router.get("/miPerfil/", profileController.profile);
 
 router.get("/agregarPost", profileController.agregarPost);
 
-router.get("/detallePera", profileController.detalleUsuario);
+router.get ("/detalleUsuario/:id", profileController.detalleUsuario);
 
 module.exports = router;
