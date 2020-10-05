@@ -9,14 +9,11 @@ module.exports = (sequelize, DataTypes) => {
         },
         idposts: {
             type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-
+            
         },
         idusuarios: {
             type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primayKey: true
+            
 
         },
         texto_comentario: {
