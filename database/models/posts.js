@@ -1,36 +1,36 @@
 module.exports = (sequelize, DataTypes) => {
 
     let cols = {
-        id: {
+        idposts: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
 
         },
-        first_name: {
-            type: DataTypes.STRING
-
-        },
-        last_name: {
-            type: DataTypes.STRING
-
-        },
-        rating: {
-            type: DataTypes.DOUBLE
-
-        },
-        favorite_movie_id: {
+        idusuario: {
             type: DataTypes.INTEGER
+
+        },
+        texto_post: {
+            type: DataTypes.STRING
+
+        },
+        texto_creacion: {
+            type: DataTypes.STRING
+
+        },
+        url_imagen: {
+            type: DataTypes.STRING
         }
     }
 
 
     let config = {
-        tableName: "actors",
+        tableName: "posts",
         timestamps: false
     }
 
-    let Actor = sequelize.define("Actor", cols, config);
+    let Posts = sequelize.define("posts", cols, config);
 
-    return Actor;
+    return Posts;
 }
