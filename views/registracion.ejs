@@ -26,10 +26,11 @@
                         <div>
                         
                         <p><input class='uk-input uk-form-width-medium' type="text" name="nombre" placeholder='Nombre'> <p>   
-                        <p><input class='uk-input uk-form-width-medium' type="text" name="apellido" placeholder='Apellido'> <p> 
+                        <p><input class='uk-input uk-form-width-medium' type="text" name="apellido" placeholder='Apellido'> <p>
+                        <p><input class='uk-input uk-form-width-medium' type="text" name="nombreUsuario" placeholder='Nombre de usuario:'> <p>  
                             <p>Fecha de nacimiento  <input type="date" class='fechaNacimiento'id="bdaymonth" name="bdaymonth"> </p>
-                          <p>Selecciona tu sexo:</p>
-                          <p><input type="radio" id="male" name="gender" value="male">
+                        <p>Selecciona tu sexo:</p>
+                        <p><input type="radio" id="male" name="gender" value="male">
                             <label for="male">Masculino</label></p> 
                         <p>  <input type="radio" id="female" name="gender" value="female">
                             <label for="female">Femenino</label></p> 
@@ -42,6 +43,18 @@
                             
                             <input class='uk-input uk-form-width-medium' type="password" id="pass" name="password" placeholder="Contraseña">
                          </p>   
+                         <p>Elige una pregunta de seguridad:</p>
+                         <select name="PreguntaSeguridad">
+                            <option value="1">A que escuela primaria fuiste de chico?</option> 
+                            <option value="2">Cual es el nombre de tu mascota?</option> 
+                            <option value="3">Cual es tu serie favorita?</option>
+                         </select> 
+                         <p>Tu respuesta:</p>
+                         <p><input class='uk-input uk-form-width-medium' type="text" name="respuesta" placeholder='Respuesta:'> <p></p>
+
+                         <br>
+                         <br>
+
 
                              <input type="reset" class='uk-button uk-button-default' value="Reset"> <input type="submit" class='uk-button uk-button-default' value="Registrate">
 
