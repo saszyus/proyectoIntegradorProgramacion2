@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     }
 
-    let Usuarios = sequelize.define("usuarios", cols, config);
+    let Usuarios = sequelize.define("Usuarios", cols, config);
 
     return Usuarios;
 }

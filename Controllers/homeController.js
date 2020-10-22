@@ -25,14 +25,13 @@ let homeController =  {
     
     },
   
-    list: function(req, res) {
+    all: function(req, res) { 
     
          db.Usuarios.findAll()
          .then(function(lista){
-
             console.log(lista);
             res.send(lista)
-         })
+         });
 
       
     },
