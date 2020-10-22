@@ -1,4 +1,5 @@
-let paqueteFrutas = require("../frutas")
+let db = require("../database/models/index")
+
 let searchController =  {
 
     resultadoBusqueda: function (req,res) {

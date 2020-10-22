@@ -1,4 +1,5 @@
-let paqueteFrutas = require("../frutas")
+let db = require("../database/models/index")
+
 let homeController =  {
 
     home: function (req,res) {
@@ -25,9 +26,15 @@ let homeController =  {
     },
   
     list: function(req, res) {
-        let listado = paqueteFrutas.lista;
-     
-        res.render("list", {listado: listado});
+    
+         db.Usuarios.findAll()
+         .then(function(lista){
+
+            console.log(lista);
+            res.send(lista)
+         })
+
+      
     },
 
     

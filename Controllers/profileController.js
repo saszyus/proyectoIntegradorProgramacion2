@@ -1,4 +1,5 @@
-let paqueteFrutas = require("../frutas")
+let db = require("../database/models/index")
+
 let profileController =  {
 
     profile: function (req,res) {
@@ -26,9 +27,7 @@ let profileController =  {
     
     },
 
-    
-    
-    
+
     
     }
     
