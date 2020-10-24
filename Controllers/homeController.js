@@ -27,7 +27,7 @@ let homeController =  {
   
     all: function(req, res) { 
     
-         db.Usuarios.findAll()
+         db.Usuario.findAll()
          .then(function(lista){
             console.log(lista);
             res.send(lista)

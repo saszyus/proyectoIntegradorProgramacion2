@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
 
     let cols = {
-        idposts: {
+        idusuarios: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     }
 
-    let Usuarios = sequelize.define("Usuarios", cols, config);
+    let Usuarios = sequelize.define("Usuario", cols, config);
 
     return Usuarios;
 }
