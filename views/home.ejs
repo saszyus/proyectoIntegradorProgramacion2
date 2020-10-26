@@ -63,8 +63,8 @@
                             <div>
                                 <img src="" alt="" >
                             </div>
-                            
-                            <h4 class="nombreUsuario"> <a href="/profile/miPerfil"><%= posts[i].idusuario %> </a></h4>
+                            <h4>Post nro: <%= posts[i].idposts %> </h4>
+                            <h4 class="nombreUsuario"> <a href="/profile/miPerfil">idUsuario: <%= posts[i].idusuario %> </a></h4>
                             
                         </div>
                         <div class="post-body uk-flex uk-flex-center">
@@ -80,7 +80,7 @@
                             <div class="post-pie uk-flex">
                                <p class="manzana"><a class='usuario' href="/profile/miPerfil" > </a></p> <br>
                                
-                                <p class="uk-width-15-6 ">   </p>
+                                <p class="uk-width-15-6 "> <%=posts[i].texto_post %>   </p>
                             </div>
                         </div>
                         <div class="post-comentarios">
