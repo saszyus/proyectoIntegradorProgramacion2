@@ -12,7 +12,11 @@ let searchController =  {
 
     detallePost: function (req,res) {
 
-        res.render("detallePost")
+        db.Posts.findAll()
+        .then(function(posts){
+           res.render("detallePost",{posts:posts})
+        })
+    
     
     },
     
