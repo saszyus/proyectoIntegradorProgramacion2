@@ -24,7 +24,10 @@ let profileController =  {
     detalleUsuario: function (req,res) {
 
         
-        res.render("detalleUsuario")
+        db.Usuario.findAll()
+        .then(function(user){
+           res.render("detalleUsuario",{user:user})
+        })
     
     },
 
