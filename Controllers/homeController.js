@@ -4,9 +4,14 @@ let op = db.Sequelize.Op;
 let homeController =  {
 
     home: function (req,res) {
+ 
+        db.Posts.findAll({
+            order: [["texto_creacion","DESC"]],
+        })
+        .then(function(posts){
+           res.render("home",{posts:posts})
+        })
 
-    
-        res.render("home")
     
     },
     
@@ -26,18 +31,6 @@ let homeController =  {
     
     },
   
-    all: function(req, res) { 
-    
-         db.Usuario.findAll()
-         .then(function(lista){
-            res.render("all",{lista:lista})
-         });
-
-      
-    },
-
-    
-    
     
     
     }

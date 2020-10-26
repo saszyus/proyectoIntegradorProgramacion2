@@ -20,7 +20,8 @@
                             <div>
                                 <img src="https://media.giphy.com/media/ysSCIY215u80w/giphy.gif" alt="" >
                             </div>
-                            <h4 class="nombreUsuario"> <a href="/profile/miPerfil">@Manzana_Roja </a></h4>
+                            
+                            <h4 class="nombreUsuario"> <a href="/profile/miPerfil"></a></h4>
                             
                         </div>
                         <div class="post-body uk-flex uk-flex-center">
@@ -34,7 +35,7 @@
                                 </li>
                             </ul>
                             <div class="post-pie uk-flex">
-                               <p class="manzana"><a class='usuario' href="/profile/miPerfil" >@Manzana_Roja          </a></p> <br>
+                               <p class="manzana"><a class='usuario' href="/profile/miPerfil" > </a></p> <br>
                                
                                 <p class="uk-width-15-6 "> Hoy jugamos con mi amiga #Martu en su casa y la pasamos muy bien! </p>
                             </div>
@@ -43,27 +44,31 @@
                             <h6>Comentarios</h6>
                             <ul>
                                 <li>
-                                    <a class='usuarioComent'href="">@Naranja_Exprimida98</a>
+                                    <a class='usuarioComent'href="/profile/miPerfil"></a>
                                     <p>Lindass!</p>
                                 </li>
                                 <li>
-                                    <a class='usuarioComent' href="">@SandiacOOL</a>
+                                    <a class='usuarioComent' href="/profile/miPerfil"></a>
                                     <p>Gracias por invitar....</p>
                                 </li>
                                 <a class='verMas' href="/search/detallePost/1">Ver más...</a>
                             </ul>
                         </div>
                     </article>
+
+                    <% for( let i = 0; i < posts.length; i++ ) { %>
+
                     <article class="post uk-card-default uk-flex uk-flex-column">
                         <div class="info-usuario uk-flex ">
                             <div>
-                                <img src="https://media.giphy.com/media/VIoej4ofZ6IH9FQwAu/giphy.gif" alt="">
+                                <img src="" alt="" >
                             </div>
-                            <h4 class="nombreUsuario"> <a href="/profile/detalleUsuario/1">@laPeraQueTeEspera;)</a></h4>
+                            <h4>Post nro: <%= posts[i].idposts %> </h4>
+                            <h4 class="nombreUsuario"> <a href="/profile/miPerfil">idUsuario: <%= posts[i].idusuario %> </a></h4>
                             
                         </div>
                         <div class="post-body uk-flex uk-flex-center">
-                            <img src="https://media.giphy.com/media/l3q2Fa0XM2SEciHaU/giphy.gif" alt="">
+                            <img src="<%= posts[i].url_imagen %>" alt="">
                         </div>
                         <div class="post-reacciones">
                             <ul class="post-icons uk-flex uk-flex-between">
@@ -73,140 +78,25 @@
                                 </li>
                             </ul>
                             <div class="post-pie uk-flex">
-                                <a class="usuario" href="/profile/detalleUsuario/1" >@laPeraQueTeEspera;)</a><br>
-                                <p class="uk-width-5-6">Ayer me mordieron, ya nada sera lo mismo</p>
+                               <p class="manzana"><a class='usuario' href="/profile/miPerfil" > </a></p> <br>
+                               
+                                <p class="uk-width-15-6 "> <%=posts[i].texto_post %>   </p>
                             </div>
                         </div>
                         <div class="post-comentarios">
                             <h6>Comentarios</h6>
                             <ul>
                                 <li>
-                                    <a class='usuarioComent' href="">@uvaDeVino</a>
-                                    <p>JAJAJAJAJAJAJ LOOOOOOOL </p>
+                                    <a class='usuarioComent'href="/profile/miPerfil"></a>
+                                    <p>  </p>
                                 </li>
-                                <li>
-                                    <a class='usuarioComent' href="">@Naranja_Exprimida98</a>
-                                    <p>a todos les llega perita, tranquila</p>
-                                </li>
-                                <a class='verMas' href="/search/detallePost/2">Ver más...</a>
+   
+                                <a class='verMas' href="/search/detallePost/1">Ver más...</a>
                             </ul>
                         </div>
                     </article>
-                    <article class="post uk-card-default uk-flex uk-flex-column">
-                        <div class="info-usuario uk-flex ">
-                            <div>
-                                <img src="https://media.giphy.com/media/2A2fTrtEFRB86cND55/giphy.gif" alt="">
-                            </div>
-                            <h4 class="nombreUsuario"> <a href="">@bananita_Aa </a></h4>
-                            
-                        </div>
-                        <div class="post-body uk-flex uk-flex-center">
-                            <img src="https://media.giphy.com/media/7SWMPHg462IbxdFzrd/giphy.gif" alt="">
-                        </div>
-                        <div class="post-reacciones">
-                            <ul class="post-icons uk-flex uk-flex-between">
-                                <li><span class="" uk-icon="icon:heart; ratio: 1.3"></span>
-                                </li>
-                                <li><span class="" uk-icon="icon:comments; ratio: 1.3"></span>
-                                </li>
-                            </ul>
-                            <div class="post-pie uk-flex">
-                                <a class=" usuario"> @bananita_Aa    </a><br>
-                                <p class="uk-width-5-6">  Las bananas merecen ser tratadas con decencia y amor por esto, para este 30/9 los invito a la marcha #NiUnaBananaMenos  </p>
-                            </div>
-                        </div>
-                        <div class="post-comentarios">
-                            <h6>Comentarios</h6>
-                            <ul>
-                                <li>
-                                    <a class='usuarioComent' href="">@frufru</a>
-                                    <p>Alli estaremos con las frutillas!</p>
-                                </li>
-                                <li>
-                                    <a class='usuarioComent' href="">@uvaDeVino</a>
-                                    <p>el pueblo unido jamas sera vencido</p>
-                                </li>
-                                <a class='verMas' href="/search/detallePost/3">Ver más...</a>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="post uk-card-default uk-flex uk-flex-column">
-                        <div class="info-usuario uk-flex ">
-                            <div>
-                                <img src="https://media.giphy.com/media/k5dX3BHkIQAqWRnT1H/giphy.gif" alt="">
-                            </div>
-                            <h4 class="nombreUsuario"> <a href="">@frufru </a></h4>
-                            
-                        </div>
-                        <div class="post-body uk-flex uk-flex-center">
-                            <img src="https://media.giphy.com/media/XV0oUIBrHfwic/giphy.gif" alt="">
-                        </div>
-                        <div class="post-reacciones">
-                            <ul class="post-icons uk-flex uk-flex-between">
-                                <li><span class="" uk-icon="icon:heart; ratio: 1.3"></span>
-                                </li>
-                                <li><span class="" uk-icon="icon:comments; ratio: 1.3"></span>
-                                </li>
-                            </ul>
-                            <div class="post-pie uk-flex">
-                                <a class="usuario">   @frufru </a><br>
-                                <p class="uk-width-5-6"> Its another day ;)   </p>
-                            </div>
-                        </div>
-                        <div class="post-comentarios">
-                            <h6>Comentarios</h6>
-                            <ul>
-                                <li>
-                                    <a class='usuarioComent' href="">@bananita_Aa</a>
-                                    <p>xD xD xD</p>
-                                </li>
-                                <li>
-                                    <a class='usuarioComent' href="/profile/miPerfil">
-                                        @Manzana_Roja</a>
-                                    <p>muy buena!</p>
-                                </li>
-                                <a class='verMas' href="/search/detallePost/4">Ver más...</a>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="post uk-card-default uk-flex uk-flex-column">
-                        <div class="info-usuario uk-flex ">
-                            <div>
-                                <img src="https://media.giphy.com/media/xT1XGTaTeovBeLdrRS/giphy.gif" alt="">
-                            </div>
-                            <h4 class="nombreUsuario"> <a href=""> @SandiacOOL </a></h4>
-                            
-                        </div>
-                        <div class="post-body uk-flex uk-flex-center">
-                            <img src="https://media.giphy.com/media/wGJGVTbZSvAL6/giphy.gif" alt="">
-                        </div>
-                        <div class="post-reacciones">
-                            <ul class="post-icons uk-flex uk-flex-between">
-                                <li><span class="" uk-icon="icon:heart; ratio: 1.3"></span>
-                                </li>
-                                <li><span class="" uk-icon="icon:comments; ratio: 1.3"></span>
-                                </li>
-                            </ul>
-                            <div class="post-pie uk-flex">
-                                <a class="usuario "> @SandiaCoOL   </a><br>
-                                <p class="uk-width-5-6">NOS ESTAN DEVORANDO! JUSTICIA! TORTUGAS A LA CARCEL! </p>
-                            </div>
-                        </div>
-                        <div class="post-comentarios">
-                            <h6>Comentarios</h6>
-                            <ul>
-                                <li>
-                                    <a class='usuarioComent' href="">@frufru</a>
-                                    <p>JUSTICIA</p>
-                                </li>
-                                <li>
-                                    <a class='usuarioComent' href="/profile/miPerfil">@Manzana_Roja</a>
-                                    <p>no esta bueno estigmatizar a las tortugas!</p>
-                                </li>
-                                <a class='verMas' href="/search/detallePost/5">Ver más...</a>
-                            </ul>
-                        </div>
-                    </article>
+
+                    <% } %>                    
         
                 </section>
 
