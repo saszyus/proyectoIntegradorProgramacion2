@@ -1,4 +1,5 @@
 let db = require("../database/models/index")
+let op = db.Sequelize.Op;
 
 let searchController =  {
 

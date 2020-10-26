@@ -1,4 +1,5 @@
 let db = require("../database/models/index")
+let op = db.Sequelize.Op;
 
 let homeController =  {
 
@@ -29,8 +30,7 @@ let homeController =  {
     
          db.Usuario.findAll()
          .then(function(lista){
-            console.log(lista);
-            res.send(lista)
+            res.render("all",{lista:lista})
          });
 
       

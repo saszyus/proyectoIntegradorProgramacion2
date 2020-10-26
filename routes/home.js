@@ -8,6 +8,6 @@ router.get("/registracion", homeController.registracion);
 
 router.get("/login", homeController.login);
 
-router.get("/users", homeController.all);
+router.get("/all", homeController.all);
 
 module.exports = router;
