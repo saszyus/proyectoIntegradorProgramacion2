@@ -4,9 +4,13 @@ let op = db.Sequelize.Op;
 let homeController =  {
 
     home: function (req,res) {
+ 
+        db.Usuario.findAll()
+        .then(function(lista){
+           res.render("home",{lista:lista})
+        })
 
-    
-        res.render("home")
+        
     
     },
     
@@ -35,9 +39,6 @@ let homeController =  {
 
       
     },
-
-    
-    
     
     
     }
