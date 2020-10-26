@@ -9,7 +9,10 @@
 <ul>
 <% for( let i = 0; i < lista.length; i++ ) { %>
     <li>
-    <%= lista[i].nombre_usuario %> 
+
+        <a href="/profile/detalleUsuario/<%= lista[i].idusuarios %> ">
+    <%= lista[i].nombre_usuario %>
+        </a> 
 </li>
 <% } %>
 
