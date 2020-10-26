@@ -14,7 +14,7 @@ main {
     padding-bottom: 70px;
 }
 
-form.iniciarSesion {
+div.iniciarSesion {
     padding: 38px;
     font-family: 'Quicksand';
     display: flex;

@@ -21,6 +21,10 @@ module.exports = (sequelize, DataTypes) => {
 
         },
 
+        contraseña: {
+            type: DataTypes.STRING
+        }, 
+
     }
 
     let config = {

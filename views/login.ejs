@@ -19,33 +19,33 @@
              <div class="contenedor  uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
 
 
-                <form action="/profile/miPerfil" class="iniciarSesion">
+                <div class="iniciarSesion">
                     <div class="gifLogin"> <img src="https://media.giphy.com/media/3ohc0UUiHhVz7iWyEo/source.gif" alt=""></div>
 
 
 
-                    <form class="login">
+                    <form class="login" action="/home/login" method="POST">
                         <div class="uk-margin">
                             <div class="uk-inline">
                                 <span class="uk-form-icon" uk-icon="icon: user"></span>
-                                <input class="uk-input usuario " type="text" placeholder="Usuario">
+                                <input class="uk-input usuario " type="text" placeholder="Usuario" name="usuario">
                             </div>
                         </div>
                         <div class="uk-margin">
                             <div class="uk-inline">
                                 <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-                                <input class="uk-input contrasena" type="text" placeholder="Contraseña">
+                                <input class="uk-input contrasena" type="text" placeholder="Contraseña" name="contraseña">
                             </div>
                         </div>
 
                         <input type="submit" class="uk-button uk-button-default botonIngresa" value="Ingresa">
-                        <p class="registrateAca">  Primera vez? <a class="registrateAqui" href="/home/registracion">Registrate aqui! </a> </p>
+                        <p class="registrateAca">  Primera vez? <a class="registrateAqui" href="/home/registracion"> Registrate aqui! </a> </p>
 
                       </form>
                 
                 
                
-                    </form>
+                    </div>
                     <br>
                     
 

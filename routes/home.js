@@ -8,5 +8,8 @@ router.get("/registracion", homeController.registracion);
 
 router.get("/login", homeController.login);
 
+router.post("/login", homeController.procesarLogin);
+
+
 
 module.exports = router;
