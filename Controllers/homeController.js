@@ -5,12 +5,11 @@ let homeController =  {
 
     home: function (req,res) {
  
-        db.Usuario.findAll()
-        .then(function(lista){
-           res.render("home",{lista:lista})
+        db.Posts.findAll()
+        .then(function(posts){
+           res.render("home",{posts:posts})
         })
 
-        
     
     },
     
@@ -30,15 +29,6 @@ let homeController =  {
     
     },
   
-    all: function(req, res) { 
-    
-         db.Usuario.findAll()
-         .then(function(lista){
-            res.render("all",{lista:lista})
-         });
-
-      
-    },
     
     
     }
