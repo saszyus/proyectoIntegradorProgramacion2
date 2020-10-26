@@ -21,7 +21,7 @@
                     </div>
                     <div class="uk-width-2-3 uk-flex uk-flex-column uk-flex-around">
                         <div class="nombreUsuario uk-flex uk-flex-middle">
-                            <h3 class="uk-margin-remove"> <a href="/profile/detalleUsuario/1" ><%= user[i].nombre_usuario %>  </a> </h3>
+                            <h3 class="uk-margin-remove"> <a href="/profile/detalleUsuario/<%=user[i].id  %>" ><%= user[i].nombre_usuario %>  </a> </h3>
 
                             <button id="follow-button">+ Follow</button>
                  
@@ -29,9 +29,10 @@
                         </div>
                         <div class="datosUsuario">
                             <ul class="red-usuario uk-flex uk-flex-between uk-width-1-2">
-                                <li>6 posts</li>
-                                <li>34523 seguidores</li>
-                                <li>305 seguidos</li>
+                                <li>Edad: <%= user[i].edad %> </li>
+                                <li>nro post</li>
+                                <li>nro seguidores</li>
+                                <li>nro seguidos</li>
                             </ul>
                         </div>
                     </div>
@@ -43,45 +44,11 @@
                         <div
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
                             <a href="/search/detallePost/1" class="link-detalle">
-                                <img src="https://media.giphy.com/media/l3q2Fa0XM2SEciHaU/giphy.gif" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">4 de agosto de 2020</p>
+                                <img src="urlimagen" alt="foto de perfil" class="foto-perfil">
+                                <p class="uk-text-center">fecha post</p>
                             </a>
                         </div>
-                        <div
-                            class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
-                                <img src="https://media.giphy.com/media/zlqDsYtuoyR9e/giphy.gif" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">1 de agosto de 2020</p>
-                            </a>
-                        </div>
-                        <div
-                            class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
-                                <img src="https://media.giphy.com/media/26uf5JF5UN7Rps4aQ/giphy.gif"  alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">15 de julio de 2020</p>
-                            </a>
-                        </div>
-                        <div
-                            class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
-                                <img src="https://media.giphy.com/media/3o6YgmyOB5R3qW7QjK/giphy.gif" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">6 de junio de 2020</p>
-                            </a>
-                        </div>
-                        <div
-                            class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
-                                <img src="https://media.giphy.com/media/VPR82KdNGA2ys/giphy.gif" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">7 de marzo de 2020</p>
-                            </a>
-                        </div>
-                        <div
-                            class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="" class="link-detalle">
-                                <img src="https://media.giphy.com/media/7YCkJI21J3ugBePTbo/giphy.gif" alt="foto de perfil" class="foto-perfil">
-                                <p class="uk-text-center">14 de enero de 2020</p>
-                            </a>
-                        </div>
+
 
 
 
