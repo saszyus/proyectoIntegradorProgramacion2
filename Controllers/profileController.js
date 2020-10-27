@@ -15,11 +15,29 @@ let profileController =  {
     
     agregarPost: function (req,res) {
 
-    
+       
         res.render("agregarPost")
     
     },
     
+    post: function (req,res) {
+
+        let posteo = {
+            id: req.body.id,
+            idusuario:req.body.idusuario,
+            texto_post:req.body.comentario,
+            texto_creacion:req.body.fecha,
+            url_imagen: req.body.url,
+
+       }
+
+       db.Posts.create(posteo)
+       .then(function() {
+               
+       res.redirect("/home/");
+       })
+    
+    },
   
     detalleUsuario: function (req,res) {
 
