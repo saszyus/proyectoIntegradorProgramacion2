@@ -22,8 +22,9 @@ let profileController =  {
     
     post: function (req,res) {
 
+
         let posteo = {
-            id: req.body.id,
+           
             idusuario:req.body.idusuario,
             texto_post:req.body.comentario,
             texto_creacion:req.body.fecha,
