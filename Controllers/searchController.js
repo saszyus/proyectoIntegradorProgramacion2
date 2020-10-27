@@ -5,8 +5,19 @@ let searchController =  {
 
     resultadoBusqueda: function (req,res) {
 
-        res.render("resultadoBusqueda");
-      
+        let resultadoBusqueda = req.query.busqueda
+        
+        db.Usuario.findAll({
+            order: [["nombre_usuario"]
+        
+        ],
+            where:[ {nombre_usuario: {[op.like]:"%" + resultadoBusqueda + "%" } }
+                
+            ],
+        })
+        .then(function(busquedas){
+           res.render("resultadoBusqueda",{busquedas:busquedas})
+        })
     
     },
 

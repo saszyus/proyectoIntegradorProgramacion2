@@ -11,8 +11,18 @@
     
     <main>
       <div class="contenedor ">
-        <h2 class="tituloResultado">Ups, su busqueda no obtuvo resultados...</h2>
-        <div><img class='fotoResultado' src="https://media.giphy.com/media/tK9YVw0UjUwJIL0oSq/giphy.gif" alt=""> </div>
+
+       <h3>Resultados:</h3>
+
+       <% for( let i = 0; i < busquedas.length; i++ ) { %>
+       
+         <li>
+          <a href="">   <%= busquedas[i].nombre_usuario  %> </a>
+
+         </li>
+
+       <% } %>
+              
 <br>
         <h3 class="volverHome"> Volvemos al home? <a href="/home/"> Click aca! </a> </h3>
      

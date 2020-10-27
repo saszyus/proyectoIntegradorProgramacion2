@@ -15,26 +15,25 @@
                <div>
                 <h2 class="tituloPost">Posteá tu foto!</h2>
                 </div>
-                <form class='subiFoto' action="/profile/miPerfil">
+        <form class='subiFoto' action="/profile/miPerfil" method="POST">
 
-                    <div class="gifsubiFoto"> <img src="https://media.giphy.com/media/3oz8xDzuVDbKoU4shi/giphy.gif" alt=""></div>
-                   
-                 <div>
-<p>Selecciona una foto o copia su URL</p> 
-                        <div class="uk-margin" uk-margin>
-                            <input class="uk-input uk-form-width-medium" type="text" placeholder="url" >
-                            <div uk-form-custom="target: true">
-                                <input type="file">
-                                <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
-                              
-                            </div>
+          <div class="gifsubiFoto"> <img src="https://media.giphy.com/media/3oz8xDzuVDbKoU4shi/giphy.gif" alt=""></div>
+ 
+            <div>
+                        <p>Copia su URL</p> 
+                <div class="uk-margin" uk-margin>
+                        <input class="uk-input uk-form-width-medium" type="text" placeholder="URL" name="url" >
+                        
+                        <div uk-form-custom="target: true">
+    
                         </div>
-                    <p>Añade un comentario
-                        <textarea class='uk-textarea' id="msg" name="user_message"></textarea></p>    
-                    <input class='uk-button boton uk-button-default' type="submit" value="Subi tu foto!">
-
                 </div>
-                </form>
+                        <p>Añade un comentario o pie de foto
+                        <textarea class='uk-textarea' id="msg" name="comentario"></textarea></p>    
+                        <input class='uk-button boton uk-button-default' type="submit" value="Subi tu foto!">
+
+            </div>
+        </form>
 
             </div>
         </div>
