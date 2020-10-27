@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
 
         },
         texto_creacion: {
-            type: DataTypes.STRING
+            type: DataTypes.DATE
 
         },
         url_imagen: {
