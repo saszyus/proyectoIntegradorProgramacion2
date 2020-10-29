@@ -26,7 +26,8 @@ let homeController =  {
 
     procesarRegistracion: function(req, res) {
         let nombre_usuario = req.body.usuario;
-        let contraseña = req.body.contraseña;
+        //let contraseña = req.body.contraseña;
+        let contraseña = bcrypt.hashSync(req.body.contraseña, 10);
         let email = req.body.email;
         let fecha_nacimiento = req.body.fecha_nacimiento;
         let pregunta = req.body.pregunta;
