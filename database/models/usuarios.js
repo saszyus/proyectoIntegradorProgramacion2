@@ -16,14 +16,17 @@ module.exports = (sequelize, DataTypes) => {
 
         },
 
-        edad: {
-            type: DataTypes.INTEGER
-
-        },
-
         contraseña: {
             type: DataTypes.STRING
         }, 
+
+        pregunta: {
+            type: DataTypes.STRING
+        },
+
+        respuesta: {
+            type: DataTypes.STRING
+        }
 
     }
 

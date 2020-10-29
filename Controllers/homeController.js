@@ -16,14 +16,36 @@ let homeController =  {
     },
     
     
-    registracion: function (req,res) {
+    registracion: function(req,res) {
 
     
         res.render("registracion")
     
     },
 
-    procesarRegistracion: function (req, res) {
+    procesarRegistracion: function(req, res) {
+        let nombre_usuario = req.body.usuario;
+        let contraseña = req.body.contraseña;
+        let email = req.body.email;
+        let pregunta = req.body.pregunta;
+        let respuesta = req.body.respuesta;
+
+        let usuario = {
+            nombre_usuario: nombre_usuario,
+            contraseña: contraseña,
+            email: email,
+            pregunta: pregunta,
+            respuesta: respuesta,
+        }
+
+        db.Usuario.create(usuario)
+        .then(function() {
+            res.redirect("/home")
+        })
+
+
+
+
 
 
     },

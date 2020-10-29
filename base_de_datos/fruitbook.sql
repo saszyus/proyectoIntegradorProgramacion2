@@ -35,7 +35,7 @@ CREATE TABLE `comentarios` (
   KEY `idusuarios_idx` (`idusuarios`),
   CONSTRAINT `idposts` FOREIGN KEY (`idposts`) REFERENCES `posts` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `idusuarios` FOREIGN KEY (`idusuarios`) REFERENCES `usuarios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=201 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `posts` (
   PRIMARY KEY (`id`),
   KEY `idusuario_idx` (`idusuario`),
   CONSTRAINT `idusuario` FOREIGN KEY (`idusuario`) REFERENCES `usuarios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,8 +88,9 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre_usuario` varchar(45) NOT NULL,
   `fecha_nacimiento` date NOT NULL,
-  `edad` int(11) NOT NULL,
   `contraseña` varchar(10) NOT NULL,
+  `pregunta` varchar(100) DEFAULT NULL,
+  `respuesta` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -100,7 +101,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Manzana_Roja','1996-04-11',24,'manzana1'),(2,'laPeraQueTeEspera;)','1999-06-03',21,'pera2'),(3,'bananita_Aa ','1999-12-20',20,'123'),(4,'frufru ','1997-05-20',23,'12345'),(5,'SandiacOOL','1999-03-06',21,'3333');
+INSERT INTO `usuarios` VALUES (1,'Manzana_Roja','1996-04-11','manzana1','',''),(2,'laPeraQueTeEspera;)','1999-06-03','pera2','',''),(3,'bananita_Aa ','1999-12-20','123','',''),(4,'frufru ','1997-05-20','12345','',''),(5,'SandiacOOL','1999-03-06','3333','','');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -113,4 +114,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-26 14:31:35
+-- Dump completed on 2020-10-29  0:04:55
