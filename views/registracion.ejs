@@ -19,17 +19,23 @@
                 </div>
             
                     
-                    <form class='registracion' action="/profile/miPerfil">
+                    <form class='registracion' action="/home/registracion" method="POST">
 
                         <div class="gifBienvenida"> <img src="https://media.giphy.com/media/26BRKRABuRCtFVre8/source.gif" alt=""></div>
 
                         <div>
                         
-                        <p><input class='uk-input uk-form-width-medium' type="text" name="nombre" placeholder='Nombre'> <p>   
-                        <p><input class='uk-input uk-form-width-medium' type="text" name="apellido" placeholder='Apellido'> <p>
-                        <p><input class='uk-input uk-form-width-medium' type="text" name="nombreUsuario" placeholder='Nombre de usuario:'> <p>  
+                        <p><input class='uk-input uk-form-width-medium' type="text" name="nombre" placeholder='Nombre'> </p>   
+                        <p><input class='uk-input uk-form-width-medium' type="text" name="apellido" placeholder='Apellido'> </p>
+                        <p><input class='uk-input uk-form-width-medium' type="text" name="usuario" placeholder='Nombre de usuario'> </p>  
+                           <p> <input class='uk-input uk-form-width-medium' type="email" id="email" name="email" placeholder="Mail"></p>   
+                        <p>
+                           
+                           <input class='uk-input uk-form-width-medium' type="password" id="pass" name="contraseña" placeholder="Contraseña">
+                        </p>   
+                        
                             <p>Fecha de nacimiento  <input type="date" class='fechaNacimiento'id="bdaymonth" name="bdaymonth"> </p>
-                        <p>Selecciona tu sexo:</p>
+                        <p>Selecciona tu sexo</p>
                         <p><input type="radio" id="male" name="gender" value="male">
                             <label for="male">Masculino</label></p> 
                         <p>  <input type="radio" id="female" name="gender" value="female">
@@ -37,12 +43,7 @@
                         <p>   <input type="radio" id="other" name="gender" value="other">
                             <label for="other">Otro</label></p> 
                             
-                            <input class='uk-input uk-form-width-medium' type="email" id="email" name="email" placeholder="Mail">
-                         </p>   
-                         <p>
                             
-                            <input class='uk-input uk-form-width-medium' type="password" id="pass" name="password" placeholder="Contraseña">
-                         </p>   
                          <p>Elige una pregunta de seguridad:</p>
                          <select name="PreguntaSeguridad">
                             <option value="1">A que escuela primaria fuiste de chico?</option> 

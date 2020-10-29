@@ -23,6 +23,11 @@ let homeController =  {
     
     },
 
+    procesarRegistracion: function (req, res) {
+
+
+    },
+
 
     login: function (req,res) {
         if (req.session.usuarioLogueado != undefined) {
