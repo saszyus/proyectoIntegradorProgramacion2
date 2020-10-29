@@ -87,12 +87,13 @@ DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre_usuario` varchar(45) NOT NULL,
-  `fecha_nacimiento` date NOT NULL,
+  `email` varchar(100) NOT NULL,
   `contraseña` varchar(10) NOT NULL,
-  `pregunta` varchar(100) DEFAULT NULL,
-  `respuesta` varchar(100) DEFAULT NULL,
+  `fecha_nacimiento` date NOT NULL,
+  `pregunta` varchar(100) NOT NULL,
+  `respuesta` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,7 +102,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Manzana_Roja','1996-04-11','manzana1','',''),(2,'laPeraQueTeEspera;)','1999-06-03','pera2','',''),(3,'bananita_Aa ','1999-12-20','123','',''),(4,'frufru ','1997-05-20','12345','',''),(5,'SandiacOOL','1999-03-06','3333','','');
+INSERT INTO `usuarios` VALUES (1,'Manzana_Roja','','manzana1','1996-04-11','',''),(2,'laPeraQueTeEspera;)','','pera2','1999-06-03','',''),(3,'bananita_Aa ','','123','1999-12-20','',''),(4,'frufru ','','12345','1997-05-20','',''),(5,'SandiacOOL','','3333','1999-03-06','',''),(6,'iarab','','hola','2010-01-08','1','Ort'),(7,'mango123','','1111','2008-06-29','3','This is us'),(8,'mango123','','hola234','2013-07-28','3','This is us');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -114,4 +115,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-29  0:04:55
+-- Dump completed on 2020-10-29  1:25:39
