@@ -10,7 +10,7 @@ router.get("/login", homeController.login);
 
 router.post("/login", homeController.procesarLogin);
 
-router.post("/registracion", homeController.procesarRegistracion)
+router.post("/registracion", homeController.procesarRegistracion);
 
 
 module.exports = router;

@@ -1,5 +1,6 @@
 let db = require("../database/models/index")
 let op = db.Sequelize.Op;
+let bcrypt = require("bcryptjs");
 
 let homeController =  {
 
@@ -27,6 +28,7 @@ let homeController =  {
         let nombre_usuario = req.body.usuario;
         let contraseña = req.body.contraseña;
         let email = req.body.email;
+        let fecha_nacimiento = req.body.fecha_nacimiento;
         let pregunta = req.body.pregunta;
         let respuesta = req.body.respuesta;
 
@@ -34,6 +36,7 @@ let homeController =  {
             nombre_usuario: nombre_usuario,
             contraseña: contraseña,
             email: email,
+            fecha_nacimiento: fecha_nacimiento,
             pregunta: pregunta,
             respuesta: respuesta,
         }
@@ -42,10 +45,6 @@ let homeController =  {
         .then(function() {
             res.redirect("/home")
         })
-
-
-
-
 
 
     },
