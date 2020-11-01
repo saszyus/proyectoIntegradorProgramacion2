@@ -31,7 +31,30 @@ let searchController =  {
     
     },
     
+    agregarComentario: function (req,res) {
+
+       
+        let comentar = {
+           
+            idposts:req.body.idpost,
+            idusuarios:req.body.idusuario,
+            texto_comentario:req.body.fecha,
+            fecha_comentario: req.body.comentario,
+
+       }
+
+       db.comentarios.create(comentar)
+       .then(function() {
+               
+       res.redirect("/search/detallePost/:id");
+       })
+    
+    
+    },
+    
     
     }
+
+
     
     module.exports = searchController;
