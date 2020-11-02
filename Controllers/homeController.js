@@ -5,6 +5,8 @@ let bcrypt = require("bcryptjs");
 let homeController =  {
 
     home: function (req,res) {
+
+        console.log(res.locals)
  
         db.Posts.findAll({
             order: [["texto_creacion","DESC"]],
@@ -52,11 +54,30 @@ let homeController =  {
 
 
     login: function (req,res) {
-        if (req.session.usuarioLogueado != undefined) {
-            res.redirect("/home");
+       if (req.session.usuarioLogueado != undefined) {
+            //res.redirect("/home");
+        }
+
+       let error = req.query.error;
+
+
+         // la opcion 1 error undefined 
+         if (req.query.error == undefined) {
+           res.render("login")
+
+        // la opcion 2 error = usuario
+         
+         } else if (req.query.error == 'usuario') { 
+            res.render('login', {mensajeError: 'El usuario no esta registrado'})
+
+         // la opcion 3 error = contra    
+        } else {
+            res.render("login", {mensajeError: 'La contraseña no coincide'})
+
         }
 
         res.render("login")
+
 
     },
 
@@ -71,24 +92,29 @@ let homeController =  {
         )
         .then(function(usuario) {
             if (usuario == null) {
-                res.send("El usuario no esta registrado")
-           // } else if (bcrypt.compareSync(req.body.password, usuario.password) == false) {
-               
-            } else if (usuario.contraseña == req.body.contraseña){ 
-        
-
+                res.redirect("/home/login?error=usuario")
+            } else if (!bcrypt.compareSync(req.body.contraseña, usuario.contraseña)) {
             
-                res.send("Mala contraseña")
+                res.redirect("/home/login?error=contraseña")
             } else {
                 req.session.usuarioLogueado = usuario;
-
+                res.locals.usuarioLogueado= usuario
+                console.log(res.locals);
                 res.redirect("/home");
             }
         }) 
+       
 
 
 
     },
+
+    logout: function (req,res) {
+
+        req.session.usuarioLogueado = undefined;
+        res.send(req.session)
+        res.redirect("/home")
+    }
   
 
     }

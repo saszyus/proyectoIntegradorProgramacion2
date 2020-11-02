@@ -12,5 +12,7 @@ router.post("/login", homeController.procesarLogin);
 
 router.post("/registracion", homeController.procesarRegistracion);
 
+router.post("/logout", homeController.logout);
+
 
 module.exports = router;

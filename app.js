@@ -39,6 +39,14 @@ app.use("/profile", rutasProfile);
 let rutasSearch = require("./routes/search");
 app.use("/search", rutasSearch);
 
+app.use(function(req, res, next) {
+  res.locals = {
+    usuarioLogueado: req.session.usuarioLogueado
+  }
+
+  next();
+})
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

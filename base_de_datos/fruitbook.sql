@@ -92,8 +92,9 @@ CREATE TABLE `usuarios` (
   `fecha_nacimiento` date NOT NULL,
   `pregunta` varchar(100) NOT NULL,
   `respuesta` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +103,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Manzana_Roja','','manzana1','1996-04-11','',''),(2,'laPeraQueTeEspera;)','','pera2','1999-06-03','',''),(3,'bananita_Aa ','','123','1999-12-20','',''),(4,'frufru ','','12345','1997-05-20','',''),(5,'SandiacOOL','','3333','1999-03-06','',''),(6,'iarab','','hola','2010-01-08','1','Ort'),(7,'mango123','','1111','2008-06-29','3','This is us'),(8,'mango123','','hola234','2013-07-28','3','This is us'),(9,'mandarinaAA','mandi@gmail.com','mandi234','2008-02-29','3','Stranger Things'),(10,'uvita','uvvv@gmail.com','chau','2010-06-29','2','lola');
+INSERT INTO `usuarios` VALUES (1,'Manzana_Roja','manzanita@gmail.com','$2a$10$LiU81AH/8jZ.Xgf8k6JpvOlMXvk3fJyfwPyt8GXP.b.gWDbxiB9Om','2017-06-29','1','Ort'),(2,'laPeraQueTeEspera;)','perita@gmail.com','$2a$10$RjMdV3XGeSB7UfaI1RCjjePNhVnIc/qpHyevDgZSguRgnYQn89ySG','2020-10-08','2','Simba'),(3,'bananita_Aa ','bananita@gmail.com','$2a$10$XTxcTbdzWxGfVrFBD2kJMO2DU7SffpBSwMBXhOsqrW8XEO6TX19Xm','2020-10-09','3','This is us'),(4,'frufru ','frutilla@gmail.com','$2a$10$PJZvv0nxOQQIkwij3E8tk.lfCZVcxNenfoHj3ZWMWr1R2GXl8aNHO','2011-06-29','3','Rick and Morty'),(5,'SandiacOOL','sandia@gmail.com','$2a$10$zAzmPvm62Ox8LYd.ZA4fFOfJHhltT9kGnt8BIRqn/ronwVNhm.Oby','2010-02-11','1','NEA');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -115,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-29 18:16:17
+-- Dump completed on 2020-11-02 15:51:21
