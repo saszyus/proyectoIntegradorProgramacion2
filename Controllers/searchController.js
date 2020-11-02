@@ -23,9 +23,9 @@ let searchController =  {
 
     detallePost: function (req,res) {
 
-        db.Posts.findAll()
-        .then(function(posts){
-           res.render("detallePost",{posts:posts})
+        db.Posts.findByPk(req.params.id)
+        .then(function(post){
+           res.render("detallePost",{post:post})
         })
     
     

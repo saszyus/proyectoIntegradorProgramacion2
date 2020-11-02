@@ -25,7 +25,7 @@ let profileController =  {
 
         let posteo = {
            
-            idusuario:req.body.idusuario,
+            idusuario:req.session.usuarioLogueado,
             texto_post:req.body.comentario,
             texto_creacion:req.body.fecha,
             url_imagen: req.body.url,
