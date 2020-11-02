@@ -32,5 +32,7 @@ module.exports = (sequelize, DataTypes) => {
 
     let Posts = sequelize.define("Posts", cols, config);
 
+    
+
     return Posts;
 }
