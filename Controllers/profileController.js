@@ -43,7 +43,7 @@ let profileController =  {
     detalleUsuario: function (req,res) {
 
         
-        db.Usuario.findAll()
+        db.Usuario.findByPk(req.params.id)
         .then(function(user){
            res.render("detalleUsuario",{user:user})
         })
