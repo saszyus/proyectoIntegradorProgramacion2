@@ -22,6 +22,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({secret:"JamesBond007"}));
 
+app.use(function(req, res, next) {
+  res.locals = {
+    usuarioLogueado: req.session.usuarioLogueado
+  }
+
+ return next();
+})
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
@@ -37,15 +46,9 @@ app.use("/profile", rutasProfile);
 
 //SEARCH
 let rutasSearch = require("./routes/search");
+
 app.use("/search", rutasSearch);
 
-app.use(function(req, res, next) {
-  res.locals = {
-    usuarioLogueado: req.session.usuarioLogueado
-  }
-
-  next();
-})
 
 
 // catch 404 and forward to error handler

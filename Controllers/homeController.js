@@ -112,7 +112,6 @@ let homeController =  {
     logout: function (req,res) {
 
         req.session.usuarioLogueado = undefined;
-        res.send(req.session)
         res.redirect("/home")
     }
   
