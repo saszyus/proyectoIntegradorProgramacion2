@@ -21,7 +21,7 @@
                     </div>
                     <div class="uk-width-2-3 uk-flex uk-flex-column uk-flex-around">
                         <div class="nombreUsuario uk-flex uk-flex-middle">
-                            <h3 class="uk-margin-remove"> <a href="/profile/detalleUsuario/<%=user[i].id  %>" ><%= user[i].nombre_usuario %>  </a> </h3>
+                            <h3 class="uk-margin-remove"> <a href="/profile/detalleUsuario/<%=user.id  %>" ><%= user.nombre_usuario %>  </a> </h3>
 
                             <button id="follow-button">+ Follow</button>
                  
@@ -29,7 +29,7 @@
                         </div>
                         <div class="datosUsuario">
                             <ul class="red-usuario uk-flex uk-flex-between uk-width-1-2">
-                                <li>Edad: <%= user[i].edad %> </li>
+                                <li>Edad: <%= user.edad %> </li>
                                 <li>nro post</li>
                                 <li>nro seguidores</li>
                                 <li>nro seguidos</li>
@@ -56,7 +56,7 @@
                 </section>
                 
             </div>
-           
+        
         </div>
     </main>
 

@@ -32,7 +32,7 @@
                            <% if (posts[i].relacionPostUser != null) { %>
                             
 
-                            <h4 class="nombreUsuario"> <a href="/profile/miPerfil"> <%= posts[i].relacionPostUser.nombre_usuario %> </a></h4>
+                            <h4 class="nombreUsuario"> <a href="/profile/detalleUsuario/<%=posts[i].relacionPostUser.id%>"> <%= posts[i].relacionPostUser.nombre_usuario %> </a></h4>
 
                            <% } else{ %>
                             <p>sin posts</p>
@@ -50,7 +50,7 @@
                                 </li>
                             </ul>
                             <div class="post-pie uk-flex">
-                               <p class="manzana"><a class='usuario' href="/profile/miPerfil" > </a></p> <br>
+                               <a class='usuario' href="/profile/detalleUsuario/<%=posts[i].relacionPostUser.id%>" > <%= posts[i].relacionPostUser.nombre_usuario %> </a>  <br>
                                
                                 <p class="uk-width-15-6 "> <%=posts[i].texto_post %>   </p>
                             </div>
@@ -63,7 +63,7 @@
                                     <p>  </p>
                                 </li>
    
-                                <a class='verMas' href="/search/detallePost/1">Ver más...</a>
+                                <a class='verMas' href="/search/detallePost/<%=posts[i].id%>">Ver más...</a>
                             </ul>
                         </div>
                     </article>
