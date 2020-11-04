@@ -10,6 +10,11 @@ let homeController =  {
  
         db.Posts.findAll({
             order: [["texto_creacion","DESC"]],
+            include:[
+
+                  {association:"relacionPostUser"},
+
+            ], 
         })
         .then(function(posts){
            res.render("home",{posts:posts})

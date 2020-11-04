@@ -29,8 +29,14 @@
                             <div>
                                 <img src="gifUsuario" alt="" >
                             </div>
-                           
-                            <h4 class="nombreUsuario"> <a href="/profile/miPerfil">Completar nombre usuario <%= posts[i].idusuario %> </a></h4>
+                           <% if (posts[i].relacionPostUser != null) { %>
+                            
+
+                            <h4 class="nombreUsuario"> <a href="/profile/miPerfil">Completar nombre usuario <%= posts[i].relacionPostUser.nombre_usuario %> </a></h4>
+
+                           <% } else{ %>
+                            <p>sin posts</p>
+                           <% } %>
                             
                         </div>
                         <div class="post-body uk-flex uk-flex-center">

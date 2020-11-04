@@ -33,5 +33,11 @@ module.exports = (sequelize, DataTypes) => {
 
     let Comentarios = sequelize.define("comentarios", cols, config);
 
+      Comentarios.associate = function(models) {
+
+
+
+      }
+
     return Comentarios;
 }

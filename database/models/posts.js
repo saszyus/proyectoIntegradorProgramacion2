@@ -32,7 +32,17 @@ module.exports = (sequelize, DataTypes) => {
 
     let Posts = sequelize.define("Posts", cols, config);
 
-    
+        
+    Posts.associate = function(models) {
+       
+
+        Posts.belongsTo(models.Usuarios,{
+
+            as:"relacionPostUser",
+            foreignKey:"idusuario",
+        })
+
+    } ;   
 
     return Posts;
 }
