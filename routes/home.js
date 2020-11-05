@@ -15,4 +15,6 @@ router.post("/registracion", homeController.procesarRegistracion);
 router.post("/logout", homeController.logout);
 
 
+router.get("/prueba", homeController.prueba);
+
 module.exports = router;

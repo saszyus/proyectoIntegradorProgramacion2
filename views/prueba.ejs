@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <%- include("head") %> 
+
+</head>
+
+
+<body>
+    
+
+    <% for( let i = 0; i < coment.length; i++ ) { %>
+
+
+        <ul>
+
+<li> 
+       <%= coment[i].texto_comentario %> 
+
+</li>
+
+<li>
+   <%= coment[i].relacionComentUser.nombre_usuario %> 
+
+</li>
+
+            
+        </ul>
+
+        <% } %>       
+
+</body>
+
+
+
+
+
+</html>

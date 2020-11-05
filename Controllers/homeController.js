@@ -54,6 +54,7 @@ let homeController =  {
         //let contraseña = req.body.contraseña;
         let contraseña = bcrypt.hashSync(req.body.contraseña, 10);
         let email = req.body.email;
+        let foto_perfil = req.body.foto_perfil
         let fecha_nacimiento = req.body.fecha_nacimiento;
         let pregunta = req.body.pregunta;
         let respuesta = req.body.respuesta;
@@ -65,6 +66,7 @@ let homeController =  {
             fecha_nacimiento: fecha_nacimiento,
             pregunta: pregunta,
             respuesta: respuesta,
+            foto_perfil: foto_perfil,
         }
 
         db.Usuario.create(usuario)
@@ -140,6 +142,24 @@ let homeController =  {
 
         req.session.usuarioLogueado = undefined;
         res.redirect("/home")
+    },
+
+    prueba: function(req,res){
+
+     
+ 
+        db.comentarios.findAll({
+            
+            include:[
+
+                  {association:"relacionComentUser"},
+
+            ], 
+        })
+        .then(function(coment){
+           res.render("prueba",{coment:coment})
+        })
+
     }
   
 
