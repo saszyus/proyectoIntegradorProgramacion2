@@ -29,21 +29,45 @@
                             <div class="uk-inline">
                                 <span class="uk-form-icon" uk-icon="icon: user"></span>
                                 <input class="uk-input usuario " type="text" placeholder="Usuario" name="usuario">
-                                <% if (typeof mensajeError != 'undefined') { %>
-                                    <p> <%= mensajeError %> 
-                                    </p>
-                                 
-                                <% } %>
                             </div>
                         </div>
+
+                        <% if (typeof mensajeErrorUsuario != 'undefined') { %>
+                            <div class="uk-alert-danger" uk-alert>
+                                <a class="uk-alert-close" uk-close></a>
+                                <p> Usuario incorrecto </p>
+                            </div>
+                         
+                        <% } %>
+
+
                         <div class="uk-margin">
                             <div class="uk-inline">
                                 <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
                                 <input class="uk-input contrasena" type="password" placeholder="Contraseña" name="contraseña">
+                                
                             </div>
                         </div>
 
+                        <% if (typeof mensajeErrorContraseña != 'undefined') { %>
+                            <div class="uk-alert-danger" uk-alert>
+                                <a class="uk-alert-close" uk-close></a>
+                                <p> Contraseña incorrecta </p>
+                            </div>
+                         
+                        <% } %>
+
+                        <div>
+                            <label for=""> Recordarme </label>
+                            <input type="checkbox" name="recordarme">
+
+                        </div>
+
                         <input type="submit" class="uk-button uk-button-default botonIngresa" value="Ingresa">
+
+                        
+
+
                         <p class="registrateAca">  Primera vez? <a class="registrateAqui" href="/home/registracion"> Registrate aqui! </a> </p>
 
                       </form>
