@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const session = require("express-session");
 
+let db = require("./database/models/index")
+
 var app = express();
 
 // view engine setup
@@ -28,6 +30,20 @@ app.use(function(req, res, next) {
   }
 
  return next();
+})
+
+app.use(function(req, res, next) {
+ 
+  if (req.cookies.usuarioLogueado != undefined && req.session.usuarioLogueado == undefined){
+    db.Usuario.findByPk(req.cookies.idUsuarioLogueado)
+    .then(function(usuario) {
+      req.session.usuarioLogueado = usuario;
+      next();
+
+    })
+  } else {
+    next ();
+  }
 })
 
 

@@ -124,7 +124,7 @@ let homeController =  {
                
                 if (req.body.recordarme != undefined) {
 
-                    res.cookie("idUsuarioLogueado", usuario.id, {maxAge : 1000 * 20});
+                    res.cookie("idUsuarioLogueado", usuario.id, {maxAge : 1000 * 50});
                 
                 } 
 
