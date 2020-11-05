@@ -42,7 +42,17 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey:"idusuario",
         })
 
+        Posts.associate = function(models) {
+         
+            Posts.hasMany(models.comentarios,{
+
+            as:"relacionComentPosts",
+            foreignKey:"idposts",
+        })
+
     } ;   
+
+}
 
     return Posts;
 }

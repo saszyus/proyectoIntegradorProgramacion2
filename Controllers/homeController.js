@@ -153,6 +153,7 @@ let homeController =  {
             include:[
 
                   {association:"relacionComentUser"},
+                  {association:"relacionComentPosts"}
 
             ], 
         })
