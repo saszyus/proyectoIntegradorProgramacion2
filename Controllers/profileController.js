@@ -50,11 +50,11 @@ let profileController =  {
     },
 
     editarPerfil: function (req,res) {
-        let idUsuario = req.params.id;
+       
 
-        db.Usuario.findByPk(idUsuario)
+        db.Usuario.findByPk(req.params.id)
         .then(function(perfilEditado) {
-            res.render("editarPerfil", {perfilEditado: perfilEditado})
+            res.render("miPerfil", {perfilEditado: perfilEditado})
         })
 
 
