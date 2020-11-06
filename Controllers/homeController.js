@@ -12,7 +12,7 @@ let homeController =  {
             order: [["texto_creacion","DESC"]],
             include:[
 
-                  {association:"relacionPostUser"},
+                {all:true,nested:true}
 
             ], 
         })
