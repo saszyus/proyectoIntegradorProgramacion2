@@ -15,18 +15,28 @@
        <h3>Resultados:</h3>
 
        <% for( let i = 0; i < busquedas.length; i++ ) { %>
+
+       <% if (busquedas[i].nombre_usuario =! null && busquedas[i].email =! null) { %>
+
+        <li>
+            <a href="/profile/detalleUsuario/<%=busquedas[i].id %>"   >   <%= busquedas[i].nombre_usuario  %> </a>
+  
+           </li>
+  
+           <li>
+              <a href="/profile/detalleUsuario/<%=busquedas[i].id %>"   >   <%= busquedas[i].email  %> </a>
+  
+           </li>
+
+        <% } else () {%>
+
+               <p> No se encontro resultado</p> 
+
+         <% } %>
+
+        <% } %>
        
-         <li>
-          <a href="/profile/detalleUsuario/<%=busquedas[i].id %>"   >   <%= busquedas[i].nombre_usuario  %> </a>
-
-         </li>
-
-         <li>
-            <a href="/profile/detalleUsuario/<%=busquedas[i].id %>"   >   <%= busquedas[i].email  %> </a>
-
-         </li>
-
-       <% } %>
+        
               
 <br>
         <h3 class="volverHome"> Volvemos al home? <a href="/home/"> Click aca! </a> </h3>

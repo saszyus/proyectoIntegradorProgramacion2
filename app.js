@@ -34,15 +34,16 @@ app.use(function(req, res, next) {
 
 app.use(function(req, res, next) {
  
-  if (req.cookies.usuarioLogueado != undefined && req.session.usuarioLogueado == undefined){
+  if (req.cookies.idUsuarioLogueado != undefined && req.session.usuarioLogueado == undefined){
     db.Usuario.findByPk(req.cookies.idUsuarioLogueado)
     .then(function(usuario) {
       req.session.usuarioLogueado = usuario;
-      next();
+      res.locals.usuarioLogueado = usuario;
+      return next();
 
     })
   } else {
-    next ();
+     return next ();
   }
 })
 
