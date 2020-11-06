@@ -54,7 +54,7 @@ let profileController =  {
 
         db.Usuario.findByPk(req.params.id)
         .then(function(perfilEditado) {
-            res.render("miPerfil", {perfilEditado: perfilEditado})
+            res.render("editarPerfil", {perfilEditado: perfilEditado})
         })
 
 

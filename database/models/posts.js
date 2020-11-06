@@ -40,19 +40,19 @@ module.exports = (sequelize, DataTypes) => {
 
             as:"relacionPostUser",
             foreignKey:"idusuario",
-        })
-
-        Posts.associate = function(models) {
-         
-            Posts.hasMany(models.comentarios,{
+        }),
+        Posts.hasMany(models.comentarios,{
 
             as:"relacionComentPosts",
             foreignKey:"idposts",
         })
+        
+         
+        
 
     } ;   
 
-}
+
 
     return Posts;
 }

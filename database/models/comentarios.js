@@ -41,8 +41,6 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey:"idusuarios",
         })
 
-        Comentarios.associate = function(models) {
-         
             Comentarios.belongsTo(models.Posts,{
 
             as:"relacionComentPosts",
@@ -51,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
 
       };
 
-    }
+    
     return Comentarios;
 
 

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 let profileController = require("../controllers/profileController")
 
-router.get("/miPerfil/", profileController.editarPerfil);
+router.get("/miPerfil/", profileController.profile);
 
 router.get("/agregarPost", profileController.agregarPost);
 router.post("/postAgregado", profileController.post);
