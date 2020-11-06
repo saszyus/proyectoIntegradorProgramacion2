@@ -11,7 +11,8 @@ let searchController =  {
             order: [["nombre_usuario"]
         
         ],
-            where:[ {nombre_usuario: {[op.like]:"%" + resultadoBusqueda + "%" } }
+            where:[ {nombre_usuario: {[op.like]:"%" + resultadoBusqueda + "%" },  },
+            {email: {[op.like]:"%" + resultadoBusqueda + "%" },  }
                 
             ],
         })
