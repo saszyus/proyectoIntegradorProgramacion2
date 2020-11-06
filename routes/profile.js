@@ -9,4 +9,6 @@ router.post("/postAgregado", profileController.post);
 
 router.get ("/detalleUsuario/:id", profileController.detalleUsuario);
 
+router.get("/editarPerfil/:id", profileController.editarPerfil)
+
 module.exports = router;
