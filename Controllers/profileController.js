@@ -5,10 +5,19 @@ let profileController =  {
 
     profile: function (req,res) {
 
+        console.log(res.locals)
+ 
+        db.Posts.findAll({
+           
+            include:[
 
+                {all:true,nested:true}
 
-        res.render("miPerfil")
-
+            ], 
+        })
+        .then(function(perfil){
+           res.render("miPerfil",{perfil:perfil})
+        })
   
     
     },
@@ -53,8 +62,8 @@ let profileController =  {
        
 
         db.Usuario.findByPk(req.params.id)
-        .then(function(perfilEditado) {
-            res.render("editarPerfil", {perfilEditado: perfilEditado})
+        .then(function(editarPerfil){
+           res.render("editarPerfil",{editarPerfil:editarPerfil})
         })
 
 
