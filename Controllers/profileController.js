@@ -5,20 +5,12 @@ let profileController =  {
 
     profile: function (req,res) {
 
-        console.log(res.locals)
+     
  
-        db.Posts.findAll({
-           
-            include:[
-
-                {all:true,nested:true}
-
-            ], 
-        })
+        db.Usuario.findByPk(req.params.id)
         .then(function(perfil){
            res.render("miPerfil",{perfil:perfil})
         })
-  
     
     },
     

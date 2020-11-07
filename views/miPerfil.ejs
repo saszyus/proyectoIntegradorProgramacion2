@@ -10,7 +10,7 @@
 
     <main>
 
-        <% for( let i = 0; i < perfil.length; i++ ) { %>
+       
 
         <div class="contendorGeneral uk-section uk-section-small">
             <div class=" contenedorChico uk-container uk-container-small">
@@ -20,8 +20,8 @@
                     </div>
                     <div class="uk-width-2-3 uk-flex uk-flex-column uk-flex-around">
                         <div class="nombreUsuario uk-flex uk-flex-middle">
-                            <h3 class="uk-margin-remove"> <a href="/profile/miPerfil">   </a> </h3>
-                            <a href="/profile/editarPerfil/<%= perfil[i].relacionPostUser.id %> "> Editar perfil </a>
+                            <h3 class="uk-margin-remove"> <a href="/profile/miPerfil">   </a> <%=perfil.nombre_usuario  %>  </h3>
+                            <a href="/profile/editarPerfil/<%= perfil.id %> "> Editar perfil </a>
                         </div>
                         <div>
                             <ul class="red-usuario uk-flex uk-flex-between uk-width-1-2">
@@ -32,7 +32,7 @@
                         </div>
                     </div>
 
-                    <h1><%= perfil[i].relacionPostUser.nombre_usuario %> </h1>
+                    <h1> </h1>
 
                 </section>
 
@@ -87,7 +87,7 @@
                 </section>
             </div>
         </div>
-        <% } %>      
+          
     </main>
 
     <%- include("footer") %> 
