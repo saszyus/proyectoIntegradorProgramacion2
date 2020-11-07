@@ -24,7 +24,13 @@ let searchController =  {
 
     detallePost: function (req,res) {
 
-        db.Posts.findByPk(req.params.id)
+        db.Posts.findByPk(req.params.id,{
+            include:[
+
+                {all:true,nested:true}
+
+            ],
+        })
         .then(function(post){
            res.render("detallePost",{post:post})
         })

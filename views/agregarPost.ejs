@@ -18,25 +18,19 @@
         <form class='subiFoto' action="/profile/postAgregado" method="POST">
 
           <div class="gifsubiFoto"> <img src="https://media.giphy.com/media/3oz8xDzuVDbKoU4shi/giphy.gif" alt=""></div>
- 
+        
+          <input type="number" placeholder="id usuario... " name="idusuario">
+          <br>
             <div>
                         <p>Copia su URL</p> 
                         <input class="uk-input uk-form-width-medium" type="text" placeholder="URL" name="url" >
-                <div class="uk-margin" uk-margin>
-                        
-                        
-                        <div uk-form-custom="target: true">
-    
-                        </div>
-                </div>
+            
                         <p>Añade un comentario o pie de foto
                         
                         <input class='uk-textarea' name="comentario"></input></p>    
-                           
-                        <input type="date" name="fecha">              
+                         <p> Selecciona la fecha
+                        <input type="date" name="fecha">   </p>           
                         <input class='uk-button boton uk-button-default' type="submit" value="Subi tu foto!">   
-                        <br>
-                        <input type="number" placeholder="id usuario... " name="idusuario">
 
             </div>
         </form>
