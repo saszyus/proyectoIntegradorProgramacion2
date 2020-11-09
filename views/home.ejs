@@ -27,14 +27,12 @@
                             <div>
                                 <img src="<%=posts[i].relacionPostUser.foto_perfil%>"  alt="" >
                             </div>
-                           <% if (posts[i].relacionPostUser != null) { %>
+        
                             
 
                             <h4 class="nombreUsuario"> <a href="/profile/detalleUsuario/<%=posts[i].relacionPostUser.id%>"> <%= posts[i].relacionPostUser.nombre_usuario %> </a></h4>
 
-                           <% } else{ %>
-                            <p>sin posts</p>
-                           <% } %>
+                       
                             
                         </div>
                         <div class="post-body uk-flex uk-flex-center">
@@ -56,12 +54,18 @@
                         <div class="post-comentarios">
                             <h6>Comentarios</h6>
                             <ul>
+                                <% for( let j = 0; j < posts[i].relacionPostUser.relacionComentUser.length; j++ ) { %>
+                                
+                             
                                 <li>
                                     <a class='usuarioComent'href="/profile/miPerfil"></a>
-                                    <p> <%=posts[i].relacionComentPosts.texto_comentario %>  </p>
+                                    <p> <%=posts[i].relacionPostUser.relacionCommentUser[j].texto_comentario %> a </p>
                                 </li>
-   
-                                <a class='verMas' href="/search/detallePost/<%=posts[i].id%>">Ver más...</a>
+                               
+                                <a class='verMas' href="">Ver más...</a>
+
+                                <% } %>
+
                             </ul>
                         </div>
                     </article>
