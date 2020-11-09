@@ -21,22 +21,30 @@
     
     
                     <div class="editarPerfil">
-                        <div class="gifLogin"> <img src="https://media.giphy.com/media/3ohc0UUiHhVz7iWyEo/source.gif" alt=""></div>
+                        <div class="gifLogin"> <img src="https://media.giphy.com/media/k7K48NJ7qlko8/giphy.gif" alt=""></div>
     
     
     
                         <form class="editarPerfil" action="/profile/perfilActualizado" method="POST">
-                            <p>Nuevo usuario</p>
                             <input type="hidden" name="idUsuarioNuevo" value="<%editarPerfil.id%>" >
                             <div class="uk-margin">
                                 <div class="uk-inline">
                                     <span class="uk-form-icon" uk-icon="icon: user"></span>
-                                    <input class="uk-input usuario " type="text" placeholder="Usuario" name="usuarioNuevo" value="<%=editarPerfil.nombre_usuario%>">
+                                    <input class="uk-input usuario " type="text" placeholder="Cambiar usuario" name="usuarioNuevo">
                                 </div>
                             </div>
 
-                            <p>Copia su URL</p> 
-                        <input class="uk-input uk-form-width-medium" type="text" placeholder="URL" name="urlNuevo" value="<%=editarPerfil.foto_perfil%>" >
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                                    <input class="uk-input contrasena" type="password" placeholder="Contraseña" name="contraNueva">
+                                    
+                                </div>
+                            </div>
+    
+
+
+                        <input class="uk-input uk-form-width-medium" type="text" placeholder="Cambiar foto de perfil" name="urlNuevo">
                 <div class="uk-margin" uk-margin>
                         
                         
@@ -45,7 +53,7 @@
                         </div>
                             </div>
 
-                            <input type="submit" value="Submit">
+                            <input type="submit" class="uk-button uk-button-default botonIngresa" value="Submit">
     
     
                           </form>

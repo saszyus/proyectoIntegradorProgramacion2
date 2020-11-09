@@ -74,6 +74,7 @@ let profileController =  {
            
             nombre_usuario: req.body.usuarioNuevo,
             url_imagen: req.body.urlNuevo,
+            contraseña: req.body.contraNueva,
 
        }
 

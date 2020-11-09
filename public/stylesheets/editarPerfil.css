@@ -6,6 +6,8 @@ h1.titulo {
 }
 
 h2.nombreUsuario {
+    font-family: 'Quicksand';
+    color: rgb(200, 146, 245) !important;
     
 }
 
