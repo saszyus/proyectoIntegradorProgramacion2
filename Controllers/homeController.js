@@ -162,8 +162,18 @@ let homeController =  {
         })
 
     },
-
-
-    }
+    delete: function(req,res){
+        let idPost = req.body.idBorrar;
+        
+        db.Post.destroy({
+            where: {
+                id : idPost
+            }
+        })
+        .then(function(){
+            res.redirect ("/home")
+        })
+//priemro encuentro el posteo, recuperar id (metodo no sabe de que id es), cuando recuperas data verificar si el usuario logueado es igual al due;o del posteo, sino es igual lo re dirigo por que no puede borrar
+    }}
     
     module.exports = homeController;

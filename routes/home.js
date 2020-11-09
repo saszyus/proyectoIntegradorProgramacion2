@@ -17,4 +17,6 @@ router.post("/logout", homeController.logout);
 
 router.get("/prueba", homeController.prueba);
 
+router.post("/delete",homeController.delete);
+
 module.exports = router;

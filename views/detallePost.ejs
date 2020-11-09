@@ -45,6 +45,16 @@
                                 <input class="uk-button uk-button-default uk-margin-small-top" type="submit" placeholder="Comentar"> 
                             </form>
                         </div>
+
+
+
+                 <% if (usuarioLogueado != undefined) { %>
+                            <% if (usuarioLogueado.id == posteos[i].id_usuario) { %>
+                                <form action ="/home/delete" method="POST">
+                                    <input type="hidden" name="Delete"> 
+                                    <button type="submit">EliminarPost</button>
+                                </form>
+                        
                     </article>
                 </section>
             </div>
