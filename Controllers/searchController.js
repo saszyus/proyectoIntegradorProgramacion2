@@ -32,7 +32,7 @@ let searchController =  {
             ],
         })
         .then(function(post){
-      
+     // res.send(post)
            res.render("detallePost",{post:post})
         })
     
