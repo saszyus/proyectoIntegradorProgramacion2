@@ -3,18 +3,63 @@
 
     <head>
         <%- include("head") %> 
-        <link rel="stylesheet" href="/stylesheets/agregarPost.css">
+        <link rel="stylesheet" href="/stylesheets/editarPerfil.css">
     </head>
 
 <body>
     <%- include("headerLogueado") %> 
 
-    <main class="granContenedor">
+        <main>
+            <div class="contenedorPrincipal uk-section uk-section-small ">
+    
+                <h1 class="titulo"> Editando perfil de <h2 class="nombreUsuario"><%=editarPerfil.nombre_usuario %> </h2></h1>
+    
+                  
+    
+               
+                 <div class="contenedor  uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
+    
+    
+                    <div class="editarPerfil">
+                        <div class="gifLogin"> <img src="https://media.giphy.com/media/3ohc0UUiHhVz7iWyEo/source.gif" alt=""></div>
+    
+    
+    
+                        <form class="editarPerfil" action="/profile/perfilActualizado" method="POST">
+                            <p>Nuevo usuario</p>
+                            <input type="hidden" name="idUsuarioNuevo" value="<%editarPerfil.id%>" >
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                    <input class="uk-input usuario " type="text" placeholder="Usuario" name="usuarioNuevo" value="<%=editarPerfil.nombre_usuario%>">
+                                </div>
+                            </div>
 
+                            <p>Copia su URL</p> 
+                        <input class="uk-input uk-form-width-medium" type="text" placeholder="URL" name="urlNuevo" value="<%=editarPerfil.foto_perfil%>" >
+                <div class="uk-margin" uk-margin>
+                        
+                        
+                        <div uk-form-custom="target: true">
+    
+                        </div>
+                            </div>
 
-        <h1>editando perfil de <%=editarPerfil.nombre_usuario  %> </h1>
-        
-    </main>
+                            <input type="submit" value="Submit">
+    
+    
+                          </form>
+                    
+                    
+                   
+                        </div>
+                        <br>
+                        
+    
+                </div>
+            </div>
+        </main>
+    
     <%- include("footer") %> 
 </body>
 

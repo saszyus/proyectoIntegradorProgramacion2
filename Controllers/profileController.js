@@ -5,9 +5,11 @@ let profileController =  {
 
     profile: function (req,res) {
 
+        // hay que hacer un if para verificar si hay un usuario logueado
+
      
  
-        db.Usuario.findByPk(req.params.id)
+        db.Usuario.findByPk(req.session.usuarioLogueado.id)
         .then(function(perfil){
            res.render("miPerfil",{perfil:perfil})
         })
@@ -57,12 +59,35 @@ let profileController =  {
     },
 
     editarPerfil: function (req,res) {
-       
 
         db.Usuario.findByPk(req.params.id)
         .then(function(editarPerfil){
            res.render("editarPerfil",{editarPerfil:editarPerfil})
         })
+
+
+    },
+
+    perfilActualizado: function (req,res) {
+
+        let datosNuevos = {
+           
+            nombre_usuario: req.body.usuarioNuevo,
+            url_imagen: req.body.urlNuevo,
+
+       }
+
+       db.Usuario.update(datosNuevos, {
+           where: {
+               id: req.session.usuarioLogueado.id,
+               //id: req.body.idUsuarioNuevo,
+           }
+
+       })
+       .then(function() {
+               
+       res.redirect("/profile/miPerfil");
+       })
 
 
     }

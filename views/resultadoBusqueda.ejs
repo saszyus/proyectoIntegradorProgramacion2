@@ -14,9 +14,9 @@
 
        <h3>Resultados:</h3>
 
-       <% for( let i = 0; i < busquedas.length; i++ ) { %>
+       <% if (busquedas.length >= 1) { %>
 
-       <% if (busquedas[i].nombre_usuario =! null && busquedas[i].email =! null) { %>
+       <% for( let i = 0; i < busquedas.length; i++ ) { %>
 
         <li>
             <a href="/profile/detalleUsuario/<%=busquedas[i].id %>"   >   <%= busquedas[i].nombre_usuario  %> </a>
@@ -28,7 +28,7 @@
   
            </li>
 
-        <% } else () {%>
+        <% } else {%>
 
                <p> No se encontro resultado</p> 
 

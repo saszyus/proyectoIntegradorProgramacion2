@@ -8,9 +8,7 @@
 
 <body>
     <% if (typeof usuarioLogueado != 'undefined') { %> 
-        <% if (usuarioLogueado) { %>
             <%- include("headerLogueado") %> 
-        <% } %>
    <% } else {%> 
        <%- include("headerDeslogueado") %> 
    <% } %> 

@@ -161,8 +161,8 @@ let homeController =  {
            res.render("prueba",{coment:coment})
         })
 
-    }
-  
+    },
+
 
     }
     
