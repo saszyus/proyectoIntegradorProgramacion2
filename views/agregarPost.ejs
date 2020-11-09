@@ -19,7 +19,7 @@
 
           <div class="gifsubiFoto"> <img src="https://media.giphy.com/media/3oz8xDzuVDbKoU4shi/giphy.gif" alt=""></div>
         
-          <input type="number" placeholder="id usuario... " name="idusuario">
+          <input type="number"  type="hidden" name="idusuario" >
           <br>
             <div>
                         <p>Copia su URL</p> 
@@ -29,11 +29,13 @@
                         
                         <input class='uk-textarea' name="comentario"></input></p>    
                          <p> Selecciona la fecha
-                        <input type="date" name="fecha">   </p>           
+                        <input type="date" name="fecha" <%= Date() %>>   </p>           
                         <input class='uk-button boton uk-button-default' type="submit" value="Subi tu foto!">   
 
             </div>
         </form>
+
+      <h2>  <%= Date() %>   </h2>  
 
             </div>
         </div>
