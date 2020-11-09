@@ -26,30 +26,33 @@ let homeController =  {
     
     registracion: function(req,res) {
 
-        let error = req.query.error;
-
-
-         // la opcion 1 error undefined 
-         if (req.query.error == undefined) {
-           res.render("registracion")
-
-        // la opcion 2 error = usuario
-         
-         } else if (req.query.error == 'usuario') { 
-            res.render('registracion', {mensajeErrorUsuario: 'mensajeErrorUsuario'})
-
-         // la opcion 3 error = contra    
-        } else {
-            res.render("registracion", {mensajeErrorMail: 'mensajeErrorMail'})
-
-        }
-
-    
         res.render("registracion")
     
     },
 
     procesarRegistracion: function(req, res) {
+
+        db.Usuario.findOne({
+
+            where:{ 
+                [op.or]:[
+                    { 
+                        email: req.body.email
+                    },
+                    { 
+                        nombre_usuario: req.body.usuario
+                    }
+                ]
+            }
+        })
+
+        .then(function(usuario){
+            if (usuario != undefined) {
+                res.render("registracion",{mensajeError: "Mensaje error"})
+                
+            } else {
+
+
         let nombre_usuario = req.body.usuario;
         //let contraseña = req.body.contraseña;
         let contraseña = bcrypt.hashSync(req.body.contraseña, 10);
@@ -74,7 +77,8 @@ let homeController =  {
             res.redirect("/home")
         })
 
-
+         }
+        })
 
     },
 

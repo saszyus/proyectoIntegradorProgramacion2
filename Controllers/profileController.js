@@ -6,8 +6,6 @@ let profileController =  {
     profile: function (req,res) {
 
         // hay que hacer un if para verificar si hay un usuario logueado
-
-     
  
         db.Usuario.findByPk(req.session.usuarioLogueado.id)
         .then(function(perfil){
@@ -69,6 +67,15 @@ let profileController =  {
     },
 
     perfilActualizado: function (req,res) {
+
+       // let datosNuevos ={}
+
+       // if (req.body.usuarioNuevo != undefined) {
+          //  datosNuevos.nombre_usuario = req.body.usuarioNuevo
+        //}
+        //if (condition) {
+            
+       // }
 
         let datosNuevos = {
            
