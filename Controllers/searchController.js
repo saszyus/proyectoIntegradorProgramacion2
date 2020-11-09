@@ -32,6 +32,7 @@ let searchController =  {
             ],
         })
         .then(function(post){
+      
            res.render("detallePost",{post:post})
         })
     
@@ -43,17 +44,17 @@ let searchController =  {
        
         let comentar = {
            
-            idposts:req.body.idpost,
-            idusuarios:req.body.idusuario,
-            texto_comentario:req.body.fecha,
-            fecha_comentario: req.body.comentario,
+            idposts:req.params.id,
+            idusuarios:req.session.usuarioLogueado.id,
+            fecha_comentario:req.body.fecha,
+            texto_comentario: req.body.comentario,
 
        }
 
        db.comentarios.create(comentar)
        .then(function() {
                
-       res.redirect("/search/detallePost/:id");
+       res.redirect("/search/detallePost/"+req.params.id);
        })
     
     

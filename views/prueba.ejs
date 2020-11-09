@@ -14,19 +14,26 @@
 
         <ul>
 
-<li> 
-       <%= coment[i].texto_comentario %> 
+            <li>
+                <%= coment[i].relacionComentUser.nombre_usuario %> 
+             
+             </li>
 
-</li>
 
-<li>
-   <%= coment[i].relacionComentUser.nombre_usuario %> 
-
-</li>
+<img src="<%=coment[i].relacionComentPosts.url_imagen  %>"  alt="">
 
 <li>
     <%= coment[i].relacionComentPosts.texto_post %> 
 </li>
+
+<li> 
+    <%= coment[i].texto_comentario %> 
+
+</li>
+
+
+
+
             
         </ul>
 
