@@ -168,6 +168,17 @@ let homeController =  {
         })
 
     },
+    //edit: function (req,res){
+      //  let idPost = req.params.id;
+
+        //db.Post.findByPk(idPost)
+        //.then(function(E)
+    //}
+
+
+
+
+
     borrarPost: function(req,res){
     
         if (req.session.usuarioLogueado == req.body.idUsuario){
@@ -178,9 +189,9 @@ let homeController =  {
                 id: idborrarPost
             }
         })
-
-        res.redirect("/home/")
-        } else {
+        .then(function()
+            res.redirect("/home/")
+        }) else {
             res.redirect("/home/detallePost" + req.body.idPost)
         }
     }}
