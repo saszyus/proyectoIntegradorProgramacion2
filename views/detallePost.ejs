@@ -54,6 +54,13 @@
                                 <input type="text" class="uk-input" placeholder="Agregar comentario" name="comentario"> 
                                 <input class="uk-button uk-button-default uk-margin-small-top" type="submit" placeholder="Comentar"> 
                             </form>
+                        <%if (usuarioLogueado == post.idusuario) { %>
+                            <form action="/home/borrarPost" method="POST">
+                                <input type="hidden" name="idPost" value="<%post.id%>"> 
+                                <input type="hidden" name="idUsuario" value="<%post.idusuario%>">
+                                <button type="submit">Borrar Post</button>   
+                            </form>
+                        <% } %>
                         </div>
 
 
