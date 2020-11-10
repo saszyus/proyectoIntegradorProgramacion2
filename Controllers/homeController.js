@@ -168,21 +168,33 @@ let homeController =  {
         })
 
     },
-    borrarPost: function(req,res){
+    //edit: function (req,res){
+      //  let idPost = req.params.id;
+
+        //db.Post.findByPk(idPost)
+        //.then(function(E)
+    //}
+
+
+
+
+
+//    borrarPost: function(req,res){
     
-        if (req.session.usuarioLogueado == req.body.idUsuario){
-            let idborrarPost = req.body.idPost;
+        //if (req.session.usuarioLogueado == req.body.idUsuario){
+          //  let idborrarPost = req.body.idPost;
 
-        db.Post.destroy({
-            where:{
-                id: idborrarPost
-            }
-        })
-
-        res.redirect("/home/")
-        } else {
-            res.redirect("/home/detallePost" + req.body.idPost)
-        }
-    }}
+        //db.Post.destroy({
+        //    where:{
+      //          id: idborrarPost
+    //        }
+  //      })
+//        .then(function()
+        //    res.redirect("/home/")
+      //  ) else {
+          //  res.redirect("/home/detallePost" + req.body.idPost)
+        //}
+    //}
+}
     
     module.exports = homeController;
