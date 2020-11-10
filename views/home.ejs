@@ -54,7 +54,19 @@
                         <div class="post-comentarios">
                             <h6>Comentarios</h6>
                             <ul>
-                            <p>aca va</p>
+                            
+                                <% for( let j = 0; j < posts[i].relacionPostUser.relacionComentUser.length; j++ ) { %>
+                                
+                             
+                                    <li>
+                                        <a class='usuarioComent'href="/profile/miPerfil"></a>
+                                        <p> <%=posts[i].relacionPostUser.relacionCommentUser[j].texto_comentario %> a </p>
+                                    </li>
+                                   
+                                    <a class='verMas' href="">Ver más...</a>
+    
+                                    <% } %>
+    
 
                             </ul>
                         </div>
