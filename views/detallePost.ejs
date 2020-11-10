@@ -8,7 +8,11 @@
 
 <body>
    
- <%- include("headerLogueado") %> 
+    <% if (typeof usuarioLogueado != 'undefined') { %> 
+        <%- include("headerLogueado") %> 
+<% } else {%> 
+   <%- include("headerDeslogueado") %> 
+<% } %> 
 
     <main>
 

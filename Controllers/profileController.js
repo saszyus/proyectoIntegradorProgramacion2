@@ -68,22 +68,28 @@ let profileController =  {
 
     perfilActualizado: function (req,res) {
 
-       // let datosNuevos ={}
+       let datosNuevos ={}
 
-       // if (req.body.usuarioNuevo != undefined) {
-          //  datosNuevos.nombre_usuario = req.body.usuarioNuevo
-        //}
-        //if (condition) {
+       if (req.body.usuarioNuevo != undefined) {
+           datosNuevos.nombre_usuario = req.body.usuarioNuevo
+        }
+
+        if (req.body.urlNuevo != undefined) {
+            datosNuevos.url_imagen = req.body.urlNuevo
+        }
+
+        if (req.body.contraNueva != undefined) {
+            datosNuevos.contraseña = req.body.contraseña
+        }
             
-       // }
 
-        let datosNuevos = {
+       /* let datosNuevos = {
            
             nombre_usuario: req.body.usuarioNuevo,
             url_imagen: req.body.urlNuevo,
             contraseña: req.body.contraNueva,
 
-       }
+       } */
 
        db.Usuario.update(datosNuevos, {
            where: {

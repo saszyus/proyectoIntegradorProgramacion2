@@ -27,6 +27,7 @@
     
                         <form class="editarPerfil" action="/profile/perfilActualizado" method="POST">
                             <input type="hidden" name="idUsuarioNuevo" value="<%editarPerfil.id%>" >
+                            <p>Opcional</p>
                             <div class="uk-margin">
                                 <div class="uk-inline">
                                     <span class="uk-form-icon" uk-icon="icon: user"></span>
@@ -34,17 +35,17 @@
                                 </div>
                             </div>
 
+                            <p>Opcional</p>
                             <div class="uk-margin">
                                 <div class="uk-inline">
                                     <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-                                    <input class="uk-input contrasena" type="password" placeholder="Contraseña" name="contraNueva" value="<%=editarPerfil.contraseña%>">
+                                    <input class="uk-input contrasena" type="password" placeholder="Cambiar ontraseña" name="contraNueva" value="">
                                     
                                 </div>
                             </div>
-    
-
-
-                        <input class="uk-input uk-form-width-medium" type="text" placeholder="Cambiar foto de perfil" name="urlNuevo">
+                            
+                            <p>Opcional</p>
+                        <input class="uk-input uk-form-width-medium" type="text" placeholder="Cambiar foto de perfil" name="urlNuevo" value="">
                 <div class="uk-margin" uk-margin>
                         
                         

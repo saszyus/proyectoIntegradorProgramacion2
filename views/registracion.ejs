@@ -24,6 +24,14 @@
                         <div class="gifBienvenida"> <img src="https://media.giphy.com/media/26BRKRABuRCtFVre8/source.gif" alt=""></div>
 
                         <div>
+
+                            <% if (typeof mensajeError != 'undefined') { %>
+                                <div class="uk-alert-danger" uk-alert>
+                                    <a class="uk-alert-close" uk-close></a>
+                                    <p> Usuario y/o mail ya registrado </p>
+                                </div>
+                             
+                            <% } %>
                         
                         
                         <p><input class='uk-input uk-form-width-medium' type="text" name="usuario" placeholder='Nombre de usuario'> </p>  
@@ -53,7 +61,10 @@
                              <input type="reset" class='uk-button uk-button-default' value="Reset"> <input type="submit" class='uk-button uk-button-default' value="Registrate">
 
                             </div>
+
                      </form>
+
+        
      
         
             </div>

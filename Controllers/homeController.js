@@ -74,10 +74,10 @@ let homeController =  {
 
         db.Usuario.create(usuario)
         .then(function() {
-            res.redirect("/home")
+            res.redirect("/home/login")
         })
 
-         }
+        }
         })
 
     },
