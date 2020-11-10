@@ -6,6 +6,7 @@ let homeController =  {
 
     home: function (req,res) {
 
+        
         console.log(res.locals)
  
         db.Posts.findAll({
@@ -17,6 +18,7 @@ let homeController =  {
             ], 
         })
         .then(function(posts){
+           //res.send(posts)
            res.render("home",{posts:posts})
         })
 
