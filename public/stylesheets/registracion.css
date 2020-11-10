@@ -58,3 +58,11 @@ div.gifBienvenida img{
     border-radius: 200px;
     margin-bottom: 40px;
 }
+
+select.pregunta {
+    font-family: 'Quicksand';
+}
+
+input.fechaNacimiento {
+    font-family: 'Quicksand'
+}

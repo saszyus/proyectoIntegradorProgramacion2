@@ -1,4 +1,9 @@
-function validar() {
+
+let form  = document.getElementById('registracion');
+
+form.addEventListener('submit', (validacion) => {
+    validacion.preventDefault();
+
     var nombreUsuario = getElementById('usuario').value;
     var email = getElementById('email').value;
     var contra = getElementById('pass').value;
@@ -18,4 +23,5 @@ function validar() {
     }
 
 
-}
+})
+

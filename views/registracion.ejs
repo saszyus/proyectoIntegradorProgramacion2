@@ -4,7 +4,7 @@
 <head>
     <%- include("head") %> 
     <link rel="stylesheet" href="/stylesheets/registracion.css">
-    <script src="../public/javascripts/registracion.js" ></script>
+    <script src="/javascripts/registracion.js" ></script>
 </head>
 
 <body>
@@ -20,11 +20,15 @@
                 </div>
             
                     
-                    <form class='registracion' action="/home/registracion" method="POST">
+                    <form class='registracion' id='registracion' action="/home/registracion" method="POST">
 
                         <div class="gifBienvenida"> <img src="https://media.giphy.com/media/26BRKRABuRCtFVre8/source.gif" alt=""></div>
 
                         <div>
+
+                            <div class="error">
+
+                            </div>
 
                             <% if (typeof mensajeError != 'undefined') { %>
                                 <div class="uk-alert-danger" uk-alert>
@@ -47,7 +51,7 @@
                             
                             
                          <p>Elige una pregunta de seguridad:</p>
-                         <select name="pregunta" id="pregunta">
+                         <select  class='pregunta' name="pregunta" id="pregunta">
                             <option value="1">A que escuela primaria fuiste de chico?</option> 
                             <option value="2">Cual es el nombre de tu mascota?</option> 
                             <option value="3">Cual es tu serie favorita?</option>
@@ -59,7 +63,7 @@
                          <br>
 
 
-                             <input type="reset" class='uk-button uk-button-default' value="Reset"> <input type="submit" class='uk-button uk-button-default' value="Registrate">
+                             <input type="reset" class='uk-button uk-button-default' value="Reset"> <input id='submit' type="submit" class='uk-button uk-button-default' value="Registrate">
 
                             </div>
 
