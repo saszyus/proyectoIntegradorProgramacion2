@@ -5,24 +5,17 @@ let bcrypt = require("bcryptjs");
 let homeController =  {
 
     home: function (req,res) {
-
-        
         console.log(res.locals)
- 
         db.Posts.findAll({
             order: [["texto_creacion","DESC"]],
             include:[
-
                 {all:true,nested:true}
-
             ], 
         })
         .then(function(posts){
-           //res.send(posts)
+        //    res.send(posts)
            res.render("home",{posts:posts})
         })
-
-    
     },
     
     
