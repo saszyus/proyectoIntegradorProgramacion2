@@ -55,14 +55,14 @@
                             <h6>Comentarios</h6>
                             <ul>
                               
-                              <li>  <%=// posts[i].relacionPostUser.nombre_usuario %> </a> </li>
+                            
                                
                                 <% for( let j = 0; j < posts[i].relacionComentPosts.length; j++ ) { %>
                                     <li>
-        
-                                      <a href="/profile/detalleUsuario/<%=posts[i].relacionComentPosts[j].idusuarios%>">  <p> - <%=posts[i].relacionComentPosts[j].texto_comentario %> </p> </a>
+                                        <a href="/profile/detalleUsuario/<%=posts[i].relacionComentPosts[j].idusuarios%>"> <p> - <%=posts[i].relacionComentPosts[j].relacionComentUser.nombre_usuario %> </p> </a>
+                                       <p> <%=posts[i].relacionComentPosts[j].texto_comentario %> </p> 
                                     </li>
-                                   
+                                                             
                                     <% } %>
 
                                     <a class='verMas' href="/search/detallePost/<%=posts[i].id %> ">Ver más...</a>

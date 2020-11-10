@@ -13,7 +13,7 @@ let homeController =  {
             ], 
         })
         .then(function(posts){
-        //    res.send(posts)
+      //res.send(posts)
            res.render("home",{posts:posts})
         })
     },
@@ -143,24 +143,7 @@ let homeController =  {
         res.redirect("/home")
     },
 
-    prueba: function(req,res){
 
-     
- 
-        db.comentarios.findAll({
-            
-            include:[
-
-                  {association:"relacionComentUser"},
-                  {association:"relacionComentPosts"}
-
-            ], 
-        })
-        .then(function(coment){
-           res.render("prueba",{coment:coment})
-        })
-
-    },
     //edit: function (req,res){
       //  let idPost = req.params.id;
 
