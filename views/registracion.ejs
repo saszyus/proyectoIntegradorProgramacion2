@@ -25,14 +25,6 @@
                         <div class="gifBienvenida"> <img src="https://media.giphy.com/media/26BRKRABuRCtFVre8/source.gif" alt=""></div>
 
                         <div>
-
-                            <% if (typeof mensajeError != 'undefined') { %>
-                                <div class="uk-alert-danger" uk-alert>
-                                    <a class="uk-alert-close" uk-close></a>
-                                    <p> Usuario y/o mail ya registrado </p>
-                                </div>
-                             
-                            <% } %>
                         
                         
                         <p><input class='uk-input uk-form-width-medium' id='usuario' type="text" name="usuario" placeholder='Nombre de usuario'> </p>  
@@ -54,6 +46,14 @@
                          </select> 
                          <p>Tu respuesta:</p>
                          <p><input class='uk-input uk-form-width-medium' id="respuesta" type="text" name="respuesta" placeholder='Respuesta:'> <p></p>
+
+                         <% if (typeof mensajeError != 'undefined') { %>
+                            <div class="uk-alert-danger" uk-alert>
+                                <a class="uk-alert-close" uk-close></a>
+                                <p> Usuario y/o mail ya registrado </p>
+                            </div>
+                         
+                        <% } %>
 
                     
                          <div class="error">

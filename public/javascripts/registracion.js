@@ -1,4 +1,4 @@
-window.onload = function (){
+ window.onload = function (){
 
 var registracion = document.querySelector(".registracion");
 registracion.onsubmit = function(validar) {
@@ -20,8 +20,10 @@ registracion.onsubmit = function(validar) {
           document.querySelector(".alert").style.display = "none"
       },3000)
         
+    } else {
+        registracion.submit()
+    
     }
-
 
 } }
 

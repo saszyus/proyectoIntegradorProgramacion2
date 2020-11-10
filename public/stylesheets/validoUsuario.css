@@ -1,0 +1,39 @@
+div.validoUsuario {
+    padding: 38px;
+    font-family: 'Quicksand';
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Quicksand';
+    border: 1px solid #CCC;
+    border-radius: 35px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+main {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+h1.nombreUsuario {
+    font-family: 'Reenie Beanie';
+    font-size: 70px;
+}
+
+div.contenedorPrincipal {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -47px;
+    padding: 40px;
+}
+
+div.gif img {
+    height: 120px;
+    border-radius: 200px;
+    margin-bottom: 20px;
+    width: 123px;
+}

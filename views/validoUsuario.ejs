@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("head") %> 
+        <link rel="stylesheet" href="/stylesheets/validoUsuario.css">
+    </head>
+
+<body>
+        <%- include("headerDeslogueado") %> 
+
+    <main>
+
+        <div class="contenedorPrincipal uk-section uk-section-small ">
+
+        <h1 class="nombreUsuario"> Ingrese su nombre de usuario</h1>
+
+<div class="contenedor  uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
+
+
+    <div class="validoUsuario">
+
+        <div class="gif"> <img src="https://media.giphy.com/media/piJMCKfEsmxHFf2XwC/giphy.gif" alt=""></div>
+
+
+
+        <form class="validoUsuario" action="/home/validoUsuario_proceso" method="POST">
+            <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                    <input class="uk-input usuario " type="text" placeholder="Usuario" name="usuario">
+                </div>
+            </div>
+
+            <% if (typeof mensajeError != 'undefined') { %>
+                <div class="uk-alert-danger" uk-alert>
+                    <a class="uk-alert-close" uk-close></a>
+                    <p> Usuario incorrecto </p>
+                </div>
+             
+            <% } %>
+
+            <input type="submit" class="uk-button uk-button-default botonContinuar" value="Continuar">
+
+           
+          </form>
+    
+    
+   
+        </div>
+        <br>
+        
+
+</div>
+</div>
+
+</main>
+
+<%- include("footer") %> 
+
+</body>
+
+</html>

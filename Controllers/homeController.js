@@ -144,6 +144,59 @@ let homeController =  {
     },
 
 
+    validoUsuario: function (req,res) {
+        res.render('validoUsuario')
+
+    },
+
+    validoUsuario_proceso: function (req,res) {
+
+        db.Usuario.findOne (
+            {
+                where: [
+                    {nombre_usuario: req.body.usuario}
+                ]
+            }
+            )
+
+            .then(function(usuario) {
+                if (usuario == null) {
+                    res.render("validoUsuario",{mensajeError: "Mensaje error"})
+                } else {
+                    req.session.usuarioLogueado = usuario;
+                    res.render("validoPregunta", {usuario:usuario})
+                }
+
+            })
+
+        },
+
+        validoPregunta_proceso: function (req,res) {
+            res.render('validoPregunta_proceso')
+
+            db.Usuario.findOne (
+                {
+                    where: [
+                        {respuesta: req.body.respuesta}
+                    ]
+                }
+                )
+
+                .then(function(respuesta) {
+                    if (respuesta == null) {
+                        res.render("login",{mensajeError: "Mensaje error"})
+                    } else {
+                        req.session.usuarioLogueado = usuario;
+                        res.render("validoPregunta", {usuario:usuario})
+                    }
+    
+                })
+
+
+        }
+
+
+
     //edit: function (req,res){
       //  let idPost = req.params.id;
 
@@ -171,6 +224,9 @@ let homeController =  {
           //  res.redirect("/home/detallePost" + req.body.idPost)
         //}
     //}
-}
+
+
+    }
+
     
     module.exports = homeController;

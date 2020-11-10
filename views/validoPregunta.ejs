@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("head") %> 
+        <link rel="stylesheet" href="/stylesheets/validoUsuario.css">
+    </head>
+
+<body>
+        <%- include("headerDeslogueado") %> 
+
+    <main>
+
+        <div class="contenedorPrincipal uk-section uk-section-small ">
+
+        <h1 class="nombreUsuario"> Pregunta de seguridad </h1>
+
+<div class="contenedor  uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
+
+
+    <div class="validoUsuario">
+
+        <div class="gif"> <img src="https://media.giphy.com/media/27bY3mzyM4d4UrNGo8/giphy.gif" alt=""></div>
+
+
+
+        <form class="proceso" action="/home/validoPregunta_proceso" method="POST">
+
+            <p> Su pregunta fue: <%=usuario.pregunta%> </p>
+
+
+            <div class="uk-margin">
+                <div class="uk-inline">
+                    <input class="uk-input respuesta " type="text" placeholder="Escriba su respuesta" name="respuesta">
+                </div>
+            </div>
+
+            <input type="submit" class="uk-button uk-button-default botonContinuar" value="Continuar">
+
+           
+          </form>
+    
+    
+   
+        </div>
+        <br>
+        
+
+</div>
+</div>
+
+</main>
+
+<%- include("footer") %> 
+
+</body>
+
+</html>

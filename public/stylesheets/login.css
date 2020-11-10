@@ -68,3 +68,13 @@ input.usuario {
  input.contrasena {
      margin-top: -15px;
  }
+
+ .olvideContra a{
+    font-family: QuickSand;
+    color: rgb(248, 159, 214);
+
+ }
+
+ form.login {
+     margin-top: 15px;
+ }
