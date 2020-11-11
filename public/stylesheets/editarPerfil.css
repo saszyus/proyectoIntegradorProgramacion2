@@ -50,7 +50,7 @@ div.contenedorPrincipal {
 }
 
 div.gifLogin img {
-    height: 206px;
+    height: 180px;
     border-radius: 200px;
 }
 
@@ -60,4 +60,8 @@ div.all {
 
 p.opcional {
     margin-bottom: 0px;
+}
+
+form.editarPerfil {
+    margin-top: 20px;
 }

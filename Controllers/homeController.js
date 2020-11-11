@@ -164,8 +164,17 @@ let homeController =  {
                 if (usuario == null) {
                     res.render("validoUsuario",{mensajeError: "Mensaje error"})
                 } else {
+
+                    if (usuario.pregunta == 1){
+                        textoPregunta = "A que escuela primaria fuiste de chico?"
+                    } else if(usuario.pregunta == 2) {
+                        textoPregunta = "Cual es el nombre de tu mascota?"
+                    } else {
+                        textoPregunta = "Cual es tu serie favorita?"
+                    }
+
                     req.session.usuarioLogueado = usuario;
-                    res.render("validoPregunta", {usuario:usuario})
+                    res.render("validoPregunta", {usuario:usuario, textoPregunta:textoPregunta})
                 }
 
             })
@@ -191,7 +200,7 @@ let homeController =  {
                         req.session.usuarioLogueado = undefined;
                         res.render("login", {mensajeError: "Mensaje error"})
                     } else {
-                        res.redirect("/profile/editarPerfil/:id")
+                        res.redirect("/profile/editarPerfil/" + req.session.usuarioLogueado.id)
                     }
     
                 })
