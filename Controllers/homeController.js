@@ -1,6 +1,7 @@
 let db = require("../database/models/index")
 let op = db.Sequelize.Op;
 let bcrypt = require("bcryptjs");
+const { editarPerfil } = require("./profileController");
 
 let homeController =  {
 
@@ -190,7 +191,7 @@ let homeController =  {
                         req.session.usuarioLogueado = undefined;
                         res.render("login", {mensajeError: "Mensaje error"})
                     } else {
-                        res.redirect("/home")
+                        res.redirect("/profile/editarPerfil/:id")
                     }
     
                 })
