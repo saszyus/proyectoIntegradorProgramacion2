@@ -172,22 +172,25 @@ let homeController =  {
         },
 
         validoPregunta_proceso: function (req,res) {
-            res.render('validoPregunta_proceso')
 
             db.Usuario.findOne (
                 {
                     where: [
-                        {respuesta: req.body.respuesta}
+                        {
+                            id: req.session.usuarioLogueado.id,
+                            respuesta: req.body.respuesta
+                        
+                        }
                     ]
                 }
                 )
 
                 .then(function(respuesta) {
                     if (respuesta == null) {
-                        res.render("login",{mensajeError: "Mensaje error"})
+                        req.session.usuarioLogueado = undefined;
+                        res.render("login", {mensajeError: "Mensaje error"})
                     } else {
-                        req.session.usuarioLogueado = usuario;
-                        res.render("validoPregunta", {usuario:usuario})
+                        res.redirect("/home")
                     }
     
                 })

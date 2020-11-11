@@ -27,33 +27,33 @@
     
                         <form class="editarPerfil" action="/profile/perfilActualizado" method="POST">
                             <input type="hidden" name="idUsuarioNuevo" value="<%editarPerfil.id%>" >
-                            <p>Opcional</p>
-                            <div class="uk-margin">
+                            <p class="opcional"> Opcional</p>
+                            <div class="uk-margin all">
                                 <div class="uk-inline">
                                     <span class="uk-form-icon" uk-icon="icon: user"></span>
                                     <input class="uk-input usuario " type="text" placeholder="Cambiar usuario" name="usuarioNuevo" value="">
                                 </div>
                             </div>
 
-                            <p>Opcional</p>
-                            <div class="uk-margin">
+                            <p class="opcional">Opcional</p>
+                            <div class="uk-margin all">
                                 <div class="uk-inline">
                                     <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-                                    <input class="uk-input contrasena" type="password" placeholder="Cambiar ontraseña" name="contraNueva" value="">
+                                    <input class="uk-input contrasena" type="password" placeholder="Cambiar contraseña" name="contraNueva" value="">
                                     
                                 </div>
                             </div>
                             
-                            <p>Opcional</p>
-                        <input class="uk-input uk-form-width-medium" type="text" placeholder="Cambiar foto de perfil" name="urlNuevo" value="">
-                <div class="uk-margin" uk-margin>
-                        
-                        
-                        <div uk-form-custom="target: true">
-    
-                        </div>
+                            <p class="opcional">Opcional</p>
+                        <div class="uk-margin all">
+                            <div class="uk-inline">
+                                <span ></span>
+                                <input class="uk-input contrasena" type="text" placeholder="Cambiar foto de perfil" name="urlNuevo" value="">
+                                
                             </div>
-
+                        </div>
+                        
+               
                             <input type="submit" class="uk-button uk-button-default botonIngresa" value="Submit">
     
     

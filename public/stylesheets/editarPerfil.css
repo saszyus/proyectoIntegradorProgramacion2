@@ -1,6 +1,6 @@
 h1.titulo {
-    margin-bottom: 40px;
-    margin-top: 100px;
+    margin-bottom: 0px;
+    margin-top: 45px;
     font-family: 'Reenie Beanie';
     font-size: 100px;
 }
@@ -8,6 +8,8 @@ h1.titulo {
 h2.nombreUsuario {
     font-family: 'Quicksand';
     color: rgb(200, 146, 245) !important;
+    margin-top: 0px;
+    font-size: 45px;
     
 }
 
@@ -28,6 +30,7 @@ div.editarPerfil {
     border-radius: 35px;
     padding-left: 100px;
     padding-right: 100px;
+    margin-top: 20px;
 }
 
 div.contenedor {
@@ -49,4 +52,12 @@ div.contenedorPrincipal {
 div.gifLogin img {
     height: 206px;
     border-radius: 200px;
+}
+
+div.all {
+    margin-top: 5px !important;
+}
+
+p.opcional {
+    margin-bottom: 0px;
 }

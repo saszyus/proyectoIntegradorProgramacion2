@@ -30,6 +30,7 @@ div.iniciarSesion {
 
 p.registrateAca {
     font-family: QuickSand;
+    margin-top: -9px;
 }
 
 p a.registrateAqui {
@@ -59,7 +60,7 @@ div.gifLogin img {
 
 h1.login {
     font-family: 'Reenie Beanie';
-    font-size: 194px;
+    font-size: 150px;
 }
 
 input.usuario {
@@ -77,4 +78,5 @@ input.usuario {
 
  form.login {
      margin-top: 15px;
+     padding-top: 10px;
  }
