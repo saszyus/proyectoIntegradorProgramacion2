@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
 
         },
         texto_creacion: {
-            type: DataTypes.DATE
+            type: DataTypes.DATE,
+           // defaultValue: sequelize.now
 
         },
         url_imagen: {

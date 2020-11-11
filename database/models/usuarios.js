@@ -18,8 +18,8 @@ module.exports = (sequelize, DataTypes) => {
         }, 
         
         fecha_nacimiento: {
-            type: DataTypes.DATE
-
+            type: DataTypes.DATE,
+          //  defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
         },
 
         contraseña: {
