@@ -2,7 +2,6 @@
 
 var registracion = document.querySelector(".registracion");
 registracion.onsubmit = function(validar) {
-    validar.preventDefault();
 
     var nombreUsuario = document.getElementById('usuario').value;
     var email = document.getElementById('email').value;
@@ -14,6 +13,7 @@ registracion.onsubmit = function(validar) {
 
 
     if (nombreUsuario == "" || email == "" || contra == "" || fechaNacimiento == "" || url == "" || pregunta == "" || respuesta == "") {
+        validar.preventDefault();
         document.querySelector(".error").innerHTML= 
          "<div class='uk-alert-danger alert' uk-alert> <a class='uk-alert-close' uk-close></a><p> Todos los campos son obligatorios </p> </div>"
       setTimeout(function (){
