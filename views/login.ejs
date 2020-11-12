@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="/stylesheets/login.css">
     </head>
 
-<body>
+    <body>
         <%- include("headerDeslogueado") %> 
 
     <main>
@@ -13,11 +13,7 @@
 
             <h1 class="login">Login</h1>
 
-              
-
-           
              <div class="contenedor  uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-
 
                 <div class="iniciarSesion">
                     <div class="gifLogin"> <img src="https://media.giphy.com/media/3ohc0UUiHhVz7iWyEo/source.gif" alt=""></div>
@@ -53,7 +49,6 @@
                             <div class="uk-inline">
                                 <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
                                 <input class="uk-input contrasena" type="password" placeholder="Contraseña" name="contraseña">
-                                
                             </div>
                         </div>
 
@@ -68,34 +63,21 @@
                         <div>
                             <label for=""> Recordarme </label>
                             <input type="checkbox" name="recordarme">
-
                         </div>
 
-                        
+                            <input type="submit" class="uk-button uk-button-default botonIngresa" value="Ingresa">
+                            <p class="olvideContra"><a href="/home/validoUsuario"> Olvide mi contraseña</a> </p>
+                            <p class="registrateAca">  Primera vez? <a class="registrateAqui" href="/home/registracion"> Registrate aqui! </a> </p>
 
-                        <input type="submit" class="uk-button uk-button-default botonIngresa" value="Ingresa">
-
-
-
-                        <p class="olvideContra"><a href="/home/validoUsuario"> Olvide mi contraseña</a> </p>
-
-
-                        <p class="registrateAca">  Primera vez? <a class="registrateAqui" href="/home/registracion"> Registrate aqui! </a> </p>
-
-                      </form>
+                    </form>
                 
-                
-               
-                    </div>
-                    <br>
-                    
-
+                </div>
             </div>
         </div>
-    </main>
+     </main>
 
-    <%- include("footer") %> 
+     <%- include("footer") %> 
 
-</body>
+    </body>
 
 </html>

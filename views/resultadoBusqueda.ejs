@@ -1,58 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+      <head>
         <%- include("head") %> 
         <link rel="stylesheet" href="/stylesheets/resultadoBusqueda.css">
-    </head>
+      </head>
     
-<body>
-    <%- include("headerDeslogueado") %> 
+    <body>
+         <%- include("headerDeslogueado") %> 
     
     <main>
-      <div class="contenedor ">
+         <div class="contenedor ">
 
-        <% if (busquedas.length == 0) { %>
-        
-            <h3> Tu busqueda no obtuvo resultados...</h3>
-            <img src="/images/noresults.jpg" alt="">
-        <% } else { %>
-            <h3>Resultados:</h3>
+            <% if (busquedas.length == 0) { %>
+         
+              <h3> Tu busqueda no obtuvo resultados...</h3>
+              <img src="/images/noresults.jpg" alt="">
+            <% } else { %>
+
+              <h3>Resultados:</h3>
      
             <% for( let i = 0; i < busquedas.length; i++ ) { %>
-     
-            
-             <li>
-     
-                 <a href="/profile/detalleUsuario/<%=busquedas[i].id %>"   >   <%= busquedas[i].nombre_usuario  %> </a>
-       
+                <li>
+                   <a href="/profile/detalleUsuario/<%=busquedas[i].id %>"   >   <%= busquedas[i].nombre_usuario  %> </a>
                 </li>
-       
                 <li>
                    <a href="/profile/detalleUsuario/<%=busquedas[i].id %>"   >   <%= busquedas[i].email  %> </a>
-       
                 </li>
-     
-             <% }  %>
-        <% } %>
-
-
-
-       
-        
-              
-<br>
-        <h3 class="volverHome"> Volvemos al home? <a href="/home/"> Click aca! </a> </h3>
-     
-     <br>
-
-    </div>
+            <% } %>
+            <% } %>
+                <br>
+                <h3 class="volverHome"> Volvemos al home? <a href="/home/"> Click aca! </a> </h3>
+             <br>
+        </div>
     </main>
-<br>
-    <%- include("footer") %> 
+         <br>
+         <%- include("footer") %> 
 
 
-</body>
+    </body>
 
 </html>
 

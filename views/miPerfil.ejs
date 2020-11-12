@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+   <head>
         <%- include("head") %> 
         <link rel="stylesheet" href="/stylesheets/miPerfil.css">
-    </head>
+   </head>
 
-<body>
-    <%- include("headerLogueado") %> 
+    <body>
+       <%- include("headerLogueado") %> 
 
-    <main>
-
-       
-
+     <main> 
         <div class="contendorGeneral uk-section uk-section-small">
             <div class=" contenedorChico uk-container uk-container-small">
                 <section class="info-usuario uk-flex uk-flex-around uk-width-1-1">
@@ -41,32 +38,29 @@
                     </div>
 
                 </section>
-     <% for( let i = 0; i < perfil.relacionPostUser.length; i++ ) { %>
-     
-    
+
+                   <% for( let i = 0; i < perfil.relacionPostUser.length; i++ ) { %>
+
                 <section class="muro uk-flex uk-flex-middle uk-flex-center">
-                    <div class="uk-grid uk-child-width-1-3 uk-width-1-1 uk-margin-remove" uk-grid>
-                        <div
-                            class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="/search/detallePost/<%=perfil.relacionPostUser[i].id  %>" class="link-detalle">
+                       <div class="uk-grid uk-child-width-1-3 uk-width-1-1 uk-margin-remove" uk-grid>
+                           <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
+                              <a href="/search/detallePost/<%=perfil.relacionPostUser[i].id  %>" class="link-detalle">
                                 <img src="<%=perfil.relacionPostUser[i].url_imagen  %> " alt="foto de perfil" class="foto-perfil">
                                 <p class="uk-text-center"> <%=perfil.relacionPostUser[i].texto_creacion  %></p>
-                            </a>
+                              </a>
+                           </div>
+                    <% } %>
+
                         </div>
-
-
-    <% } %>
-
-                    </div>
                 </section>
             </div>
         </div>
           
-    </main>
+     </main>
 
-    <%- include("footer") %> 
+      <%- include("footer") %> 
 
 
-</body>
+    </body>
 
 </html>

@@ -1,82 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <%- include("head") %> 
-    <link rel="stylesheet" href="/stylesheets/registracion.css">
-    <script src="/javascripts/registracion.js" ></script>
-</head>
+   <head>
+     <%- include("head") %> 
+      <link rel="stylesheet" href="/stylesheets/registracion.css">
+      <script src="/javascripts/registracion.js" ></script>
+    </head>
 
-<body>
-    <%- include("headerDeslogueado") %> 
+    <body>
+     <%- include("headerDeslogueado") %> 
 
-    <main>
-        <div class="contenedorGeneral uk-section uk-section-small">
-            <div class=" contenedorMayor uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
+        <main>
+            <div class="contenedorGeneral uk-section uk-section-small">
+                <div class=" contenedorMayor uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
                     
 
-                <div class="bienvenida">
-                    <h1 class="bienvenidoA">Bienvenido! Registrate a continuación </h1>
-                </div>
+                   <div class="bienvenida">
+                     <h1 class="bienvenidoA">Bienvenido! Registrate a continuación </h1>
+                   </div>
             
                     
-                    <form class='registracion' id='registracion' action="/home/registracion" method="POST">
-
-                        <div class="gifBienvenida"> <img src="https://media.giphy.com/media/26BRKRABuRCtFVre8/source.gif" alt=""></div>
-
-                        <div>
-                        
-                        
-                        <p><input class='uk-input uk-form-width-medium' id='usuario' type="text" name="usuario" placeholder='Nombre de usuario'> </p>  
+                   <form class='registracion' id='registracion' action="/home/registracion" method="POST">
+                         <div class="gifBienvenida"> <img src="https://media.giphy.com/media/26BRKRABuRCtFVre8/source.gif" alt=""></div>
+                         <div> 
+                           <p><input class='uk-input uk-form-width-medium' id='usuario' type="text" name="usuario" placeholder='Nombre de usuario'> </p>  
                            <p> <input class='uk-input uk-form-width-medium' type="email" id="email" name="email" placeholder="Mail"></p>   
-                        <p>
-                           
-                           <input class='uk-input uk-form-width-medium' type="password" id="pass" name="contraseña" placeholder="Contraseña">
-                        </p>   
-                        
-                            <p>Fecha de nacimiento  <input type="date" class='fechaNacimiento'id="fechaNacimiento" name="fecha_nacimiento"> </p>
-                            <p>Url foto de perfil <input class="uk-input uk-form-width-medium" id="url" type="text" placeholder="URL" name="foto_perfil" ></p>
-                            
-                            
-                         <p>Elige una pregunta de seguridad:</p>
-                         <select  class='pregunta' name="pregunta" id="pregunta">
+                           <p><input class='uk-input uk-form-width-medium' type="password" id="pass" name="contraseña" placeholder="Contraseña"></p>   
+                           <p>Fecha de nacimiento  <input type="date" class='fechaNacimiento'id="fechaNacimiento" name="fecha_nacimiento"> </p>
+                           <p>Url foto de perfil <input class="uk-input uk-form-width-medium" id="url" type="text" placeholder="URL" name="foto_perfil" ></p> 
+                           <p>Elige una pregunta de seguridad:</p>
+                           <select  class='pregunta' name="pregunta" id="pregunta">
                             <option value="1">A que escuela primaria fuiste de chico?</option> 
                             <option value="2">Cual es el nombre de tu mascota?</option> 
                             <option value="3">Cual es tu serie favorita?</option>
-                         </select> 
-                         <p>Tu respuesta:</p>
-                         <p><input class='uk-input uk-form-width-medium' id="respuesta" type="text" name="respuesta" placeholder='Respuesta:'> <p></p>
+                           </select> 
+                           <p>Tu respuesta:</p>
+                           <p><input class='uk-input uk-form-width-medium' id="respuesta" type="text" name="respuesta" placeholder='Respuesta:'> <p></p>
 
-                         <% if (typeof mensajeError != 'undefined') { %>
-                            <div class="uk-alert-danger" uk-alert>
+                            <% if (typeof mensajeError != 'undefined') { %>
+                             <div class="uk-alert-danger" uk-alert>
                                 <a class="uk-alert-close" uk-close></a>
                                 <p> Usuario y/o mail ya registrado </p>
-                            </div>
+                             </div>
                          
-                        <% } %>
+                            <% } %>
 
                     
-                         <div class="error">
-
-                        </div>
-                         <br>
-
-
+                             <div class="error"> </div>
+                              <br>
                              <input type="reset" class='uk-button uk-button-default' value="Reset"> <input id='submit' type="submit" class='uk-button uk-button-default' value="Registrate">
-
-                            </div>
-
-                     </form>
-
-        
-     
-        
+                        </div>
+                   </form>
+               </div>
             </div>
-        </div>
-    </main>
-    <%- include("footer") %> 
+        </main>
+        <%- include("footer") %> 
 
 
-</body>
+    </body>
 
 </html>

@@ -6,26 +6,19 @@
         <link rel="stylesheet" href="/stylesheets/editarPerfil.css">
     </head>
 
-<body>
-    <%- include("headerLogueado") %> 
+    <body>
+        <%- include("headerLogueado") %> 
 
         <main>
             <div class="contenedorPrincipal uk-section uk-section-small ">
+                   <h1 class="titulo"> Editando perfil de <h2 class="nombreUsuario"><%=editarPerfil.nombre_usuario %> </h2></h1>
     
-                <h1 class="titulo"> Editando perfil de <h2 class="nombreUsuario"><%=editarPerfil.nombre_usuario %> </h2></h1>
-    
-                  
-    
-               
                  <div class="contenedor  uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-    
-    
+
                     <div class="editarPerfil">
                         <div class="gifLogin"> <img src="https://media.giphy.com/media/QVO3JxpAYXc1v2Bqr1/giphy.gif" alt=""></div>
-    
-    
-    
-                        <form class="editarPerfil" action="/profile/perfilActualizado" method="POST">
+
+                         <form class="editarPerfil" action="/profile/perfilActualizado" method="POST">
                             <input type="hidden" name="idUsuarioNuevo" value="<%editarPerfil.id%>" >
                             <p class="opcional"> Opcional</p>
                             <div class="uk-margin all">
@@ -39,31 +32,22 @@
                             <div class="uk-margin all">
                                 <div class="uk-inline">
                                     <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-                                    <input class="uk-input contrasena" type="password" placeholder="Cambiar contraseña" name="contraNueva" value="">
-                                    
+                                    <input class="uk-input contrasena" type="password" placeholder="Cambiar contraseña" name="contraNueva" value="">      
                                 </div>
                             </div>
                             
                             <p class="opcional">Opcional</p>
-                        <div class="uk-margin all">
+                            <div class="uk-margin all">
                             <div class="uk-inline">
                                 <span ></span>
                                 <input class="uk-input contrasena" type="text" placeholder="Cambiar foto de perfil" name="urlNuevo" value="">
-                                
                             </div>
-                        </div>
-                        
-               
+                            </div>
+
                             <input type="submit" class="uk-button uk-button-default botonIngresa" value="Submit">
-    
-    
-                          </form>
-                    
-                    
-                   
+                         </form>
+                               
                         </div>
-                        <br>
-                        
     
                 </div>
             </div>
@@ -71,7 +55,7 @@
 
         
     
-    <%- include("footer") %> 
-</body>
+        <%- include("footer") %> 
+    </body>
 
 </html>
