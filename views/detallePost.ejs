@@ -40,15 +40,15 @@
                             <div class="comentario uk-flex uk-flex-middle uk-margin-small-top"> 
                                 <div class="uk-width-1-4 uk-flex uk-flex-center">
                             <ul>
-                            
+                                <li>
 
                                 
-                              <li>    <img src="<%=post.relacionComentPosts[j].relacionComentUser.foto_perfil %>  " alt="Foto de usuario"></li> 
-                             <li>  <%=post.relacionComentPosts[j].relacionComentUser.nombre_usuario %> 
-                                 <%=post.relacionComentPosts[j].texto_comentario  %>  </li> 
+                             <p>   <img src="<%=post.relacionComentPosts[j].relacionComentUser.foto_perfil %>  " alt="Foto de usuario"></p> 
+                          <p> <a href="/profile/detalleUsuario/<%=post.relacionComentPosts[j].idusuarios%>"> <%=post.relacionComentPosts[j].relacionComentUser.nombre_usuario %></a>  </p>
+                           <p>    <%=post.relacionComentPosts[j].texto_comentario  %>   </p> 
                                 
                                
-                            
+                             </li>
                             </ul>
                         </div>
                         </div>

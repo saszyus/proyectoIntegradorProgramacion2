@@ -51,6 +51,7 @@ let profileController =  {
             ],
         })
         .then(function(user){
+           // res.send(user)
            res.render("detalleUsuario",{user:user})
         })
     

@@ -42,15 +42,21 @@
                 </section>
 
                 <section class="muro uk-flex uk-flex-middle uk-flex-center">
+
+                    <% for( let i = 0; i < user.relacionPostUser.length; i++ ) { %>
+                    
+                  
                     <div class="uk-grid uk-child-width-1-3 uk-width-1-1 uk-margin-remove" uk-grid>
                         <div
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
-                            <a href="/search/detallePost/1" class="link-detalle">
-                                <img src="" alt="foto post" class="foto-perfil">
-                                <p class="uk-text-center">fecha <%=user.relacionPostUser.url_imagen%></p>
+                            <a href="/search/detallePost/<%=user.relacionPostUser[i].id  %>" class="link-detalle">
+                                <img src="<%=user.relacionPostUser[i].url_imagen  %>" alt="foto post" class="foto-perfil">
+                                <p class="uk-text-center"> <%=user.relacionPostUser[i].texto_creacion  %>  </p>
                             </a>
                         </div>
                         
+
+                    <% } %>    
 
 
 
