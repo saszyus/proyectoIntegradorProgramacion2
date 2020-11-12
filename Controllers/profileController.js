@@ -7,7 +7,16 @@ let profileController =  {
 
         // hay que hacer un if para verificar si hay un usuario logueado
  
-        db.Usuario.findByPk(req.session.usuarioLogueado.id)
+        db.Usuario.findByPk(req.session.usuarioLogueado.id,{
+
+            include:[
+
+                {all:true,nested:true}
+
+            ],
+
+
+        })
         .then(function(perfil){
            res.render("miPerfil",{perfil:perfil})
         })
