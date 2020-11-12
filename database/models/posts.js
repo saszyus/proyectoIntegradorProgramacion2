@@ -15,13 +15,17 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING
 
         },
-        texto_creacion: {
-            type: DataTypes.DATE,
-           // defaultValue: sequelize.now
-
-        },
+        
         url_imagen: {
             type: DataTypes.STRING
+        },
+
+        created_at: {
+            type: DataTypes.DATE
+        },
+
+        updated_at: {
+            type: DataTypes.DATE
         }
     }
 

@@ -8,7 +8,7 @@ let homeController =  {
     home: function (req,res) {
         console.log(res.locals)
         db.Posts.findAll({
-            order: [["texto_creacion","DESC"]],
+            order: [["created_at","DESC"]],
             include:[
                 {all:true,nested:true}
             ], 
@@ -173,7 +173,7 @@ let homeController =  {
                         textoPregunta = "Cual es tu serie favorita?"
                     }
 
-                    req.session.usuarioLogueado = usuario;
+                    // req.session.usuarioLogueado = usuario;
                     res.render("validoPregunta", {usuario:usuario, textoPregunta:textoPregunta})
                 }
 
@@ -187,7 +187,7 @@ let homeController =  {
                 {
                     where: [
                         {
-                            id: req.session.usuarioLogueado.id,
+                            id: req.body.idUsuario,
                             respuesta: req.body.respuesta
                         
                         }
@@ -200,6 +200,7 @@ let homeController =  {
                         req.session.usuarioLogueado = undefined;
                         res.render("login", {mensajeError: "Mensaje error"})
                     } else {
+                        req.session.usuarioLogueado = respuesta;
                         res.redirect("/profile/editarPerfil/" + req.session.usuarioLogueado.id)
                     }
     

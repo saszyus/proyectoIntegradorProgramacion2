@@ -6,8 +6,10 @@ let profileController =  {
     profile: function (req,res) {
 
         // hay que hacer un if para verificar si hay un usuario logueado
- 
-        db.Usuario.findByPk(req.session.usuarioLogueado.id,{
+
+        if (req.session.usuarioLogueado != undefined) {
+            db.Usuario.findByPk(req.session.usuarioLogueado.id,{
+
             include:[
 
                 {all:true,nested:true}
@@ -17,6 +19,9 @@ let profileController =  {
         .then(function(perfil){
            res.render("miPerfil",{perfil:perfil})
         })
+    } else {
+        res.redirect("/home/")
+    }
     
     },
     
@@ -29,12 +34,10 @@ let profileController =  {
     
     post: function (req,res) {
 
-
         let posteo = {
            
             idusuario:req.session.usuarioLogueado.id,
             texto_post:req.body.comentario,
-            texto_creacion:req.body.fecha,
             url_imagen: req.body.url,
 
        }
@@ -65,10 +68,15 @@ let profileController =  {
 
     editarPerfil: function (req,res) {
 
+        if (req.session.usuarioLogueado != undefined) {
+
         db.Usuario.findByPk(req.params.id)
         .then(function(editarPerfil){
            res.render("editarPerfil",{editarPerfil:editarPerfil})
         })
+    } else {
+        res.redirect("/home/")
+    }
 
 
     },
