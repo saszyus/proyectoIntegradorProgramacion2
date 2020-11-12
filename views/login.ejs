@@ -33,13 +33,6 @@
                          
                         <% } %>
 
-                        <div class="uk-margin">
-                            <div class="uk-inline">
-                                <span class="uk-form-icon" uk-icon="icon: user"></span>
-                                <input class="uk-input usuario " type="text" placeholder="Usuario" name="usuario">
-                            </div>
-                        </div>
-
                         <% if (typeof mensajeErrorUsuario != 'undefined') { %>
                             <div class="uk-alert-danger" uk-alert>
                                 <a class="uk-alert-close" uk-close></a>
@@ -47,6 +40,22 @@
                             </div>
                          
                         <% } %>
+
+                        <% if (typeof mensajeErrorContraseña != 'undefined') { %>
+                            <div class="uk-alert-danger" uk-alert>
+                                <a class="uk-alert-close" uk-close></a>
+                                <p> Contraseña incorrecta </p>
+                            </div>
+                         
+                        <% } %>
+
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                <input class="uk-input usuario " type="text" placeholder="Usuario" name="usuario">
+                            </div>
+                        </div>
+
 
 
                         <div class="uk-margin">
@@ -57,13 +66,6 @@
                             </div>
                         </div>
 
-                        <% if (typeof mensajeErrorContraseña != 'undefined') { %>
-                            <div class="uk-alert-danger" uk-alert>
-                                <a class="uk-alert-close" uk-close></a>
-                                <p> Contraseña incorrecta </p>
-                            </div>
-                         
-                        <% } %>
 
                         <div>
                             <label for=""> Recordarme </label>

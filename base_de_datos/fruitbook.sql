@@ -29,7 +29,8 @@ CREATE TABLE `comentarios` (
   `idposts` int(11) NOT NULL,
   `idusuarios` int(11) NOT NULL,
   `texto_comentario` varchar(150) NOT NULL,
-  `fecha_comentario` date NOT NULL,
+  `updated_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `idposts_idx` (`idposts`),
   KEY `idusuarios_idx` (`idusuarios`),
@@ -44,7 +45,7 @@ CREATE TABLE `comentarios` (
 
 LOCK TABLES `comentarios` WRITE;
 /*!40000 ALTER TABLE `comentarios` DISABLE KEYS */;
-INSERT INTO `comentarios` VALUES (1,1,2,'a todos les llega perita, tranquila','2020-10-03'),(2,1,3,'Gracias por invitar....','2020-10-03'),(3,1,4,'BUENARDOO','2020-10-03'),(4,1,5,'el pueblo unido jamas sera vencido','2020-10-03'),(5,2,2,'EPICARDOO','2020-10-03'),(6,2,3,'esa facha se las robo','2020-10-03'),(7,2,4,'xD xD xD','2020-10-03'),(8,2,5,'el pueblo unido jamas sera vencido','2020-10-03'),(9,3,2,'a todos les llega perita, tranquila','2020-10-03'),(10,3,3,'EPICARDOO','2020-10-03');
+INSERT INTO `comentarios` VALUES (1,1,2,'a todos les llega perita, tranquila','2020-11-12 18:59:27','2020-11-12 18:59:27'),(2,1,3,'Gracias por invitar....','2020-11-12 18:59:27','2020-11-12 18:59:27'),(3,1,4,'BUENARDOO','2020-11-12 18:59:27','2020-11-12 18:59:27'),(4,1,5,'el pueblo unido jamas sera vencido','2020-11-12 18:59:27','2020-11-12 18:59:27'),(5,2,2,'EPICARDOO','2020-11-12 18:59:27','2020-11-12 18:59:27'),(6,2,3,'esa facha se las robo','2020-11-12 18:59:27','2020-11-12 18:59:27'),(7,2,4,'xD xD xD','2020-11-12 18:59:27','2020-11-12 18:59:27'),(8,2,5,'el pueblo unido jamas sera vencido','2020-11-12 18:59:27','2020-11-12 18:59:27'),(9,3,2,'a todos les llega perita, tranquila','2020-11-12 18:59:27','2020-11-12 18:59:27'),(10,3,3,'EPICARDOO','2020-11-12 18:59:27','2020-11-12 18:59:27');
 /*!40000 ALTER TABLE `comentarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,11 +61,12 @@ CREATE TABLE `posts` (
   `idusuario` int(11) NOT NULL,
   `url_imagen` varchar(500) NOT NULL,
   `texto_post` varchar(300) DEFAULT NULL,
-  `texto_creacion` date NOT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `idusuario_idx` (`idusuario`),
   CONSTRAINT `idusuario` FOREIGN KEY (`idusuario`) REFERENCES `usuarios` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,7 +75,7 @@ CREATE TABLE `posts` (
 
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
-INSERT INTO `posts` VALUES (1,1,'https://media.giphy.com/media/CfxNnwHaOayFW/giphy.gif','Mira mi giff','2020-10-03'),(2,2,'https://media.giphy.com/media/l3q2Fa0XM2SEciHaU/giphy.gif','Aca con el mas banana','2020-10-03'),(3,3,'https://media.giphy.com/media/7SWMPHg462IbxdFzrd/giphy.gif','BUENARDO','2020-10-03'),(4,4,'https://media.giphy.com/media/XV0oUIBrHfwic/giphy.gif ','Con esa palta te hago alto guacamole','2020-10-03'),(5,5,'https://media.giphy.com/media/wGJGVTbZSvAL6/giphy.gif ','soy geniaal','2020-10-03');
+INSERT INTO `posts` VALUES (1,1,'https://media.giphy.com/media/CfxNnwHaOayFW/giphy.gif','Mira mi giff','2020-11-12 14:04:30','2020-11-12 18:38:37'),(2,2,'https://media.giphy.com/media/l3q2Fa0XM2SEciHaU/giphy.gif','Aca con el mas banana','2020-11-12 14:04:30','2020-11-12 18:38:37'),(3,3,'https://media.giphy.com/media/7SWMPHg462IbxdFzrd/giphy.gif','BUENARDO','2020-11-12 14:04:30','2020-11-12 18:38:37'),(4,4,'https://media.giphy.com/media/XV0oUIBrHfwic/giphy.gif ','Con esa palta te hago alto guacamole','2020-11-12 14:04:30','2020-11-12 18:38:37'),(5,5,'https://media.giphy.com/media/wGJGVTbZSvAL6/giphy.gif ','soy geniaal','2020-11-12 14:04:30','2020-11-12 18:38:37'),(6,1,'https://media.giphy.com/media/MeCtzyYPiW8n7rWklM/giphy.gif','hola','2020-11-12 21:53:14','2020-11-12 21:53:14'),(7,1,'https://media.giphy.com/media/l3vRdf2ry9gs46Gu4/giphy.gif','buenas','2020-11-12 22:12:55','2020-11-12 22:12:55');
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -97,7 +99,7 @@ CREATE TABLE `usuarios` (
   `updated_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -106,7 +108,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Manzana_Roja','manzanita@gmail.com','$2a$10$LiU81AH/8jZ.Xgf8k6JpvOlMXvk3fJyfwPyt8GXP.b.gWDbxiB9Om','2017-06-29','1','Ort','https://media.giphy.com/media/L62bJobKh6EiA/giphy.gif',NULL,NULL),(2,'laPeraQueTeEspera;)','perita@gmail.com','$2a$10$RjMdV3XGeSB7UfaI1RCjjePNhVnIc/qpHyevDgZSguRgnYQn89ySG','2020-10-08','2','Simba','https://media.giphy.com/media/ln2604BTkCXuRX7Xnp/giphy.gif',NULL,NULL),(3,'bananita_Aa ','bananita@gmail.com','$2a$10$XTxcTbdzWxGfVrFBD2kJMO2DU7SffpBSwMBXhOsqrW8XEO6TX19Xm','2020-10-09','3','This is us','https://media.giphy.com/media/3o7TKWKHCUtXZXvj9K/giphy.gif',NULL,NULL),(4,'frufru ','frutilla@gmail.com','$2a$10$PJZvv0nxOQQIkwij3E8tk.lfCZVcxNenfoHj3ZWMWr1R2GXl8aNHO','2011-06-29','3','Rick and Morty','https://media.giphy.com/media/1K55aTdYIYsa4/giphy.gif',NULL,NULL),(5,'SandiacOOL','sandia@gmail.com','$2a$10$zAzmPvm62Ox8LYd.ZA4fFOfJHhltT9kGnt8BIRqn/ronwVNhm.Oby','2010-02-11','1','NEA','https://media.giphy.com/media/xT1XGTaTeovBeLdrRS/giphy.gif',NULL,NULL),(7,'NaranjaPicante','naranjita@gmail.com','$2a$10$/Tbn8mJs21g/GGNj3pXzTewjiCSl8k7dogaCuWK4M/.ZoDeD1aal2','2011-06-05','3','This is us','https://media.giphy.com/media/l0IpXwyCXikRK9Yl2/giphy.gif',NULL,NULL),(8,'Morita','morita@gmail.com','$2a$10$nN4qlCA1eON2xYuGGkGfpOTRaBMqvhZJ40Ix2HH16mrBIhU.I.rYS','2013-02-09','2','Lupe','https://media.giphy.com/media/xk5wubM71Rs7ZNXcjX/giphy.gif',NULL,NULL);
+INSERT INTO `usuarios` VALUES (1,'Manzana_Roja','manzanita@gmail.com','$2a$10$LiU81AH/8jZ.Xgf8k6JpvOlMXvk3fJyfwPyt8GXP.b.gWDbxiB9Om','2017-06-29','1','Ort','https://media.giphy.com/media/L62bJobKh6EiA/giphy.gif',NULL,'2020-11-11 16:42:20'),(2,'laPeraQueTeEspera;)','perita@gmail.com','$2a$10$RjMdV3XGeSB7UfaI1RCjjePNhVnIc/qpHyevDgZSguRgnYQn89ySG','2020-10-08','2','Simba','https://media.giphy.com/media/ln2604BTkCXuRX7Xnp/giphy.gif',NULL,NULL),(3,'bananita_Aa ','bananita@gmail.com','$2a$10$XTxcTbdzWxGfVrFBD2kJMO2DU7SffpBSwMBXhOsqrW8XEO6TX19Xm','2020-10-09','3','This is us','https://media.giphy.com/media/3o7TKWKHCUtXZXvj9K/giphy.gif',NULL,NULL),(4,'frufru ','frutilla@gmail.com','$2a$10$PJZvv0nxOQQIkwij3E8tk.lfCZVcxNenfoHj3ZWMWr1R2GXl8aNHO','2011-06-29','3','Rick and Morty','https://media.giphy.com/media/1K55aTdYIYsa4/giphy.gif',NULL,NULL),(5,'SandiacOOL','sandia@gmail.com','$2a$10$zAzmPvm62Ox8LYd.ZA4fFOfJHhltT9kGnt8BIRqn/ronwVNhm.Oby','2010-02-11','1','NEA','https://media.giphy.com/media/xT1XGTaTeovBeLdrRS/giphy.gif',NULL,NULL),(7,'NaranjaPicante','naranjita@gmail.com','$2a$10$/Tbn8mJs21g/GGNj3pXzTewjiCSl8k7dogaCuWK4M/.ZoDeD1aal2','2011-06-05','3','This is us','https://media.giphy.com/media/l0IpXwyCXikRK9Yl2/giphy.gif',NULL,NULL),(8,'Morita','morita@gmail.com','$2a$10$nN4qlCA1eON2xYuGGkGfpOTRaBMqvhZJ40Ix2HH16mrBIhU.I.rYS','2013-02-09','2','Lupe','https://media.giphy.com/media/xk5wubM71Rs7ZNXcjX/giphy.gif',NULL,NULL),(9,'kiwi','kiwi@gmail.com','$2a$10$6cp/gedwoAenFptXEjFwcu1qu49dpGp08kNWU1DKF8ndNvDG1END2','2020-08-14','2','Rosa','https://media.giphy.com/media/10nqF5fv6hssk8/giphy.gif','2020-11-11 18:37:25','2020-11-11 18:37:25');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -119,4 +121,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-11 13:40:09
+-- Dump completed on 2020-11-12 19:43:39

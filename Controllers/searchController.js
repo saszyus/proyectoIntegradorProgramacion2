@@ -48,7 +48,6 @@ let searchController =  {
            
             idposts:req.params.id,
             idusuarios:req.session.usuarioLogueado.id,
-            fecha_comentario:req.body.fecha,
             texto_comentario: req.body.comentario,
 
        }
