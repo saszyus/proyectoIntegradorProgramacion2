@@ -63,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
             as:"relacionPostUser",
             foreignKey:"idusuario",
         })
-
+        
         Usuarios.hasMany(models.comentarios,{
 
             as:"relacionComentUser",

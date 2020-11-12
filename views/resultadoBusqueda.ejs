@@ -12,16 +12,12 @@
     <main>
       <div class="contenedor ">
 
-        <br>
-        <br>
-        <br>
-       
         <% if (busquedas.length == 0) { %>
-            <h3> Tu busqueda no obtuvo resultados</h3>
+        
+            <h3> Tu busqueda no obtuvo resultados...</h3>
+            <img src="/images/noresults.jpg" alt="">
         <% } else { %>
             <h3>Resultados:</h3>
-     
-         
      
             <% for( let i = 0; i < busquedas.length; i++ ) { %>
      

@@ -14,7 +14,7 @@ let homeController =  {
             ], 
         })
         .then(function(posts){
-      //res.send(posts)
+         //res.send(posts)
            res.render("home",{posts:posts})
         })
     },
@@ -81,7 +81,7 @@ let homeController =  {
 
     login: function (req,res) {
 
-       let error = req.query.error;
+        let error = req.query.error;
 
 
          // la opcion 1 error undefined 
@@ -181,9 +181,9 @@ let homeController =  {
 
         },
 
-        validoPregunta_proceso: function (req,res) {
+    validoPregunta_proceso: function (req,res) {
 
-            db.Usuario.findOne (
+             db.Usuario.findOne (
                 {
                     where: [
                         {
@@ -195,7 +195,7 @@ let homeController =  {
                 }
                 )
 
-                .then(function(respuesta) {
+            .then(function(respuesta) {
                     if (respuesta == null) {
                         req.session.usuarioLogueado = undefined;
                         res.render("login", {mensajeError: "Mensaje error"})

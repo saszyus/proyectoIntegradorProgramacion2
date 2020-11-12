@@ -2,42 +2,51 @@
 <html lang="en">
 
     <head>
+
         <%- include("head") %> 
         <link rel="stylesheet" href="/stylesheets/agregarPost.css">
+
     </head>
 
-<body>
+    <body>
+
     <%- include("headerLogueado") %> 
 
-    <main class="granContenedor">
-        <div class=" uk-section uk-section-small">
-            <div class=" contenedor uk-container uk-container-large uk-flex">
-               <div>
-                <h2 class="tituloPost">Posteá tu foto!</h2>
-                </div>
-        <form class='subiFoto' action="/profile/postAgregado" method="POST">
+       <main class="granContenedor">
 
-          <div class="gifsubiFoto"> <img src="https://media.giphy.com/media/3oz8xDzuVDbKoU4shi/giphy.gif" alt=""></div>
+           <div class=" uk-section uk-section-small">
+
+              <div class=" contenedor uk-container uk-container-large uk-flex">
+
+               <div>
+               <h2 class="tituloPost">Posteá tu foto!</h2>
+               </div>
+
+               <form class='subiFoto' action="/profile/postAgregado" method="POST">
+
+               <div class="gifsubiFoto"> <img src="https://media.giphy.com/media/3oz8xDzuVDbKoU4shi/giphy.gif" alt=""></div>
         
          
-          <br>
-            <div>
+       
+                <div>
                         <p>Copia su URL</p> 
                         <input class="uk-input uk-form-width-medium" type="text" placeholder="URL" name="url" >
-            
                         <p>Añade un comentario o pie de foto
-                        
                         <input class='uk-textarea' name="comentario"></input></p>    
-                         <p> Selecciona la fecha
-                        <input type="date" name="fecha" <%= Date() %>>   </p>           
+                        <p> Selecciona la fecha
+                        <input type="text" name="fecha" value="<%= new Date() %> " >   </p>           
                         <input class='uk-button boton uk-button-default' type="submit" value="Subi tu foto!">   
 
-            </div>
-        </form>
-            </div>
-        </div>
-    </main>
+               </div>
+              </form>
+
+              </div>
+
+           </div>
+       </main>
+
     <%- include("footer") %> 
-</body>
+
+    </body>
 
 </html>
