@@ -224,7 +224,7 @@ let homeController =  {
             let idborrarPost = req.body.idPost;
             db.Post.destroy({
                 where:{
-                    id: idborrarPost
+                    id: idborrarPost,
                 }
             }) 
             .then(function() {

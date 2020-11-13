@@ -45,7 +45,7 @@
                                 
                                      <p><img src="<%=post.relacionComentPosts[j].relacionComentUser.foto_perfil %>  " alt="Foto de usuario"></p> 
                                      <p><a href="/profile/detalleUsuario/<%=post.relacionComentPosts[j].idusuarios%>"> <%=post.relacionComentPosts[j].relacionComentUser.nombre_usuario %></a>  </p>
-                                     <p>%=post.relacionComentPosts[j].texto_comentario %></p> 
+                                     <p><%=post.relacionComentPosts[j].texto_comentario %></p> 
                                 
                                    </li>
                                 </ul>
@@ -62,13 +62,13 @@
                                     <input class="uk-button uk-button-default uk-margin-small-top" type="submit" placeholder="Comentar"> 
                                 </form>
             
-                                <% if (usuarioLogueado.id == post.idusuario) { %>
+                        <%// if (usuarioLogueado.id == post.idusuario) { %>
                                     <form action="/home/borrarPost" method="POST">
                                         <input type="hidden" name="idPost" value="<%= post.id%>"> 
                                         <input type="hidden" name="idUsuario" value="<%= post.idusuario%>">
                                         <button type="submit">Borrar Post</button>   
                                     </form>
-                                <% } %>
+                        <% //} %>
                             </div>
 
                         </div>
