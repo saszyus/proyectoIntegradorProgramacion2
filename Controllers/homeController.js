@@ -215,8 +215,10 @@ let homeController =  {
       //  let idPost = req.params.id;
 
         //db.Post.findByPk(idPost)
-        //.then(function(E)
-    //}
+        //.then(function(post){
+            //res.render("editarPost", {post: posr})
+        //}),
+    //},
 
 
 
@@ -224,7 +226,7 @@ let homeController =  {
 
     borrarPost: function(req,res){
     
-        if (req.session.usuarioLogueado == req.body.idUsuario){
+        if (req.session.usuarioLogueado.id == req.body.idUsuario){
             let idborrarPost = req.body.idPost;
             db.Post.destroy({
                 where:{
@@ -235,7 +237,7 @@ let homeController =  {
                 res.redirect("/home/")
             })    
         } else {
-            res.redirect("/home/detallePost" + req.body.idPost)
+            res.redirect("/home/detallePost/" + req.body.idPost)
         }
     }
 }
