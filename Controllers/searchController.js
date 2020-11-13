@@ -35,7 +35,11 @@ let searchController =  {
             ],
         })
         .then(function(post){
+<<<<<<< Updated upstream
         // res.send(post)
+=======
+     //return res.send(post)
+>>>>>>> Stashed changes
            res.render("detallePost",{post:post})
         })
     

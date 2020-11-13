@@ -207,7 +207,7 @@ let homeController =  {
                 })
 
 
-        }
+        },
 
 
 
@@ -222,25 +222,23 @@ let homeController =  {
 
 
 
-//    borrarPost: function(req,res){
+    borrarPost: function(req,res){
     
-        //if (req.session.usuarioLogueado == req.body.idUsuario){
-          //  let idborrarPost = req.body.idPost;
-
-        //db.Post.destroy({
-        //    where:{
-      //          id: idborrarPost
-    //        }
-  //      })
-//        .then(function()
-        //    res.redirect("/home/")
-      //  ) else {
-          //  res.redirect("/home/detallePost" + req.body.idPost)
-        //}
-    //}
-
-
+        if (req.session.usuarioLogueado == req.body.idUsuario){
+            let idborrarPost = req.body.idPost;
+            db.Post.destroy({
+                where:{
+                    id: idborrarPost
+                }
+            }) 
+            .then(function() {
+                res.redirect("/home/")
+            })    
+        } else {
+            res.redirect("/home/detallePost" + req.body.idPost)
+        }
     }
+}
 
     
-    module.exports = homeController;
+module.exports = homeController;
