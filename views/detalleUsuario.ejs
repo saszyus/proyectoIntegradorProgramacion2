@@ -7,7 +7,11 @@
 
 <body>
 
-    <%- include("headerDeslogueado") %> 
+    <% if (typeof usuarioLogueado != 'undefined') { %> 
+        <%- include("headerLogueado") %> 
+    <% } else {%> 
+      <%- include("headerDeslogueado") %> 
+    <% } %> 
 
     <main>
         <div class="contendorGeneral uk-section uk-section-small">

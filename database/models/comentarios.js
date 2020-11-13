@@ -19,6 +19,14 @@ module.exports = (sequelize, DataTypes) => {
         texto_comentario: {
             type: DataTypes.STRING
 
+        },
+        
+        created_at: {
+            type: DataTypes.DATE
+        },
+
+        updated_at: {
+            type: DataTypes.DATE
         }
     }
 
