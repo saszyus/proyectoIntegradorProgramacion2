@@ -50,7 +50,13 @@ let profileController =  {
     
     },
   
-    detalleUsuario: function (req,res) {    
+    detalleUsuario: function (req,res) {   
+        
+        if(req.session.usuarioLogueado != null && req.session.usuarioLogueado.id == req.params.id)  {
+
+            res.redirect('/profile/miPerfil')
+
+        }
 
         db.Usuario.findByPk(req.params.id,{
             include:[
