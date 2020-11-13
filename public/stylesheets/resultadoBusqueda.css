@@ -9,6 +9,7 @@ div.contenedor {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    font-family: 'Quicksand';
 }
 
 div img.fotoResultado {
@@ -32,4 +33,37 @@ h3.volverHome a {
 
 h3.volverHome a:hover {
     color: rgb(248, 159, 214);
+}
+
+img {
+    border-radius: 252px;
+    height: 171px;
+}
+
+h3 {
+    font-family: 'Quicksand';
+}
+
+li.hola {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-weight: 'Quicksand';
+    font-size: 17px;
+
+}
+
+p {
+    margin-right: 10px;
+    color: black;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(248, 159, 214);;
 }

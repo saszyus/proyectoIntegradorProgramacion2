@@ -13,19 +13,21 @@
          <div class="contenedor ">
 
             <% if (busquedas.length == 0) { %>
+
+              <img src="https://media.giphy.com/media/tK9YVw0UjUwJIL0oSq/giphy.gif" alt="">
          
-              <h3> Tu busqueda no obtuvo resultados...</h3>
-              <img src="/images/noresults.jpg" alt="">
+              <h3 class="noResults"> Tu busqueda no obtuvo resultados...</h3>
+              
             <% } else { %>
 
               <h3>Resultados:</h3>
      
             <% for( let i = 0; i < busquedas.length; i++ ) { %>
-                <li>
-                   <a href="/profile/detalleUsuario/<%=busquedas[i].id %>"   >   <%= busquedas[i].nombre_usuario  %> </a>
+                <li class="hola"> 
+                   <p> Nombre de usuario: </p><a class="nombre" href="/profile/detalleUsuario/<%=busquedas[i].id %>"   >   <%= busquedas[i].nombre_usuario  %> </a>
                 </li>
-                <li>
-                   <a href="/profile/detalleUsuario/<%=busquedas[i].id %>"   >   <%= busquedas[i].email  %> </a>
+                <li class="hola">
+                  <p>Mail:</p> <a class="email" href="/profile/detalleUsuario/<%=busquedas[i].id %>"   >   <%= busquedas[i].email  %> </a> 
                 </li>
             <% } %>
             <% } %>
