@@ -20,11 +20,7 @@ router.post("/validoUsuario_proceso", homeController.validoUsuario_proceso)
 
 router.post("/validoPregunta_proceso", homeController.validoPregunta_proceso)
 
-<<<<<<< Updated upstream
-//router.post("/borrarPost",homeController.borrarPost);
-=======
 
 router.post("/borrarPost",homeController.borrarPost);
->>>>>>> Stashed changes
 
 module.exports = router;
