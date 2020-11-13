@@ -209,20 +209,20 @@ let homeController =  {
 
         },
 
+    
+    //editarPost: function(req, res){
+
+      //  if (req.session.usuarioLogueado != undefined )
+
+  //  }
 
 
-    //edit: function (req,res){
-      //  let idPost = req.params.id;
-
-        //db.Post.findByPk(idPost)
-        //.then(function(E)
-     //}
 
     borrarPost: function(req,res){
     
         if (req.session.usuarioLogueado.id == req.body.idUsuario){
             let idborrarPost = req.body.idPost;
-            db.Post.destroy({
+            db.Posts.destroy({
                 where:{
                     id: idborrarPost,
                 }
