@@ -216,11 +216,7 @@ let homeController =  {
 
         //db.Post.findByPk(idPost)
         //.then(function(E)
-    //}
-
-
-
-
+     //}
 
     borrarPost: function(req,res){
     
