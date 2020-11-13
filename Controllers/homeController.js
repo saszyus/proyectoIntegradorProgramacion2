@@ -215,19 +215,8 @@ let homeController =  {
       //  let idPost = req.params.id;
 
         //db.Post.findByPk(idPost)
-<<<<<<< HEAD
         //.then(function(E)
      //}
-=======
-        //.then(function(post){
-            //res.render("editarPost", {post: posr})
-        //}),
-    //},
-
-
-
-
->>>>>>> main
 
     borrarPost: function(req,res){
     
