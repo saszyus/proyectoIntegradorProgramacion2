@@ -25,6 +25,27 @@ let searchController =  {
     
     },
 
+    resultadoBusquedaPost: function (req,res) {
+
+        let resultadoBusquedaPost = req.query.busquedaPost
+        
+        db.Posts.findAll({
+           // order: [["nombre_usuario"]
+        
+       // ],
+            where: {
+                [op.or]:[
+                {texto_post: {[op.like]:"%" + resultadoBusquedaPost + "%" },  },
+                
+                ]  
+        }
+        })
+        .then(function(busquedaPost){
+           res.render("resultadoBusquedaPost",{busquedaPost:busquedaPost})
+        })
+    
+    },
+
     detallePost: function (req,res) {
 
         db.Posts.findByPk(req.params.id,{
