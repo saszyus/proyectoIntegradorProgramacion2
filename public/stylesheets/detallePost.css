@@ -1,5 +1,6 @@
 section.detalle-container{
     border: 1px solid lightgray;
+    height: 700px;
 }
 article.detalle-post{
     /* border-right: 1px solid lightgray; */
@@ -43,10 +44,7 @@ article.detalle-post .imagen-post{
 }
 
 .comentarios-detalle .lista-comentarios{
-    padding-right: 13px;
-    padding-left: 9px;
-    padding-bottom: 30px;
-    padding-top: 5px;
+    
 }
 .comentarios-detalle .lista-comentarios .comentario .icono-meGusta{
     font-weight: bolder;
@@ -86,6 +84,7 @@ div.info-post h3 a {
     font-family: 'Quicksand';
     color: rgb(200, 146, 245);
     padding-left: 2px;
+
 }
 
 div.info-post h3 a:hover {
@@ -114,5 +113,12 @@ img.fotoManzana {
     height: 65px;
 }
 
+li.comentarios {
+    list-style: none;
+}
+
+img.fotito {
+    width: 66px;
+}
 
 

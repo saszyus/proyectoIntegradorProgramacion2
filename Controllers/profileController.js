@@ -96,7 +96,7 @@ let profileController =  {
         }
 
         if (req.body.urlNuevo != undefined) {
-            datosNuevos.url_imagen = req.body.urlNuevo
+            datosNuevos.foto_perfil = req.body.urlNuevo
         }
 
         if (req.body.contraNueva != undefined) {

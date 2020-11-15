@@ -209,6 +209,7 @@ let homeController =  {
 
         },
 
+<<<<<<< Updated upstream
         editarPost: function(req, res){
 
             if(req.session.usuarioLogueado != undefined) {
@@ -255,6 +256,54 @@ let homeController =  {
     
         },
     
+=======
+    
+    editarPost: function(req, res){
+
+        if(req.session.usuarioLogueado != undefined) {
+
+
+          db.Posts.findByPk(req.params.id)
+          .then(function(editarPost){
+            res.render("editarPost",{editarPost:editarPost})
+
+          })
+
+        } else {
+            res.redirect('/home/')
+        }
+
+      
+
+    },
+
+    editandoPost: function(req, res) {
+        
+
+        let datosNuevos ={}
+
+       if (req.body.textoNuevo != undefined) {
+           datosNuevos.texto_post = req.body.textoNuevo
+        }
+
+        if (req.body.urlNuevo != undefined) {
+            datosNuevos.url_imagen = req.body.urlNuevo
+        }
+
+        db.Posts.update(datosNuevos, {
+            where: {
+                id: req.body.idPost,
+            }
+ 
+        })
+        .then(function() {
+                
+        res.redirect("/search/detallePost/" + req.body.idPost);
+        })
+
+
+    },
+>>>>>>> Stashed changes
 
 
 

@@ -21,7 +21,6 @@ router.post("/validoUsuario_proceso", homeController.validoUsuario_proceso);
 
 router.post("/validoPregunta_proceso", homeController.validoPregunta_proceso);
 
-
 router.post("/borrarPost",homeController.borrarPost);
 
 router.get("/editarPost/:id",homeController.editarPost);

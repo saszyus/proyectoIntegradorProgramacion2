@@ -31,7 +31,9 @@
                         <div class="info-post uk-flex uk-flex-middle">
                             <img class='fotoManzana' src="<%= post.relacionPostUser.foto_perfil %> " alt="Foto del usuario">
                             <h3> <a href="/profile/detalleUsuario/<%= post.relacionPostUser.id %>">  <%= post.relacionPostUser.nombre_usuario %>  </a></h3>
+                            
                         </div>
+                        
 
                     
                 
@@ -41,13 +43,13 @@
                             <div class="comentario uk-flex uk-flex-middle uk-margin-small-top"> 
                                 <div class="uk-width-1-4 uk-flex uk-flex-center">
                                  <ul>
-                                   <li>
+                                  
                                 
-                                     <p><img src="<%=post.relacionComentPosts[j].relacionComentUser.foto_perfil %>  " alt="Foto de usuario"></p> 
-                                     <p><a href="/profile/detalleUsuario/<%=post.relacionComentPosts[j].idusuarios%>"> <%=post.relacionComentPosts[j].relacionComentUser.nombre_usuario %></a>  </p>
-                                     <p><%=post.relacionComentPosts[j].texto_comentario %></p> 
+                                     <li><img class="fotito" src="<%=post.relacionComentPosts[j].relacionComentUser.foto_perfil %>  " alt="Foto de usuario"></p></li>
+                                     <li><a href="/profile/detalleUsuario/<%=post.relacionComentPosts[j].idusuarios%>"> <%=post.relacionComentPosts[j].relacionComentUser.nombre_usuario %></a></li>
+                                     <li><%=post.relacionComentPosts[j].texto_comentario %></p> </li>
                                 
-                                   </li>
+                                   
                                 </ul>
                                </div>
                            </div>
@@ -70,6 +72,7 @@
                                     </form>
                                     <a href="/home/editarPost/<%= post.id %> "> Editar post </a>
                         <% } %>
+
                             </div>
 
                         </div>
