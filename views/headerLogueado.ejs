@@ -13,6 +13,12 @@
                         <input name="busqueda" type="search" class="uk-search-input buscador" placeholder="Buscar...">
                     </form>
                 </li>
+                <li>
+                    <form action="/search/resultadoBusquedaPost/" class=" buscadoR uk-search uk-search-default" method="GET">
+                        <span class="icono" uk-search-icon></span>
+                        <input name="busquedaPost" type="search" class="uk-search-input buscador" placeholder="Buscar Post!">
+                    </form>
+                </li>
             </ul>
         </div>
 
@@ -26,7 +32,7 @@
                         <li><a href="/profile/miPerfil/">MI PERFIL</a></li>
                 </ul> 
                 <form class="logout" action="/home/logout" method="POST">
-                        <button type="submit"> LOGOUT </button>
+                        <button class= "logout" type="submit"> LOGOUT </button>
                 </form>
             </div>
         </nav>
