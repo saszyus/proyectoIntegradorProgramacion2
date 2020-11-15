@@ -24,9 +24,8 @@ router.post("/validoPregunta_proceso", homeController.validoPregunta_proceso);
 
 router.post("/borrarPost",homeController.borrarPost);
 
-//router.get("/editarPost",homeController.editarPost);
+router.get("/editarPost/:id",homeController.editarPost);
 
-
-//router.post("/editandoPost",homeController.editandoPost)
+router.post("/editandoPost",homeController.editandoPost)
 
 module.exports = router;
