@@ -10,6 +10,7 @@
    
     <% if (typeof usuarioLogueado != 'undefined') { %> 
         <%- include("headerLogueado") %> 
+        
     <% } else {%> 
     <%- include("headerDeslogueado") %> 
     <% } %> 
@@ -58,22 +59,26 @@
                             <h6 class="uk-margin-remove uk-width-2-4"> <a href=""></a> </h6>
                             <a href="" uk-icon="icon:heart; ratio: 0.8" class="uk-width-1-4 uk-text-right icono-meGusta"></a>
 
-                            <div class="agregar-comentario uk-flex uk-flex-middle">
+                            <% if (typeof usuarioLogueado != 'undefined') { %>
+
+                             <div class="agregar-comentario uk-flex uk-flex-middle">
                                 <form action="/search/comentarioAgregado/<%=post.id  %>"  class="uk-text-center" method="POST">
                                     <input type="text" class="uk-input" placeholder="Agregar comentario" name="comentario"> 
                                     <input class="uk-button uk-button-default uk-margin-small-top" type="submit" placeholder="Comentar"> 
                                 </form>
             
-                        <% if (usuarioLogueado.id == post.idusuario) { %>
+                               
                                     <form action="/home/borrarPost" method="POST">
                                         <input type="hidden" name="idPost" value="<%= post.id%>"> 
                                         <input type="hidden" name="idUsuario" value="<%= post.idusuario%>">
                                         <button type="submit">Borrar Post</button>   
                                     </form>
                                     <a href="/home/editarPost/<%= post.id %> "> Editar post </a>
-                        <% } %>
+                            <% } %>
 
-                            </div>
+                             
+                        
+                             </div>
 
                         </div>
 
