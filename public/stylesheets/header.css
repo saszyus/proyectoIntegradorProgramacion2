@@ -10,6 +10,7 @@ div.headerPrincipal {
     padding-bottom: 10px;
     align-items: center;
     height: 89px;
+    justify-content: space-between;
     
 }
 
@@ -50,7 +51,7 @@ ul li form {
 }
 
 div.logO {
-    width: 43%;
+   
 
 }
 
@@ -89,4 +90,8 @@ form.logout button {
 
   li.hola a.hola:hover {
       color: black;
+  }
+
+  div.escondido {
+      width: 390px;
   }

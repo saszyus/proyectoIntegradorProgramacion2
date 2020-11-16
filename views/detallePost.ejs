@@ -45,7 +45,7 @@
                                 <div class="uk-width-1-4 uk-flex uk-flex-center">
                                  <ul>
                                     
-                                      <p> <a href="/profile/detalleUsuario/<%=post.relacionComentPosts[j].idusuarios%>"> <%=post.relacionComentPosts[j].relacionComentUser.nombre_usuario %></a></p>
+                                      <p> <a class='nombUs' href="/profile/detalleUsuario/<%=post.relacionComentPosts[j].idusuarios%>"> <%=post.relacionComentPosts[j].relacionComentUser.nombre_usuario %></a></p>
                                  <p> <%=post.relacionComentPosts[j].texto_comentario %></p></li>
                                 </ul>
                                </div>
@@ -69,9 +69,9 @@
                                     <form action="/home/borrarPost" method="POST">
                                         <input type="hidden" name="idPost" value="<%= post.id%>"> 
                                         <input type="hidden" name="idUsuario" value="<%= post.idusuario%>">
-                                        <button class="uk-button uk-button-default" type="submit">Borrar Post</button>   
+                                        <button class="uk-button uk-button-default borrarPost"  type="submit"> Borrar Post</button>   
                                     </form>
-                                    <a class="uk-button uk-button-default uk-margin-small-top" href="/home/editarPost/<%= post.id %> "> Editar post </a>
+                                    <a class="uk-button uk-button-default uk-margin-small-top editarPost" href="/home/editarPost/<%= post.id %> "> Editar post </a>
 
                                 </div>        
                             <% } }%>

@@ -94,6 +94,7 @@ div.info-post h3 a:hover {
 
 div.comentario {
     padding-top: 15px;
+    margin-left: 30px;
 }
 
 
@@ -119,6 +120,25 @@ li.comentarios {
 
 img.fotito {
     width: 66px;
+}
+
+a.editarPost {
+    margin-top: 0px !important;
+    font-family: 'Quicksand';
+
+}
+
+a.nombUs {
+    font-family: 'Quicksand';
+    color: rgb(200, 146, 245);
+}
+
+a.nombUs:hover {
+    text-decoration: none;
+}
+
+button.borrarPost {
+    font-family: 'Quicksand' !important;
 }
 
 
