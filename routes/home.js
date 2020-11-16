@@ -9,13 +9,13 @@ router.get("/registracion", homeController.registracion);
 
 router.get("/login", homeController.login);
 
-router.get("/validoUsuario", homeController.validoUsuario);
-
 router.post("/login", homeController.procesarLogin);
 
 router.post("/registracion", homeController.procesarRegistracion);
 
 router.post("/logout", homeController.logout);
+
+router.get("/validoUsuario", homeController.validoUsuario);
 
 router.post("/validoUsuario_proceso", homeController.validoUsuario_proceso);
 
