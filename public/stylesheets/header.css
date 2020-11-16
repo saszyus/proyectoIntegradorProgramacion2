@@ -41,7 +41,7 @@ nav div ul li a {
     color: black !important ;
 }
 
-nav div ul li a:hover {
+nav div ul li a.home:hover {
     color: rgb(200, 146, 245) !important;
 }
 
@@ -80,4 +80,13 @@ form.logout button {
   .dark-mode {
     background-color: black;
     color: white;
+  }
+
+  li.hola a.hola {
+    text-transform: none;
+    color: black;
+  }
+
+  li.hola a.hola:hover {
+      color: black;
   }
