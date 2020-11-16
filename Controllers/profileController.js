@@ -91,11 +91,11 @@ let profileController =  {
 
        let datosNuevos ={}
 
-       if (req.body.usuarioNuevo != undefined) {
+       if (req.body.usuarioNuevo != "") {
            datosNuevos.nombre_usuario = req.body.usuarioNuevo
         }
 
-        if (req.body.urlNuevo != undefined) {
+        if (req.body.urlNuevo != "") {
             datosNuevos.foto_perfil = req.body.urlNuevo
         }
 

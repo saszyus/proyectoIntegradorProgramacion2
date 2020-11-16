@@ -233,11 +233,11 @@ let homeController =  {
     
             let datosNuevos ={}
     
-           if (req.body.textoNuevo != undefined) {
+           if (req.body.textoNuevo != "") {
                datosNuevos.texto_post = req.body.textoNuevo
             }
     
-            if (req.body.urlNuevo != undefined) {
+            if (req.body.urlNuevo != "") {
                 datosNuevos.url_imagen = req.body.urlNuevo
             }
     
